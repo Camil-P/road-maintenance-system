@@ -3,7 +3,7 @@ import axios, { AxiosHeaders, type InternalAxiosRequestConfig } from "axios";
 import { getToken } from "../lib/auth";
 
 export const httpClient = axios.create({
-  baseURL: "https://localhost:7204/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? "https://localhost:7204/api",
 });
 
 httpClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
