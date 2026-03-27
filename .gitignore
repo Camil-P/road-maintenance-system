@@ -1,0 +1,107 @@
+# .NET API 10 .gitignore
+.vs/
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet packages
+*.nupkg
+packages/
+# Uncomment if you use NuGet Package Restore
+# !packages/build/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish outputs
+*.pubxml
+*.publishsettings
+
+# Web config transforms
+*.config.transform.*
+
+# IIS Express
+/.vs/
+*.vspscc
+*.vssscc
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+*.trx
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Azure WebJobs
+*.azureWebJobsStorage
+
+# Docker
+docker-compose*.yml
+*.dockerfile
+
+# LocalDB
+*.db
+
+# Others
+*.cache
+*.pdb
+*.pidb
+*.svclog
+*.scc
+
+# Ignore secrets
+secrets.json
+
+# Ignore environment files
+.env
+
+# Ignore migrations
+Migrations/
+
+# Ignore generated files
+Generated/
+
+# FRONTEND
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
