@@ -108,7 +108,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://localhost:3000", "http://prolific-nurturing-production-a530.up.railway.app") // Vite default ports
+        policy.WithOrigins("http://localhost:5173", "http://localhost:3000", "https://prolific-nurturing-production-a530.up.railway.app") // Vite default ports
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
