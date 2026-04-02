@@ -155,7 +155,7 @@ export function IncidentTable({ incidents }: Props) {
                               ✕
                             </Button>
                           </div>
-                        ) : (
+                        ) : (isVerified ??
                           <Button
                             size="sm"
                             variant="ghost"

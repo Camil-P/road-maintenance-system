@@ -1,9 +1,12 @@
+using System.Text.Json.Serialization;
+
 namespace RoadMaintenance.Domain.Enums;
 
 /// <summary>
 /// Types of incidents that can be reported by drivers.
 /// Used for categorization and priority calculations.
 /// </summary>
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum IncidentType
 {
     /// <summary>Pothole or road surface damage</summary>
