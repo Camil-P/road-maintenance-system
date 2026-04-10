@@ -54,7 +54,6 @@ TestResults/
 *.azureWebJobsStorage
 
 # Docker
-docker-compose*.yml
 *.dockerfile
 
 # LocalDB
