@@ -9,6 +9,7 @@ using RoadMaintenance.Api.Features.Materials;
 using RoadMaintenance.Api.Features.RoadSegments;
 using RoadMaintenance.Api.Features.WorkOrders;
 using RoadMaintenance.Infrastructure;
+using RoadMaintenance.Infrastructure.Interfaces;
 using Scalar.AspNetCore;
 using System.Text;
 
@@ -114,6 +115,9 @@ builder.Services.AddCors(options =>
             .AllowCredentials();
     });
 });
+
+builder.Services.AddHttpContextAccessor(); // Neophodno za čitanje HTTP konteksta
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
 var app = builder.Build();
 

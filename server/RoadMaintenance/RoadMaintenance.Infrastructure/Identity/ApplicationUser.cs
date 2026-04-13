@@ -9,6 +9,12 @@ namespace RoadMaintenance.Infrastructure.Identity;
 public class ApplicationUser : IdentityUser
 {
     /// <summary>
+    /// Foreign key to the agency the user belongs to (if applicable).
+    /// Nullable because of driver accounts that may not be associated with an agency
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+
+    /// <summary>
     /// User's first name
     /// </summary>
     public string FirstName { get; set; } = string.Empty;

@@ -1,4 +1,5 @@
 using RoadMaintenance.Domain.Enums;
+using RoadMaintenance.Domain.Interfaces;
 
 namespace RoadMaintenance.Domain.Entities;
 
@@ -6,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents a segment of road in the system.
 /// Road segments are the primary organizational unit for maintenance tracking.
 /// </summary>
-public class RoadSegment
+public class RoadSegment : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -54,6 +55,13 @@ public class RoadSegment
     /// Ending point longitude (optional for v1)
     /// </summary>
     public double? EndLongitude { get; private set; }
+    
+    /// <summary>
+    /// ID of the agency that this road segment belongs to. 
+    /// This is determined based on the road segment location and agency jurisdiction areas.
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+    public Agency? Agency { get; set; }
     
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }

@@ -1,10 +1,12 @@
+using RoadMaintenance.Domain.Interfaces;
+
 namespace RoadMaintenance.Domain.Entities;
 
 /// <summary>
 /// Represents a machine or vehicle used for road maintenance.
 /// Includes a simple amortization model for cost tracking.
 /// </summary>
-public class Machine
+public class Machine : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -58,6 +60,12 @@ public class Machine
     /// </summary>
     public string? Notes { get; private set; }
     
+    /// <summary>
+    /// ID of the agency that this machine belongs to.
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+    public Agency? Agency { get; set; }
+
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
     

@@ -1,4 +1,5 @@
 using RoadMaintenance.Domain.Enums;
+using RoadMaintenance.Domain.Interfaces;
 
 namespace RoadMaintenance.Domain.Entities;
 
@@ -6,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents physical infrastructure assets (bridges, traffic lights, signs, etc.)
 /// that need to be maintained and tracked.
 /// </summary>
-public class InfrastructureAsset
+public class InfrastructureAsset : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -50,6 +51,12 @@ public class InfrastructureAsset
     /// </summary>
     public string? ContractorName { get; private set; }
     
+    /// <summary>
+    /// ID of the agency that this infrastructure asset belongs to.
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+    public Agency? Agency { get; set; }
+
     /// <summary>
     /// Optional reference to the road segment this asset belongs to
     /// </summary>

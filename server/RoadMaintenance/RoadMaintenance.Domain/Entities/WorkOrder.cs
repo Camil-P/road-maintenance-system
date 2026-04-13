@@ -1,4 +1,5 @@
 using RoadMaintenance.Domain.Enums;
+using RoadMaintenance.Domain.Interfaces;
 
 namespace RoadMaintenance.Domain.Entities;
 
@@ -6,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents a work order for maintenance tasks.
 /// Follows the status flow: Created → Scheduled → InProgress → Completed
 /// </summary>
-public class WorkOrder
+public class WorkOrder : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -71,6 +72,13 @@ public class WorkOrder
     /// Notes added by the field worker during or after completion
     /// </summary>
     public string? CompletionNotes { get; private set; }
+    
+    /// <summary>
+    /// ID of the agency responsible for handling this work order. 
+    /// This is determined based on the work order location and agency jurisdiction areas.
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+    public Agency? Agency { get; set; }
     
     public DateTime CreatedAt { get; private set; }
     public DateTime? ScheduledFor { get; private set; }

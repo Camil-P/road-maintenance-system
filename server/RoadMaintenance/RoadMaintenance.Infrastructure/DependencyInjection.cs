@@ -29,8 +29,10 @@ public static class DependencyInjection
                 {
                     sqlOptions.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName);
                     sqlOptions.EnableRetryOnFailure(maxRetryCount: 3);
+
+                    sqlOptions.UseNetTopologySuite();
                 }));
-        
+
         // Add ASP.NET Core Identity
         services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {

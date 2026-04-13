@@ -1,4 +1,5 @@
 using RoadMaintenance.Domain.Enums;
+using RoadMaintenance.Domain.Interfaces;
 
 namespace RoadMaintenance.Domain.Entities;
 
@@ -6,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents an incident report submitted by a driver.
 /// Follows the status flow: Reported → Verified → WorkOrderIssued → Resolved
 /// </summary>
-public class IncidentReport
+public class IncidentReport : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -55,6 +56,13 @@ public class IncidentReport
     /// ID of the user (Dispatcher) who verified the incident
     /// </summary>
     public string? VerifiedByUserId { get; private set; }
+    
+    /// <summary>
+    /// ID of the agency responsible for handling this incident. 
+    /// This is determined based on the incident location and agency jurisdiction areas.
+    /// </summary>
+    public Guid? AgencyId { get; set; }
+    public Agency? Agency { get; set; }
     
     /// <summary>
     /// Reference to the work order created for this incident (if any)
