@@ -72,6 +72,26 @@ public class WorkOrder
     /// </summary>
     public string? CompletionNotes { get; private set; }
     
+    /// <summary>
+    /// Start offset along the road segment in meters (for work zone marking)
+    /// </summary>
+    public double? WorkZoneStartMeters { get; private set; }
+
+    /// <summary>
+    /// End offset along the road segment in meters (for work zone marking)
+    /// </summary>
+    public double? WorkZoneEndMeters { get; private set; }
+
+    /// <summary>
+    /// Which side of the road is affected
+    /// </summary>
+    public AffectedLane? AffectedLane { get; private set; }
+
+    /// <summary>
+    /// GeoJSON LineString geometry of the work zone section
+    /// </summary>
+    public string? WorkZoneGeometryJson { get; private set; }
+
     public DateTime CreatedAt { get; private set; }
     public DateTime? ScheduledFor { get; private set; }
     public DateTime? StartedAt { get; private set; }
@@ -91,7 +111,11 @@ public class WorkOrder
         Guid? roadSegmentId = null,
         Guid? incidentReportId = null,
         bool isEmergency = false,
-        decimal? estimatedCost = null)
+        decimal? estimatedCost = null,
+        double? workZoneStartMeters = null,
+        double? workZoneEndMeters = null,
+        AffectedLane? affectedLane = null,
+        string? workZoneGeometryJson = null)
     {
         if (string.IsNullOrWhiteSpace(description))
             throw new ArgumentException("Work order description is required.", nameof(description));
@@ -114,8 +138,20 @@ public class WorkOrder
             CreatedByUserId = createdByUserId,
             IsEmergency = isEmergency,
             EstimatedCost = estimatedCost,
+            WorkZoneStartMeters = workZoneStartMeters,
+            WorkZoneEndMeters = workZoneEndMeters,
+            AffectedLane = affectedLane,
+            WorkZoneGeometryJson = workZoneGeometryJson,
             CreatedAt = DateTime.UtcNow
         };
+    }
+
+    public void SetWorkZone(double? startMeters, double? endMeters, AffectedLane? lane, string? geometryJson)
+    {
+        WorkZoneStartMeters = startMeters;
+        WorkZoneEndMeters = endMeters;
+        AffectedLane = lane;
+        WorkZoneGeometryJson = geometryJson;
     }
     
     /// <summary>

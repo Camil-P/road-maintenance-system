@@ -21,6 +21,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<WorkOrder> WorkOrders => Set<WorkOrder>();
     public DbSet<MaterialStock> MaterialStocks => Set<MaterialStock>();
     public DbSet<Machine> Machines => Set<Machine>();
+    public DbSet<WorkZone> WorkZones => Set<WorkZone>();
+    public DbSet<WorkZoneHistory> WorkZoneHistories => Set<WorkZoneHistory>();
     
     protected override void OnModelCreating(ModelBuilder builder)
     {

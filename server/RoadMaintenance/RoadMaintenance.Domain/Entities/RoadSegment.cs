@@ -54,7 +54,13 @@ public class RoadSegment
     /// Ending point longitude (optional for v1)
     /// </summary>
     public double? EndLongitude { get; private set; }
-    
+
+    /// <summary>
+    /// Full road geometry as GeoJSON LineString.
+    /// When null, falls back to straight line between Start/End coordinates.
+    /// </summary>
+    public string? GeometryJson { get; private set; }
+
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
     
@@ -74,14 +80,15 @@ public class RoadSegment
         double? startLatitude = null,
         double? startLongitude = null,
         double? endLatitude = null,
-        double? endLongitude = null)
+        double? endLongitude = null,
+        string? geometryJson = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Road segment name is required.", nameof(name));
-        
+
         if (lengthKm <= 0)
             throw new ArgumentException("Length must be positive.", nameof(lengthKm));
-        
+
         return new RoadSegment
         {
             Id = Guid.NewGuid(),
@@ -94,6 +101,7 @@ public class RoadSegment
             StartLongitude = startLongitude,
             EndLatitude = endLatitude,
             EndLongitude = endLongitude,
+            GeometryJson = geometryJson,
             CreatedAt = DateTime.UtcNow
         };
     }
@@ -104,18 +112,25 @@ public class RoadSegment
         UpdatedAt = DateTime.UtcNow;
     }
     
-    public void Update(string name, RoadCategory category, decimal lengthKm, string description)
+    public void Update(string name, RoadCategory category, decimal lengthKm, string description, string? geometryJson = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Road segment name is required.", nameof(name));
-        
+
         if (lengthKm <= 0)
             throw new ArgumentException("Length must be positive.", nameof(lengthKm));
-        
+
         Name = name;
         Category = category;
         LengthKm = lengthKm;
         Description = description ?? string.Empty;
+        GeometryJson = geometryJson;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void UpdateGeometry(string? geometryJson)
+    {
+        GeometryJson = geometryJson;
         UpdatedAt = DateTime.UtcNow;
     }
 }

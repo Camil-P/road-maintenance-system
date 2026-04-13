@@ -19,6 +19,7 @@ import { AnalyticsDashboardPage } from "./features/analytics/pages/AnalyticsDash
 import { UserManagementPage } from "./features/users/pages/UserManagementPage";
 import { UsersListPage } from "./features/users/pages/UsersListPage";
 import { ProfilePage } from "./features/profile/pages/ProfilePage";
+import { MapPage } from "./features/map/pages/MapPage";
 
 function RequireAuth() {
   if (!isAuthenticated()) {
@@ -104,6 +105,11 @@ export const router = createBrowserRouter([
       {
         path: "/my-workorders",
         element: <MyWorkOrdersPage />,
+      },
+      // Map
+      {
+        path: "/map",
+        element: <MapPage />,
       },
       // Road segments
       {

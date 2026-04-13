@@ -17,6 +17,11 @@ public class CreateWorkOrderRequest
     public DateTime? ScheduledDate { get; set; }
     public string? Description { get; set; } = "";
     public int Priority { get; set; } = 2;
+
+    public double? WorkZoneStartMeters { get; set; }
+    public double? WorkZoneEndMeters { get; set; }
+    public AffectedLane? AffectedLane { get; set; }
+    public string? WorkZoneGeometryJson { get; set; }
 }
 
 public class UpdateWorkOrderStatusRequest
@@ -41,6 +46,12 @@ public class WorkOrderResponse
     public string? AssignedToUserId { get; set; }
     public DateTime? ScheduledDate { get; set; } // Maps to domain's ScheduledFor
     public DateTime CreatedAt { get; set; }
+
+    public double? WorkZoneStartMeters { get; set; }
+    public double? WorkZoneEndMeters { get; set; }
+    public AffectedLane? AffectedLane { get; set; }
+    public string? AffectedLaneName { get; set; }
+    public string? WorkZoneGeometryJson { get; set; }
 }
 
 public class GetWorkOrdersQuery
@@ -70,7 +81,12 @@ public static class WorkOrderMapper
             Priority = workOrder.Priority.ToString(), // Map int to string for frontend
             AssignedToUserId = workOrder.AssignedToUserId,
             ScheduledDate = workOrder.ScheduledFor, // Map from DB to DTO
-            CreatedAt = workOrder.CreatedAt
+            CreatedAt = workOrder.CreatedAt,
+            WorkZoneStartMeters = workOrder.WorkZoneStartMeters,
+            WorkZoneEndMeters = workOrder.WorkZoneEndMeters,
+            AffectedLane = workOrder.AffectedLane,
+            AffectedLaneName = workOrder.AffectedLane?.ToString(),
+            WorkZoneGeometryJson = workOrder.WorkZoneGeometryJson
         };
     }
 }

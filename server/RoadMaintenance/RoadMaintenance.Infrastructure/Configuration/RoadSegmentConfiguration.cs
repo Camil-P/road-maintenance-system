@@ -26,6 +26,9 @@ public class RoadSegmentConfiguration : IEntityTypeConfiguration<RoadSegment>
         builder.Property(r => r.Status)
             .IsRequired();
         
+        builder.Property(r => r.GeometryJson)
+            .HasColumnType("jsonb");
+
         builder.HasIndex(r => r.Name);
         builder.HasIndex(r => r.Category);
         builder.HasIndex(r => r.Status);

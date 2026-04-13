@@ -45,11 +45,15 @@ public class CreateWorkOrderHandler : ICreateWorkOrderHandler
         var workOrder = WorkOrder.Create(
             createdByUserId: userId,
             workType: request.WorkType,
-            description: request.Description ?? "", 
-            priority: request.Priority, 
+            description: request.Description ?? "",
+            priority: request.Priority,
             roadSegmentId: request.RoadSegmentId,
             incidentReportId: request.IncidentId,
-            isEmergency: request.WorkType == WorkType.Other
+            isEmergency: request.WorkType == WorkType.Other,
+            workZoneStartMeters: request.WorkZoneStartMeters,
+            workZoneEndMeters: request.WorkZoneEndMeters,
+            affectedLane: request.AffectedLane,
+            workZoneGeometryJson: request.WorkZoneGeometryJson
         );
 
         // If a scheduled date is provided upfront, we can optionally schedule it immediately

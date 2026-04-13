@@ -31,7 +31,8 @@ public class CreateRoadSegmentHandler : ICreateRoadSegmentHandler
                 startLatitude: request.StartLatitude,
                 startLongitude: request.StartLongitude,
                 endLatitude: request.EndLatitude,
-                endLongitude: request.EndLongitude
+                endLongitude: request.EndLongitude,
+                geometryJson: request.GeometryJson
             );
 
             _context.RoadSegments.Add(segment);

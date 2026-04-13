@@ -45,6 +45,7 @@ export interface CreateIncidentRequest {
   longitude?: number;
   locationDescription?: string;
   roadSegmentId?: string;
+  geometryJson?: string;
 }
 
 // --- API Functions ---

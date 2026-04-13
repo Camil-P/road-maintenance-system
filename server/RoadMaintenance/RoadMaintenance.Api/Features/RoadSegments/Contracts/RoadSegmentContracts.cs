@@ -34,6 +34,7 @@ public class RoadSegmentResponse
     public double? StartLongitude { get; set; }
     public double? EndLatitude { get; set; }
     public double? EndLongitude { get; set; }
+    public string? GeometryJson { get; set; }
     public DateTime CreatedAt { get; set; }
 }
 
@@ -83,6 +84,8 @@ public class CreateRoadSegmentRequest
 
     [Range(-180, 180)]
     public double? EndLongitude { get; set; }
+
+    public string? GeometryJson { get; set; }
 }
 
 /// <summary>
@@ -103,6 +106,8 @@ public class UpdateRoadSegmentRequest
 
     [MaxLength(1000)]
     public string Description { get; set; } = string.Empty;
+
+    public string? GeometryJson { get; set; }
 }
 
 /// <summary>
@@ -132,6 +137,7 @@ public static class RoadSegmentMapper
             StartLongitude = segment.StartLongitude,
             EndLatitude = segment.EndLatitude,
             EndLongitude = segment.EndLongitude,
+            GeometryJson = segment.GeometryJson,
             CreatedAt = segment.CreatedAt
         };
     }

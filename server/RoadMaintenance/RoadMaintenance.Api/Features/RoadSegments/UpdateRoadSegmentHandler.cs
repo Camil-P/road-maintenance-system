@@ -32,7 +32,8 @@ public class UpdateRoadSegmentHandler : IUpdateRoadSegmentHandler
                 name: request.Name,
                 category: request.Category,
                 lengthKm: request.LengthKm,
-                description: request.Description
+                description: request.Description,
+                geometryJson: request.GeometryJson
             );
 
             await _context.SaveChangesAsync();

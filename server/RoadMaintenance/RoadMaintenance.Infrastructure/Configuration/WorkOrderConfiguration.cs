@@ -51,5 +51,8 @@ public class WorkOrderConfiguration : IEntityTypeConfiguration<WorkOrder>
         builder.HasIndex(w => w.CreatedAt);
         builder.HasIndex(w => w.AssignedToUserId);
         builder.HasIndex(w => w.IsEmergency);
+
+        builder.Property(w => w.WorkZoneGeometryJson)
+            .HasColumnType("jsonb");
     }
 }

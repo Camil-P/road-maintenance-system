@@ -68,6 +68,12 @@ public class IncidentReport
     public Guid? RelatedIncidentId { get; private set; }
     public IncidentReport? RelatedIncident { get; private set; }
     
+    /// <summary>
+    /// GeoJSON geometry for the affected area (LineString for a road section, or Point).
+    /// When set, Latitude/Longitude represent the midpoint for backwards compatibility.
+    /// </summary>
+    public string? GeometryJson { get; private set; }
+
     public DateTime ReportedAt { get; private set; }
     public DateTime? VerifiedAt { get; private set; }
     public DateTime? ResolvedAt { get; private set; }
@@ -85,7 +91,8 @@ public class IncidentReport
         double? latitude = null,
         double? longitude = null,
         string? locationDescription = null,
-        Guid? roadSegmentId = null)
+        Guid? roadSegmentId = null,
+        string? geometryJson = null)
     {
         if (string.IsNullOrWhiteSpace(description))
             throw new ArgumentException("Incident description is required.", nameof(description));
@@ -107,6 +114,7 @@ public class IncidentReport
             LocationDescription = locationDescription ?? string.Empty,
             RoadSegmentId = roadSegmentId,
             ReportedByUserId = reportedByUserId,
+            GeometryJson = geometryJson,
             ReportedAt = DateTime.UtcNow
         };
     }

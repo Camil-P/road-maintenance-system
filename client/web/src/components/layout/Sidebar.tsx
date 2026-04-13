@@ -5,6 +5,7 @@ import {
   PlusCircle,
   LayoutDashboard,
   Map,
+  MapPin,
   ClipboardList,
   HardHat,
   AlertTriangle,
@@ -41,6 +42,11 @@ export function Sidebar() {
         <NavLink to="/dashboard" className={linkClasses}>
           <LayoutDashboard className="h-4 w-4" />
           Kontrolna tabla
+        </NavLink>
+
+        <NavLink to="/map" className={linkClasses}>
+          <MapPin className="h-4 w-4 text-blue-600" />
+          Interaktivna mapa
         </NavLink>
 
         <hr className="my-2 border-slate-200" />

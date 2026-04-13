@@ -62,7 +62,8 @@ public class CreateIncidentHandler : ICreateIncidentHandler
             latitude: request.Latitude,
             longitude: request.Longitude,
             locationDescription: request.LocationDescription,
-            roadSegmentId: request.RoadSegmentId);
+            roadSegmentId: request.RoadSegmentId,
+            geometryJson: request.GeometryJson);
         
         // Check for potential duplicates using the location service
         IReadOnlyList<Guid> potentialDuplicates = [];
@@ -115,6 +116,7 @@ public class CreateIncidentHandler : ICreateIncidentHandler
             ReportedAt = incident.ReportedAt,
             VerifiedAt = incident.VerifiedAt,
             ResolvedAt = incident.ResolvedAt,
+            GeometryJson = incident.GeometryJson,
             HasPotentialDuplicates = potentialDuplicates?.Count > 0,
             PotentialDuplicateIds = potentialDuplicates
         };

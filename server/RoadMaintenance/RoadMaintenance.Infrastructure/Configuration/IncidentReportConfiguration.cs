@@ -48,6 +48,9 @@ public class IncidentReportConfiguration : IEntityTypeConfiguration<IncidentRepo
             .HasForeignKey(i => i.RelatedIncidentId)
             .OnDelete(DeleteBehavior.Restrict);
         
+        builder.Property(i => i.GeometryJson)
+            .HasColumnType("jsonb");
+
         builder.HasIndex(i => i.Status);
         builder.HasIndex(i => i.Type);
         builder.HasIndex(i => i.ReportedAt);

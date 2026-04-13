@@ -5,7 +5,9 @@ using RoadMaintenance.Api.Common;
 using RoadMaintenance.Api.Features.Analytics;
 using RoadMaintenance.Api.Features.Incidents;
 using RoadMaintenance.Api.Features.Machines;
+using RoadMaintenance.Api.Features.Map;
 using RoadMaintenance.Api.Features.Materials;
+using RoadMaintenance.Api.Features.WorkZones;
 using RoadMaintenance.Api.Features.RoadSegments;
 using RoadMaintenance.Api.Features.WorkOrders;
 using RoadMaintenance.Infrastructure;
@@ -57,6 +59,12 @@ builder.Services.AddScoped<IMachinesHandler, MachinesHandler>();
 
 // Analytics
 builder.Services.AddScoped<IAnalyticsHandler, AnalyticsHandler>();
+
+// Map
+builder.Services.AddScoped<IMapHandler, MapHandler>();
+
+// Work Zones
+builder.Services.AddScoped<IWorkZonesHandler, WorkZonesHandler>();
 
 #endregion
 

@@ -38,7 +38,11 @@ export interface CreateWorkOrderPayload {
   workType: WorkType;
   scheduledDate?: string;
   description: string;
-  priority: number; 
+  priority: number;
+  workZoneStartMeters?: number;
+  workZoneEndMeters?: number;
+  affectedLane?: string;
+  workZoneGeometryJson?: string;
 }
 
 export interface WorkOrderFilters {

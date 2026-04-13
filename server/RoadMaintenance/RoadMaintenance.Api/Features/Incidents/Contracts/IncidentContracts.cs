@@ -40,6 +40,11 @@ public class CreateIncidentRequest
     /// Optional ID of the road segment where the incident occurred.
     /// </summary>
     public Guid? RoadSegmentId { get; set; }
+
+    /// <summary>
+    /// GeoJSON geometry for the affected area (LineString or Point).
+    /// </summary>
+    public string? GeometryJson { get; set; }
 }
 
 /// <summary>
@@ -62,6 +67,7 @@ public class IncidentResponse
     public DateTime ReportedAt { get; set; }
     public DateTime? VerifiedAt { get; set; }
     public DateTime? ResolvedAt { get; set; }
+    public string? GeometryJson { get; set; }
     public bool HasPotentialDuplicates { get; set; }
     public IEnumerable<Guid>? PotentialDuplicateIds { get; set; }
 }
