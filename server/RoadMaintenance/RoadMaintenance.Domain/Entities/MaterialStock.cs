@@ -37,9 +37,9 @@ public class MaterialStock : IMustHaveTenant
     /// <summary>
     /// ID of the agency that this material stock belongs to.
     /// </summary>
-    public Guid? AgencyId { get; set; }
-    public Agency? Agency { get; set; }
-    
+    public Guid AgencyId { get; set; }
+    public Agency Agency { get; set; } = null!;
+
     public DateTime LastUpdated { get; private set; }
     
     // Private constructor for EF Core

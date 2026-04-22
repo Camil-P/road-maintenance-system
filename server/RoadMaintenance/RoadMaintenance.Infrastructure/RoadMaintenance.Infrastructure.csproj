@@ -27,4 +27,8 @@
 		<ProjectReference Include="..\RoadMaintenance.Domain\RoadMaintenance.Domain.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Scripts\SQL\" />
+	</ItemGroup>
+
 </Project>

@@ -30,6 +30,11 @@ public class MachineConfiguration : IEntityTypeConfiguration<Machine>
         builder.Property(m => m.ResidualValue)
             .HasPrecision(18, 2);
 
+        builder.HasOne(m => m.Agency)
+            .WithMany()
+            .HasForeignKey(m => m.AgencyId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         builder.HasIndex(m => m.Name);
         builder.HasIndex(m => m.MachineType);
         builder.HasIndex(m => m.IsOperational);

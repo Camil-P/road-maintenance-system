@@ -77,9 +77,9 @@ public class WorkOrder : IMustHaveTenant
     /// ID of the agency responsible for handling this work order. 
     /// This is determined based on the work order location and agency jurisdiction areas.
     /// </summary>
-    public Guid? AgencyId { get; set; }
-    public Agency? Agency { get; set; }
-    
+    public Guid AgencyId { get; set; }
+    public Agency Agency { get; set; } = null!;
+
     public DateTime CreatedAt { get; private set; }
     public DateTime? ScheduledFor { get; private set; }
     public DateTime? StartedAt { get; private set; }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace RoadMaintenance.Domain.Interfaces
 {
-    public interface IMustHaveTenant
+    public interface IMayHaveTenant
     {
-        Guid AgencyId { get; set; }
+        Guid? AgencyId { get; set; }
     }
 }

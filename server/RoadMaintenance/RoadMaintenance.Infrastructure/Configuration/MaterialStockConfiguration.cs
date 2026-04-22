@@ -29,5 +29,10 @@ public class MaterialStockConfiguration : IEntityTypeConfiguration<MaterialStock
         
         builder.HasIndex(m => m.Name)
             .IsUnique();
+
+        builder.HasOne(m => m.Agency)
+            .WithMany()
+            .HasForeignKey(m => m.AgencyId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

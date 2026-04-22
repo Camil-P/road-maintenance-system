@@ -7,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents a segment of road in the system.
 /// Road segments are the primary organizational unit for maintenance tracking.
 /// </summary>
-public class RoadSegment : IMustHaveTenant
+public class RoadSegment : IMayHaveTenant
 {
     public Guid Id { get; private set; }
     

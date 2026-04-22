@@ -7,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents an incident report submitted by a driver.
 /// Follows the status flow: Reported → Verified → WorkOrderIssued → Resolved
 /// </summary>
-public class IncidentReport : IMustHaveTenant
+public class IncidentReport : IMayHaveTenant
 {
     public Guid Id { get; private set; }
     

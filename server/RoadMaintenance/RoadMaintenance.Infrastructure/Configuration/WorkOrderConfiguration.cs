@@ -44,7 +44,12 @@ public class WorkOrderConfiguration : IEntityTypeConfiguration<WorkOrder>
             .WithMany(r => r.WorkOrders)
             .HasForeignKey(w => w.RoadSegmentId)
             .OnDelete(DeleteBehavior.SetNull);
-        
+
+        builder.HasOne(m => m.Agency)
+            .WithMany()
+            .HasForeignKey(m => m.AgencyId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         builder.HasIndex(w => w.Status);
         builder.HasIndex(w => w.Priority);
         builder.HasIndex(w => w.WorkType);

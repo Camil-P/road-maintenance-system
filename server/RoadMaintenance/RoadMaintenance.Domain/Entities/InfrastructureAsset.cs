@@ -7,7 +7,7 @@ namespace RoadMaintenance.Domain.Entities;
 /// Represents physical infrastructure assets (bridges, traffic lights, signs, etc.)
 /// that need to be maintained and tracked.
 /// </summary>
-public class InfrastructureAsset : IMustHaveTenant
+public class InfrastructureAsset : IMayHaveTenant
 {
     public Guid Id { get; private set; }
     

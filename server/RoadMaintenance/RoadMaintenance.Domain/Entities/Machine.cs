@@ -63,8 +63,8 @@ public class Machine : IMustHaveTenant
     /// <summary>
     /// ID of the agency that this machine belongs to.
     /// </summary>
-    public Guid? AgencyId { get; set; }
-    public Agency? Agency { get; set; }
+    public Guid AgencyId { get; set; }
+    public Agency Agency { get; set; } = null!;
 
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
