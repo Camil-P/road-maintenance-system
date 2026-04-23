@@ -1,0 +1,146 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Road Maintenance System" [ref=e5] [cursor=pointer]:
+      - /url: /dashboard
+    - generic [ref=e6]:
+      - generic [ref=e7]: cplojovic@gmail.com
+      - generic [ref=e8]: Admin
+      - button "Logout" [ref=e9]
+  - generic [ref=e10]:
+    - complementary [ref=e11]:
+      - generic [ref=e12]: Održavanje puteva IS
+      - navigation [ref=e13]:
+        - link "Kontrolna tabla" [ref=e14] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e15]
+          - text: Kontrolna tabla
+        - link "Interaktivna mapa" [ref=e20] [cursor=pointer]:
+          - /url: /map
+          - img [ref=e21]
+          - text: Interaktivna mapa
+        - separator [ref=e24]
+        - generic [ref=e25]: Incidenti i Prijave
+        - link "Prijavi oštećenje" [ref=e26] [cursor=pointer]:
+          - /url: /incidents/new
+          - img [ref=e27]
+          - text: Prijavi oštećenje
+        - link "Sve prijave (Pregled)" [ref=e29] [cursor=pointer]:
+          - /url: /incidents
+          - img [ref=e30]
+          - text: Sve prijave (Pregled)
+        - separator [ref=e33]
+        - generic [ref=e34]: Operativa
+        - link "Moji zadaci" [ref=e35] [cursor=pointer]:
+          - /url: /my-workorders
+          - img [ref=e36]
+          - text: Moji zadaci
+        - link "Svi radni nalozi" [ref=e41] [cursor=pointer]:
+          - /url: /workorders
+          - img [ref=e42]
+          - text: Svi radni nalozi
+        - separator [ref=e45]
+        - generic [ref=e46]: Resursi
+        - link "Putna mreža" [ref=e47] [cursor=pointer]:
+          - /url: /roadsegments
+          - img [ref=e48]
+          - text: Putna mreža
+        - link "Materijali" [ref=e50] [cursor=pointer]:
+          - /url: /materials
+          - img [ref=e51]
+          - text: Materijali
+        - link "Mašine i vozila" [ref=e55] [cursor=pointer]:
+          - /url: /machines
+          - img [ref=e56]
+          - text: Mašine i vozila
+        - separator [ref=e61]
+        - generic [ref=e62]: Analitika
+        - link "Pregled analitike" [ref=e63] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e64]
+          - text: Pregled analitike
+        - separator [ref=e65]
+        - generic [ref=e66]: Administracija
+        - link "Korisnici" [ref=e67] [cursor=pointer]:
+          - /url: /users
+          - img [ref=e68]
+          - text: Korisnici
+        - link "Kreiranje naloga" [ref=e73] [cursor=pointer]:
+          - /url: /admin/users
+          - img [ref=e74]
+          - text: Kreiranje naloga
+        - separator [ref=e79]
+        - link "Moj profil" [ref=e80] [cursor=pointer]:
+          - /url: /profile
+          - img [ref=e81]
+          - text: Moj profil
+    - main [ref=e84]:
+      - generic [ref=e85]:
+        - region "Map" [ref=e87]
+        - generic [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]:
+            - generic [ref=e93]: ALERT
+            - generic [ref=e94]: · LIVE FROM CITY OPS
+            - generic [ref=e95]:
+              - text: 2/4
+              - img [ref=e96]
+          - generic [ref=e122]:
+            - generic [ref=e123]: Black ice advisory — Steel Bridge
+            - generic [ref=e124]: City crews salting now. Reduce speed.
+        - generic [ref=e102]:
+          - button "My reports" [ref=e103]:
+            - img [ref=e104]
+            - generic [ref=e105]: "3"
+          - button "Center on my location" [ref=e106]:
+            - img [ref=e107]
+          - button "Map layers" [ref=e109]:
+            - img [ref=e110]
+        - button "Spot a hazard? Report it" [active] [ref=e115]:
+          - img [ref=e117]
+          - generic [ref=e119]:
+            - generic [ref=e120]: Spot a hazard?
+            - generic [ref=e121]: Report it
+        - generic [ref=e127]:
+          - generic [ref=e130]:
+            - img [ref=e132]
+            - generic [ref=e134]:
+              - generic [ref=e135]: REPORT A HAZARD
+              - generic [ref=e136]: Help keep roads safe
+              - generic [ref=e137]: City crews are alerted within seconds.
+            - button "Close" [ref=e138]:
+              - img [ref=e139]
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - generic [ref=e144]: What did you see?
+              - button "INCIDENT TYPE Pothole" [ref=e145]:
+                - img [ref=e147]
+                - generic [ref=e152]:
+                  - generic [ref=e153]: INCIDENT TYPE
+                  - generic [ref=e154]: Pothole
+                - img [ref=e155]
+            - generic [ref=e157]:
+              - generic [ref=e158]: Where?
+              - button "GPS LOCKED · ±12m Current location 45.52110, -122.68230 Change" [ref=e159]:
+                - img [ref=e161]
+                - generic [ref=e163]:
+                  - generic [ref=e164]: GPS LOCKED · ±12m
+                  - generic [ref=e165]: Current location
+                  - generic [ref=e166]: 45.52110, -122.68230
+                - generic [ref=e167]: Change
+            - generic [ref=e168]:
+              - generic [ref=e169]: Add a photo (optional)
+              - button "CAMERA / LIBRARY Take or upload a photo" [ref=e170]:
+                - img [ref=e172]
+                - generic [ref=e176]:
+                  - generic [ref=e177]: CAMERA / LIBRARY
+                  - generic [ref=e178]: Take or upload a photo
+                - img [ref=e179]
+            - generic [ref=e181]:
+              - generic [ref=e182]: Anything else? (optional)
+              - textbox "e.g. Right lane, just past the bridge…" [ref=e183]
+          - generic [ref=e184]:
+            - button "Submit report" [ref=e185]:
+              - img [ref=e186]
+              - text: Submit report
+            - generic [ref=e188]:
+              - img [ref=e189]
+              - text: Anonymous · No personal data shared

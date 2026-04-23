@@ -1,0 +1,21 @@
+- generic [ref=e4]:
+  - heading "Sistem za upravljanje putevima" [level=1] [ref=e5]
+  - paragraph [ref=e6]: Prijavite se na vaš nalog
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - button "Admin" [active] [ref=e9]
+      - button "Manager" [ref=e10]
+      - button "Dispatcher" [ref=e11]
+      - button "Field Worker" [ref=e12]
+      - button "Driver" [ref=e13]
+    - generic [ref=e14]:
+      - generic [ref=e15]: E-mail
+      - textbox [ref=e16]: cplojovic@gmail.com
+    - generic [ref=e17]:
+      - generic [ref=e18]: Lozinka
+      - textbox [ref=e19]: Camil!123
+    - button "Prijavi se" [ref=e20]
+  - paragraph [ref=e21]:
+    - text: Nemate nalog?
+    - link "Registrujte se" [ref=e22] [cursor=pointer]:
+      - /url: /register

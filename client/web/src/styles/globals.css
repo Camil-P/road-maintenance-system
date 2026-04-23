@@ -1,6 +1,7 @@
 /* stylelint-disable */
 
 @import "tailwindcss";
+@import "../features/map/citizen/citizen.css";
 
 @theme {
   --color-background: 0 0% 100%;

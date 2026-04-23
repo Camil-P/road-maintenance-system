@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>RoadSense — Citizen Map</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Inter Tight"', 'ui-sans-serif', 'system-ui'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: {
+              950: '#0A0B0D',
+              900: '#111216',
+              800: '#1A1C22',
+              700: '#23262E',
+              600: '#2E313B',
+              500: '#464A56',
+              400: '#6B7080',
+              300: '#9B9FAD',
+              200: '#C8CBD4',
+              100: '#E6E8ED',
+              50:  '#F4F5F8',
+            },
+            brand: {
+              500: '#FF5A1F',
+              600: '#EC4A12',
+              400: '#FF7A4A',
+            },
+            signal: {
+              amber: '#F5A524',
+              red:   '#E5484D',
+              green: '#2BB673',
+              ice:   '#4CC2FF',
+            },
+          },
+          boxShadow: {
+            'soft': '0 1px 2px rgba(10,11,13,0.06), 0 8px 24px rgba(10,11,13,0.08)',
+            'lift': '0 2px 6px rgba(10,11,13,0.08), 0 20px 40px rgba(10,11,13,0.18)',
+            'fab':  '0 8px 16px rgba(255,90,31,0.35), 0 2px 4px rgba(10,11,13,0.2)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body, #root { height: 100%; }
+    body {
+      font-family: "Inter Tight", system-ui, sans-serif;
+      background: #0A0B0D;
+      color: #111216;
+      -webkit-font-smoothing: antialiased;
+      overscroll-behavior: none;
+    }
+    .maplibregl-ctrl-attrib { font-size: 10px; opacity: 0.6; }
+    .maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { display: none !important; }
+
+    /* Hazard pin */
+    .hazard-pin {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 999px;
+      border: 2px solid white;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25), 0 1px 2px rgba(0,0,0,0.2);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 120ms ease;
+    }
+    .hazard-pin:hover { transform: translateY(-2px) scale(1.05); }
+    .hazard-pin.pothole { background: #E5484D; }
+    .hazard-pin.ice { background: #4CC2FF; color: #0A0B0D; }
+    .hazard-pin.sign { background: #F5A524; color: #0A0B0D; }
+    .hazard-pin.debris { background: #7C5CFF; }
+
+    .pulse-dot {
+      position: relative;
+      width: 16px; height: 16px;
+      background: #2563EB;
+      border-radius: 999px;
+      border: 3px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .pulse-dot::after {
+      content: '';
+      position: absolute; inset: -10px;
+      border-radius: 999px;
+      background: rgba(37,99,235,0.25);
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.6); opacity: 0.8; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* Ticker animations */
+    @keyframes ticker-slide {
+      0%   { transform: translateY(10px); opacity: 0; }
+      10%  { transform: translateY(0);    opacity: 1; }
+      90%  { transform: translateY(0);    opacity: 1; }
+      100% { transform: translateY(-10px); opacity: 0; }
+    }
+    .ticker-item { animation: ticker-slide 6s ease-in-out both; }
+
+    /* Sheet motion */
+    .sheet-backdrop { animation: fadeIn 220ms ease-out both; }
+    .sheet-panel    { animation: slideUp 320ms cubic-bezier(.2,.8,.2,1) both; }
+    .sheet-backdrop.closing { animation: fadeOut 200ms ease-in both; }
+    .sheet-panel.closing    { animation: slideDown 240ms cubic-bezier(.4,0,.6,1) both; }
+
+    @keyframes fadeIn  { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes fadeOut { from { opacity: 1 } to { opacity: 0 } }
+    @keyframes slideUp {
+      from { transform: translateY(100%); } to { transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(0); } to { transform: translateY(100%); }
+    }
+
+    /* Scrollbar polish */
+    .nice-scroll::-webkit-scrollbar { width: 6px; }
+    .nice-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+
+    /* Safe areas */
+    .safe-top { padding-top: max(env(safe-area-inset-top), 0px); }
+    .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 0px); }
+
+    /* Hide native select arrow */
+    select { appearance: none; -webkit-appearance: none; }
+
+    /* Icon helper */
+    .i { width: 1em; height: 1em; stroke-width: 2; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="react" src="src/icons.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/data.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/MapCanvas.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/NewsTicker.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/TopBar.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/ReportSheet.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/MyReportsSheet.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/WorkSegmentPeek.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/ReportFAB.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/Toast.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/App.jsx"></script>
+</body>
+</html>

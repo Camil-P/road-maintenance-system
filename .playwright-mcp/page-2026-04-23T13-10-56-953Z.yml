@@ -1,0 +1,105 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Road Maintenance System" [ref=e5] [cursor=pointer]:
+      - /url: /dashboard
+    - generic [ref=e6]:
+      - generic [ref=e7]: cplojovic@gmail.com
+      - generic [ref=e8]: Admin
+      - button "Logout" [ref=e9]
+  - generic [ref=e10]:
+    - complementary [ref=e11]:
+      - generic [ref=e12]: Održavanje puteva IS
+      - navigation [ref=e13]:
+        - link "Kontrolna tabla" [ref=e14] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e15]
+          - text: Kontrolna tabla
+        - link "Interaktivna mapa" [ref=e20] [cursor=pointer]:
+          - /url: /map
+          - img [ref=e21]
+          - text: Interaktivna mapa
+        - separator [ref=e24]
+        - generic [ref=e25]: Incidenti i Prijave
+        - link "Prijavi oštećenje" [active] [ref=e26] [cursor=pointer]:
+          - /url: /incidents/new
+          - img [ref=e27]
+          - text: Prijavi oštećenje
+        - link "Sve prijave (Pregled)" [ref=e29] [cursor=pointer]:
+          - /url: /incidents
+          - img [ref=e30]
+          - text: Sve prijave (Pregled)
+        - separator [ref=e33]
+        - generic [ref=e34]: Operativa
+        - link "Moji zadaci" [ref=e35] [cursor=pointer]:
+          - /url: /my-workorders
+          - img [ref=e36]
+          - text: Moji zadaci
+        - link "Svi radni nalozi" [ref=e41] [cursor=pointer]:
+          - /url: /workorders
+          - img [ref=e42]
+          - text: Svi radni nalozi
+        - separator [ref=e45]
+        - generic [ref=e46]: Resursi
+        - link "Putna mreža" [ref=e47] [cursor=pointer]:
+          - /url: /roadsegments
+          - img [ref=e48]
+          - text: Putna mreža
+        - link "Materijali" [ref=e50] [cursor=pointer]:
+          - /url: /materials
+          - img [ref=e51]
+          - text: Materijali
+        - link "Mašine i vozila" [ref=e55] [cursor=pointer]:
+          - /url: /machines
+          - img [ref=e56]
+          - text: Mašine i vozila
+        - separator [ref=e61]
+        - generic [ref=e62]: Analitika
+        - link "Pregled analitike" [ref=e63] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e64]
+          - text: Pregled analitike
+        - separator [ref=e65]
+        - generic [ref=e66]: Administracija
+        - link "Korisnici" [ref=e67] [cursor=pointer]:
+          - /url: /users
+          - img [ref=e68]
+          - text: Korisnici
+        - link "Kreiranje naloga" [ref=e73] [cursor=pointer]:
+          - /url: /admin/users
+          - img [ref=e74]
+          - text: Kreiranje naloga
+        - separator [ref=e79]
+        - link "Moj profil" [ref=e80] [cursor=pointer]:
+          - /url: /profile
+          - img [ref=e81]
+          - text: Moj profil
+    - main [ref=e84]:
+      - generic [ref=e125]:
+        - heading "Prijavi novo oštećenje" [level=1] [ref=e126]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: Tip oštećenja
+            - combobox [ref=e130]:
+              - option "Rupa na putu" [selected]
+              - option "Led"
+              - option "Krhotine/Otpad"
+              - option "Poplava"
+              - option "Problem sa semaforom"
+              - option "Oštećena ograda"
+              - option "Problem s oznakama"
+              - option "Problem sa znakom"
+              - option "Ostalo"
+          - generic [ref=e131]:
+            - generic [ref=e132]: Opis
+            - textbox [ref=e133]
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - generic [ref=e136]: ID dionice
+              - textbox "opcionalno" [ref=e137]
+            - generic [ref=e138]:
+              - generic [ref=e139]: Geografska širina
+              - spinbutton [ref=e140]
+            - generic [ref=e141]:
+              - generic [ref=e142]: Geografska dužina
+              - spinbutton [ref=e143]
+          - button "Pošalji prijavu" [ref=e144]

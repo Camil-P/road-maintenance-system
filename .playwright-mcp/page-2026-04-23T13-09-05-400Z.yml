@@ -1,0 +1,91 @@
+- generic [ref=e24]:
+  - banner [ref=e25]:
+    - link "Road Maintenance System" [ref=e26] [cursor=pointer]:
+      - /url: /dashboard
+    - generic [ref=e27]:
+      - generic [ref=e28]: cplojovic@gmail.com
+      - generic [ref=e29]: Admin
+      - button "Logout" [ref=e30]
+  - generic [ref=e31]:
+    - complementary [ref=e32]:
+      - generic [ref=e33]: Održavanje puteva IS
+      - navigation [ref=e34]:
+        - link "Kontrolna tabla" [ref=e35] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e36]
+          - text: Kontrolna tabla
+        - link "Interaktivna mapa" [ref=e41] [cursor=pointer]:
+          - /url: /map
+          - img [ref=e42]
+          - text: Interaktivna mapa
+        - separator [ref=e45]
+        - generic [ref=e46]: Incidenti i Prijave
+        - link "Prijavi oštećenje" [ref=e47] [cursor=pointer]:
+          - /url: /incidents/new
+          - img [ref=e48]
+          - text: Prijavi oštećenje
+        - link "Sve prijave (Pregled)" [ref=e50] [cursor=pointer]:
+          - /url: /incidents
+          - img [ref=e51]
+          - text: Sve prijave (Pregled)
+        - separator [ref=e54]
+        - generic [ref=e55]: Operativa
+        - link "Moji zadaci" [ref=e56] [cursor=pointer]:
+          - /url: /my-workorders
+          - img [ref=e57]
+          - text: Moji zadaci
+        - link "Svi radni nalozi" [ref=e62] [cursor=pointer]:
+          - /url: /workorders
+          - img [ref=e63]
+          - text: Svi radni nalozi
+        - separator [ref=e66]
+        - generic [ref=e67]: Resursi
+        - link "Putna mreža" [ref=e68] [cursor=pointer]:
+          - /url: /roadsegments
+          - img [ref=e69]
+          - text: Putna mreža
+        - link "Materijali" [ref=e71] [cursor=pointer]:
+          - /url: /materials
+          - img [ref=e72]
+          - text: Materijali
+        - link "Mašine i vozila" [ref=e76] [cursor=pointer]:
+          - /url: /machines
+          - img [ref=e77]
+          - text: Mašine i vozila
+        - separator [ref=e82]
+        - generic [ref=e83]: Analitika
+        - link "Pregled analitike" [ref=e84] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e85]
+          - text: Pregled analitike
+        - separator [ref=e86]
+        - generic [ref=e87]: Administracija
+        - link "Korisnici" [ref=e88] [cursor=pointer]:
+          - /url: /users
+          - img [ref=e89]
+          - text: Korisnici
+        - link "Kreiranje naloga" [ref=e94] [cursor=pointer]:
+          - /url: /admin/users
+          - img [ref=e95]
+          - text: Kreiranje naloga
+        - separator [ref=e100]
+        - link "Moj profil" [ref=e101] [cursor=pointer]:
+          - /url: /profile
+          - img [ref=e102]
+          - text: Moj profil
+    - main [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - heading "Menadžerska kontrolna tabla" [level=1] [ref=e108]
+          - paragraph [ref=e109]: Pregled svih operacija.
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - heading "Sve prijave" [level=3] [ref=e113]
+            - link "Pregled" [ref=e115] [cursor=pointer]:
+              - /url: /incidents
+              - button "Pregled" [ref=e116]
+          - generic [ref=e117]:
+            - heading "Radni nalozi" [level=3] [ref=e119]
+            - link "Upravljaj" [ref=e121] [cursor=pointer]:
+              - /url: /workorders
+              - button "Upravljaj" [ref=e122]
