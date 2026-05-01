@@ -1,0 +1,563 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - generic [ref=e11]: Izveštaji · Mesečni
+        - generic [ref=e12]: April 2026 · Region · Novi Pazar
+    - generic [ref=e13]:
+      - button "Promeni period" [ref=e14]:
+        - img [ref=e15]
+        - text: Promeni period
+        - img [ref=e17]
+      - button "Klean prikaz" [ref=e19]:
+        - img [ref=e20]
+        - text: Klean prikaz
+      - button "Pošalji nadležnom" [ref=e25]:
+        - img [ref=e26]
+        - text: Pošalji nadležnom
+      - button "Preuzmi" [ref=e30]:
+        - img [ref=e31]
+        - text: Preuzmi
+        - img [ref=e34]
+  - article [ref=e37]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: Putevi NP · JKP za održavanje
+        - generic [ref=e43]: Mesečni izveštaj o stanju i radovima
+        - generic [ref=e44]: "Period: April 2026 · Region · Novi Pazar"
+      - generic [ref=e45]:
+        - generic [ref=e46]: RPT-2026-04-NPZ
+        - generic [ref=e47]: "Izdato: 01.05.2026."
+        - generic [ref=e48]: Verzija 1.0 · Završeno
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]: "01"
+        - generic [ref=e52]:
+          - heading "Izvršni pregled" [level=2] [ref=e53]
+          - generic [ref=e54]: Ključni indikatori za period
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - img [ref=e58]
+            - text: Ukupno prijava
+          - generic [ref=e63]: "187"
+          - generic [ref=e64]:
+            - img [ref=e65]
+            - text: +12% u odnosu na mart
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - img [ref=e70]
+            - text: Rešeno u roku
+          - generic [ref=e73]: 94%
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - text: +6 p.p.
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img [ref=e80]
+            - text: Prosečno vreme odziva
+          - generic [ref=e82]: 42 min
+          - generic [ref=e83]:
+            - img [ref=e84]
+            - text: −18%
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - img [ref=e89]
+            - text: Ukupan trošak
+          - generic [ref=e94]: 14.380 €
+          - generic [ref=e95]:
+            - img [ref=e96]
+            - text: −4% vs plan
+      - generic [ref=e99]:
+        - paragraph [ref=e100]:
+          - text: Tokom
+          - strong [ref=e101]: April 2026
+          - text: u sistemu je registrovano
+          - strong [ref=e102]: 187 prijava
+          - text: ", od čega je"
+          - strong [ref=e103]: 172 (92%)
+          - text: zatvoreno do kraja perioda.
+        - paragraph [ref=e104]:
+          - text: Prosečno vreme od prijave do izlaska ekipe smanjeno je za
+          - strong [ref=e105]: 18%
+          - text: zahvaljujući automatskoj triaži i pred-dodeli ekipa po regionu.
+        - paragraph [ref=e106]:
+          - text: Ukupan trošak intervencija iznosi
+          - strong [ref=e107]: 14.380 €
+          - text: ", što je"
+          - strong [ref=e108]: 4%
+          - text: ispod plana za april.
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e111]: "02"
+        - generic [ref=e112]:
+          - heading "Geografski pregled" [level=2] [ref=e113]
+          - generic [ref=e114]: Prijave i radovi po deonicama
+      - generic [ref=e115]:
+        - generic [ref=e117]:
+          - region "Map" [ref=e118]
+          - button "Map marker" [ref=e119] [cursor=pointer]:
+            - img [ref=e120]
+          - button "Map marker" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+          - button "Map marker" [ref=e128] [cursor=pointer]:
+            - img [ref=e129]
+          - button "Map marker" [ref=e142] [cursor=pointer]:
+            - img [ref=e143]
+          - button "Map marker" [ref=e146] [cursor=pointer]:
+            - img [ref=e147]
+          - button "Map marker" [ref=e151] [cursor=pointer]:
+            - img [ref=e152]
+          - button "Map marker" [ref=e155] [cursor=pointer]:
+            - img [ref=e156]
+          - button "Map marker" [ref=e161] [cursor=pointer]:
+            - img [ref=e162]
+          - button "Map marker" [ref=e165] [cursor=pointer]:
+            - img [ref=e166]
+          - button "Map marker" [ref=e171] [cursor=pointer]:
+            - img [ref=e172]
+          - button "Map marker" [ref=e174] [cursor=pointer]:
+            - img [ref=e175]
+          - button "Map marker" [ref=e178] [cursor=pointer]:
+            - img [ref=e179]
+          - button "Map marker" [ref=e184] [cursor=pointer]:
+            - img [ref=e185]
+          - button "Map marker" [ref=e189] [cursor=pointer]:
+            - img [ref=e190]
+          - button "Map marker" [ref=e199] [cursor=pointer]:
+            - img [ref=e200]
+          - button "Map marker" [ref=e204] [cursor=pointer]:
+            - img [ref=e205]
+          - button "Map marker" [ref=e214] [cursor=pointer]:
+            - img [ref=e215]
+          - button "Map marker" [ref=e219] [cursor=pointer]:
+            - img [ref=e220]
+          - button "Map marker" [ref=e229]
+        - generic:
+          - generic:
+            - generic: Region · Novi Pazar
+            - generic: 187 prijava · 3 aktivnih radilišta
+          - generic:
+            - generic:
+              - generic: Hitno
+            - generic:
+              - generic: Visoko
+            - generic:
+              - generic: Normalno
+      - generic [ref=e230]: Prikaz svih intervencija za period. Klizište na obilaznici i poledica na pristupu mostu označeni su kao prioritetni za sledeći mesec.
+    - generic [ref=e231]:
+      - generic [ref=e232]:
+        - generic [ref=e233]: "03"
+        - generic [ref=e234]:
+          - heading "Dinamika prijava" [level=2] [ref=e235]
+          - generic [ref=e236]: Dnevni broj prijava tokom meseca
+      - generic [ref=e237]:
+        - generic [ref=e238]:
+          - 'generic "Dan 1: 10 prijava" [ref=e239]'
+          - 'generic "Dan 2: 4 prijava" [ref=e240]'
+          - 'generic "Dan 3: 7 prijava" [ref=e241]'
+          - 'generic "Dan 4: 8 prijava" [ref=e242]'
+          - 'generic "Dan 5: 5 prijava" [ref=e243]'
+          - 'generic "Dan 6: 6 prijava" [ref=e244]'
+          - 'generic "Dan 7: 4 prijava" [ref=e245]'
+          - 'generic "Dan 8: 9 prijava" [ref=e246]'
+          - 'generic "Dan 9: 12 prijava" [ref=e247]'
+          - 'generic "Dan 10: 6 prijava" [ref=e248]'
+          - 'generic "Dan 11: 8 prijava" [ref=e249]'
+          - 'generic "Dan 12: 7 prijava" [ref=e250]'
+          - 'generic "Dan 13: 4 prijava" [ref=e251]'
+          - 'generic "Dan 14: 3 prijava" [ref=e252]'
+          - 'generic "Dan 15: 6 prijava" [ref=e253]'
+          - 'generic "Dan 16: 8 prijava" [ref=e254]'
+          - 'generic "Dan 17: 11 prijava" [ref=e255]'
+          - 'generic "Dan 18: 7 prijava" [ref=e256]'
+          - 'generic "Dan 19: 9 prijava" [ref=e257]'
+          - 'generic "Dan 20: 5 prijava" [ref=e258]'
+          - 'generic "Dan 21: 4 prijava" [ref=e259]'
+          - 'generic "Dan 22: 7 prijava" [ref=e260]'
+          - 'generic "Dan 23: 9 prijava" [ref=e261]'
+          - 'generic "Dan 24: 8 prijava" [ref=e262]'
+          - 'generic "Dan 25: 6 prijava" [ref=e263]'
+          - 'generic "Dan 26: 10 prijava" [ref=e264]'
+          - 'generic "Dan 27: 8 prijava" [ref=e265]'
+          - 'generic "Dan 28: 5 prijava" [ref=e266]'
+          - 'generic "Dan 29: 6 prijava" [ref=e267]'
+          - 'generic "Dan 30: 4 prijava" [ref=e268]'
+        - generic [ref=e269]:
+          - generic [ref=e270]: 1. apr
+          - generic [ref=e271]: 15. apr
+          - generic [ref=e272]: 30. apr
+      - generic [ref=e273]:
+        - generic [ref=e274]:
+          - generic [ref=e275]: Najviše
+          - generic [ref=e276]: 12 prijava
+          - generic [ref=e277]: 9. april (četvrtak)
+        - generic [ref=e278]:
+          - generic [ref=e279]: Najmanje
+          - generic [ref=e280]: 3 prijave
+          - generic [ref=e281]: 14. april (nedelja)
+        - generic [ref=e282]:
+          - generic [ref=e283]: Prosek
+          - generic [ref=e284]: 6.2 dnevno
+          - generic [ref=e285]: april 2026
+        - generic [ref=e286]:
+          - generic [ref=e287]: Promena
+          - generic [ref=e288]: +12%
+          - generic [ref=e289]: vs mart 2026
+    - generic [ref=e290]:
+      - generic [ref=e291]:
+        - generic [ref=e292]: "04"
+        - generic [ref=e293]:
+          - heading "Aktivnosti po tipu" [level=2] [ref=e294]
+          - generic [ref=e295]: Prijave, radni nalozi i prosečno vreme po vrsti
+      - table [ref=e297]:
+        - rowgroup [ref=e298]:
+          - row "Tip prijave Broj Zatvoreno Stopa Prosečno trajanje Trošak" [ref=e299]:
+            - columnheader "Tip prijave" [ref=e300]
+            - columnheader "Broj" [ref=e301]
+            - columnheader "Zatvoreno" [ref=e302]
+            - columnheader "Stopa" [ref=e303]
+            - columnheader "Prosečno trajanje" [ref=e304]
+            - columnheader "Trošak" [ref=e305]
+        - rowgroup [ref=e306]:
+          - row "Rupa u putu 78 71 91% 8.4 h 6.240 €" [ref=e307]:
+            - cell "Rupa u putu" [ref=e308]:
+              - generic [ref=e309]:
+                - img [ref=e311]
+                - generic [ref=e316]: Rupa u putu
+            - cell "78" [ref=e317]
+            - cell "71" [ref=e318]
+            - cell "91%" [ref=e319]:
+              - generic [ref=e323]: 91%
+            - cell "8.4 h" [ref=e324]
+            - cell "6.240 €" [ref=e325]
+          - row "Oštećena signalizacija 32 30 94% 4.2 h 1.860 €" [ref=e326]:
+            - cell "Oštećena signalizacija" [ref=e327]:
+              - generic [ref=e328]:
+                - img [ref=e330]
+                - generic [ref=e332]: Oštećena signalizacija
+            - cell "32" [ref=e333]
+            - cell "30" [ref=e334]
+            - cell "94%" [ref=e335]:
+              - generic [ref=e339]: 94%
+            - cell "4.2 h" [ref=e340]
+            - cell "1.860 €" [ref=e341]
+          - row "Led / sneg 24 24 100% 1.8 h 1.320 €" [ref=e342]:
+            - cell "Led / sneg" [ref=e343]:
+              - generic [ref=e344]:
+                - img [ref=e346]
+                - generic [ref=e359]: Led / sneg
+            - cell "24" [ref=e360]
+            - cell "24" [ref=e361]
+            - cell "100%" [ref=e362]:
+              - generic [ref=e366]: 100%
+            - cell "1.8 h" [ref=e367]
+            - cell "1.320 €" [ref=e368]
+          - row "Otpad na kolovozu 21 20 95% 1.2 h 740 €" [ref=e369]:
+            - cell "Otpad na kolovozu" [ref=e370]:
+              - generic [ref=e371]:
+                - img [ref=e373]
+                - generic [ref=e376]: Otpad na kolovozu
+            - cell "21" [ref=e377]
+            - cell "20" [ref=e378]
+            - cell "95%" [ref=e379]:
+              - generic [ref=e383]: 95%
+            - cell "1.2 h" [ref=e384]
+            - cell "740 €" [ref=e385]
+          - row "Poplava / klizište 18 16 89% 12.5 h 2.480 €" [ref=e386]:
+            - cell "Poplava / klizište" [ref=e387]:
+              - generic [ref=e388]:
+                - img [ref=e390]
+                - generic [ref=e393]: Poplava / klizište
+            - cell "18" [ref=e394]
+            - cell "16" [ref=e395]
+            - cell "89%" [ref=e396]:
+              - generic [ref=e400]: 89%
+            - cell "12.5 h" [ref=e401]
+            - cell "2.480 €" [ref=e402]
+          - row "Ne radi rasveta 14 11 79% 22.0 h 1.740 €" [ref=e403]:
+            - cell "Ne radi rasveta" [ref=e404]:
+              - generic [ref=e405]:
+                - img [ref=e407]
+                - generic [ref=e411]: Ne radi rasveta
+            - cell "14" [ref=e412]
+            - cell "11" [ref=e413]
+            - cell "79%" [ref=e414]:
+              - generic [ref=e418]: 79%
+            - cell "22.0 h" [ref=e419]
+            - cell "1.740 €" [ref=e420]
+        - rowgroup [ref=e421]:
+          - row "Ukupno 187 172 92% — 14.380 €" [ref=e422]:
+            - cell "Ukupno" [ref=e423]
+            - cell "187" [ref=e424]
+            - cell "172" [ref=e425]
+            - cell "92%" [ref=e426]
+            - cell "—" [ref=e427]
+            - cell "14.380 €" [ref=e428]
+    - generic [ref=e429]:
+      - generic [ref=e430]:
+        - generic [ref=e431]: "05"
+        - generic [ref=e432]:
+          - heading "Učinak ekipa i raspodela troškova" [level=2] [ref=e433]
+          - generic [ref=e434]: Po ekipi i kategorijama troškova
+      - generic [ref=e435]:
+        - generic [ref=e436]:
+          - generic [ref=e437]:
+            - img [ref=e438]
+            - text: Učinak ekipa
+          - table [ref=e443]:
+            - rowgroup [ref=e444]:
+              - row "Ekipa Naloga Sati U roku" [ref=e445]:
+                - columnheader "Ekipa" [ref=e446]
+                - columnheader "Naloga" [ref=e447]
+                - columnheader "Sati" [ref=e448]
+                - columnheader "U roku" [ref=e449]
+            - rowgroup [ref=e450]:
+              - row "Asfalterska ekipa A 32 142 96%" [ref=e451]:
+                - cell "Asfalterska ekipa A" [ref=e452]
+                - cell "32" [ref=e453]
+                - cell "142" [ref=e454]
+                - cell "96%" [ref=e455]
+              - row "Asfalterska ekipa B 28 134 89%" [ref=e456]:
+                - cell "Asfalterska ekipa B" [ref=e457]
+                - cell "28" [ref=e458]
+                - cell "134" [ref=e459]
+                - cell "89%" [ref=e460]
+              - row "Hitna intervencija 22 78 100%" [ref=e461]:
+                - cell "Hitna intervencija" [ref=e462]
+                - cell "22" [ref=e463]
+                - cell "78" [ref=e464]
+                - cell "100%" [ref=e465]
+              - row "Signalizacija 18 64 94%" [ref=e466]:
+                - cell "Signalizacija" [ref=e467]
+                - cell "18" [ref=e468]
+                - cell "64" [ref=e469]
+                - cell "94%" [ref=e470]
+              - row "Zimska služba 1 14 96 92%" [ref=e471]:
+                - cell "Zimska služba 1" [ref=e472]
+                - cell "14" [ref=e473]
+                - cell "96" [ref=e474]
+                - cell "92%" [ref=e475]
+              - row "Ekipa za održavanje 24 88 87%" [ref=e476]:
+                - cell "Ekipa za održavanje" [ref=e477]
+                - cell "24" [ref=e478]
+                - cell "88" [ref=e479]
+                - cell "87%" [ref=e480]
+        - generic [ref=e481]:
+          - generic [ref=e482]:
+            - img [ref=e483]
+            - text: Trošak po kategoriji
+          - img [ref=e488]:
+            - generic [ref=e494]: UKUPNO
+            - generic [ref=e495]: 14.380 €
+          - generic [ref=e496]:
+            - generic [ref=e497]:
+              - generic [ref=e499]: Materijali
+              - generic [ref=e500]: 6.240 €
+            - generic [ref=e501]:
+              - generic [ref=e503]: Rad ekipa
+              - generic [ref=e504]: 5.180 €
+            - generic [ref=e505]:
+              - generic [ref=e507]: Vozila i gorivo
+              - generic [ref=e508]: 1.820 €
+            - generic [ref=e509]:
+              - generic [ref=e511]: Eksterni izvođači
+              - generic [ref=e512]: 740 €
+            - generic [ref=e513]:
+              - generic [ref=e515]: Materijali — zimska služba
+              - generic [ref=e516]: 400 €
+    - generic [ref=e517]:
+      - generic [ref=e518]:
+        - generic [ref=e519]: "06"
+        - generic [ref=e520]:
+          - heading "Hotspot deonice" [level=2] [ref=e521]
+          - generic [ref=e522]: Lokacije sa najviše prijava u periodu
+      - table [ref=e524]:
+        - rowgroup [ref=e525]:
+          - row "# Deonica Prijava Promena vs mart" [ref=e526]:
+            - columnheader "#" [ref=e527]
+            - columnheader "Deonica" [ref=e528]
+            - columnheader "Prijava" [ref=e529]
+            - columnheader "Promena vs mart" [ref=e530]
+        - rowgroup [ref=e531]:
+          - row "1 Bulevar 12. februar 27 +8" [ref=e532]:
+            - cell "1" [ref=e533]
+            - cell "Bulevar 12. februar" [ref=e534]:
+              - generic [ref=e535]:
+                - img [ref=e536]
+                - text: Bulevar 12. februar
+            - cell "27" [ref=e540]
+            - cell "+8" [ref=e541]:
+              - generic [ref=e542]:
+                - img [ref=e543]
+                - text: "+8"
+          - row "2 Selakovac — krivina kod škole 19 +4" [ref=e545]:
+            - cell "2" [ref=e546]
+            - cell "Selakovac — krivina kod škole" [ref=e547]:
+              - generic [ref=e548]:
+                - img [ref=e549]
+                - text: Selakovac — krivina kod škole
+            - cell "19" [ref=e553]
+            - cell "+4" [ref=e554]:
+              - generic [ref=e555]:
+                - img [ref=e556]
+                - text: "+4"
+          - row "3 Most preko Raške — pristup 14 −2" [ref=e558]:
+            - cell "3" [ref=e559]
+            - cell "Most preko Raške — pristup" [ref=e560]:
+              - generic [ref=e561]:
+                - img [ref=e562]
+                - text: Most preko Raške — pristup
+            - cell "14" [ref=e566]
+            - cell "−2" [ref=e567]:
+              - generic [ref=e568]:
+                - img [ref=e569]
+                - text: −2
+          - row "4 Hadžetska ulica 11 +1" [ref=e571]:
+            - cell "4" [ref=e572]
+            - cell "Hadžetska ulica" [ref=e573]:
+              - generic [ref=e574]:
+                - img [ref=e575]
+                - text: Hadžetska ulica
+            - cell "11" [ref=e579]
+            - cell "+1" [ref=e580]:
+              - generic [ref=e581]:
+                - img [ref=e582]
+                - text: "+1"
+          - row "5 Stara čaršija 9 0" [ref=e584]:
+            - cell "5" [ref=e585]
+            - cell "Stara čaršija" [ref=e586]:
+              - generic [ref=e587]:
+                - img [ref=e588]
+                - text: Stara čaršija
+            - cell "9" [ref=e592]
+            - cell "0" [ref=e593]:
+              - generic [ref=e594]: "0"
+          - row "6 Obilaznica · izlaz Tutin 6 −3" [ref=e595]:
+            - cell "6" [ref=e596]
+            - cell "Obilaznica · izlaz Tutin" [ref=e597]:
+              - generic [ref=e598]:
+                - img [ref=e599]
+                - text: Obilaznica · izlaz Tutin
+            - cell "6" [ref=e603]
+            - cell "−3" [ref=e604]:
+              - generic [ref=e605]:
+                - img [ref=e606]
+                - text: −3
+          - row "7 Postenje · autobuska 5 5 +2" [ref=e608]:
+            - cell "7" [ref=e609]
+            - cell "Postenje · autobuska 5" [ref=e610]:
+              - generic [ref=e611]:
+                - img [ref=e612]
+                - text: Postenje · autobuska 5
+            - cell "5" [ref=e616]
+            - cell "+2" [ref=e617]:
+              - generic [ref=e618]:
+                - img [ref=e619]
+                - text: "+2"
+    - generic [ref=e621]:
+      - generic [ref=e622]:
+        - generic [ref=e623]: "07"
+        - generic [ref=e624]:
+          - heading "Stanje resursa" [level=2] [ref=e625]
+          - generic [ref=e626]: Vozila, radnici i zalihe na kraju perioda
+      - generic [ref=e627]:
+        - generic [ref=e628]:
+          - generic [ref=e629]:
+            - img [ref=e631]
+            - generic [ref=e636]: Vozila
+          - generic [ref=e637]:
+            - generic [ref=e638]:
+              - generic [ref=e639]: Ukupno u floti
+              - generic [ref=e640]: "10"
+            - generic [ref=e641]:
+              - generic [ref=e642]: Aktivno u operativi
+              - generic [ref=e643]: "8"
+            - generic [ref=e644]:
+              - generic [ref=e645]: U servisu
+              - generic [ref=e646]: "1"
+            - generic [ref=e647]:
+              - generic [ref=e648]: Predloženo otpisivanje
+              - generic [ref=e649]: "1"
+        - generic [ref=e650]:
+          - generic [ref=e651]:
+            - img [ref=e653]
+            - generic [ref=e658]: Radnici
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: Aktivnih u smeni
+              - generic [ref=e662]: 12 / 15
+            - generic [ref=e663]:
+              - generic [ref=e664]: Sertifikati ističu (90 dana)
+              - generic [ref=e665]: "3"
+            - generic [ref=e666]:
+              - generic [ref=e667]: Prosečan staž
+              - generic [ref=e668]: 10.4 g.
+            - generic [ref=e669]:
+              - generic [ref=e670]: Bolovanje / odmor
+              - generic [ref=e671]: "2"
+        - generic [ref=e672]:
+          - generic [ref=e673]:
+            - img [ref=e675]
+            - generic [ref=e677]: Zalihe
+          - generic [ref=e678]:
+            - generic [ref=e679]:
+              - generic [ref=e680]: Vrednost zaliha
+              - generic [ref=e681]: 23.200 €
+            - generic [ref=e682]:
+              - generic [ref=e683]: Stavki ispod praga
+              - generic [ref=e684]: "9"
+            - generic [ref=e685]:
+              - generic [ref=e686]: Kritično (hitno naručiti)
+              - generic [ref=e687]: "3"
+            - generic [ref=e688]:
+              - generic [ref=e689]: Aktivnih depoa
+              - generic [ref=e690]: "3"
+    - generic [ref=e691]:
+      - generic [ref=e692]:
+        - generic [ref=e693]: "08"
+        - heading "Preporuke i prioriteti za maj" [level=2] [ref=e695]
+      - list [ref=e696]:
+        - listitem [ref=e697]:
+          - generic [ref=e699]:
+            - generic [ref=e700]: VISOK PRIORITET
+            - strong [ref=e701]: Bulevar 12. februar
+            - text: "— 27 prijava u mesecu (+8 vs mart). Predlog: planirati frezovanje i preasfaltiranje od km 0+200 do 1+850 u prvoj polovini maja."
+        - listitem [ref=e702]:
+          - generic [ref=e704]:
+            - generic [ref=e705]: VISOK PRIORITET
+            - strong [ref=e706]: Selakovac — krivina kod škole
+            - text: "označen kao crna tačka. Predlog: ugradnja zvučnih traka i zamena horizontalne signalizacije."
+        - listitem [ref=e707]:
+          - generic [ref=e709]:
+            - generic [ref=e710]: SREDNJI
+            - text: Topli asfalt i LED reflektori u kritičnim zalihama — narudžba do 5. maja kako se ne bi blokirale ekipe.
+        - listitem [ref=e711]:
+          - generic [ref=e713]:
+            - generic [ref=e714]: SREDNJI
+            - text: Kiper-2 (NP 112-QR) u servisu — proceniti opravdanost remonta vs nabavke novog vozila u Q3.
+        - listitem [ref=e715]:
+          - generic [ref=e717]:
+            - generic [ref=e718]: NIZAK
+            - text: "3 sertifikata radnika ističu u narednih 90 dana (CPC vozača: 1, ZNR II: 1, MEH: 1) — pokrenuti obnovu."
+    - generic [ref=e719]:
+      - generic [ref=e720]:
+        - generic [ref=e721]:
+          - generic [ref=e722]: Sastavio izveštaj
+          - generic [ref=e723]:
+            - generic [ref=e724]: Aleksandar Pavlović
+            - generic [ref=e725]: Šef dispečerskog centra
+        - generic [ref=e726]:
+          - generic [ref=e727]: Pregledao
+          - generic [ref=e728]:
+            - generic [ref=e729]: Jovana Stanković
+            - generic [ref=e730]: Tehnička služba
+        - generic [ref=e731]:
+          - generic [ref=e732]: Odobrio
+          - generic [ref=e733]:
+            - generic [ref=e734]: ime i prezime
+            - generic [ref=e735]: Direktor
+      - generic [ref=e736]:
+        - generic [ref=e737]: RPT-2026-04-NPZ · generisano 01.05.2026. u 09:14 · sistem Putevi NP
+        - generic [ref=e738]: strana 1/1

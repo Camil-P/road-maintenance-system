@@ -20,6 +20,14 @@ import { UserManagementPage } from "./features/users/pages/UserManagementPage";
 import { UsersListPage } from "./features/users/pages/UsersListPage";
 import { ProfilePage } from "./features/profile/pages/ProfilePage";
 import { MapPage } from "./features/map/pages/MapPage";
+import { IncidentsInboxPage } from "./features/incidents/pitch/IncidentsInboxPage";
+import { WorkOrdersBoardPage } from "./features/workOrders/pitch/WorkOrdersBoardPage";
+import { ManagerDashboardPage as PitchManagerDashboard } from "./features/dashboard/pitch/ManagerDashboardPage";
+import { FleetMapPage } from "./features/fleet/pitch/FleetMapPage";
+import { RoadSegmentsPage as PitchRoadSegmentsPage } from "./features/roadSegments/pitch/RoadSegmentsPage";
+import { NewsAdminPage } from "./features/news/pitch/NewsAdminPage";
+import { ResourcesPage } from "./features/resources/pitch/ResourcesPage";
+import { MonthlyReportPage } from "./features/reports/pitch/MonthlyReportPage";
 
 function RequireAuth() {
   if (!isAuthenticated()) {
@@ -30,6 +38,13 @@ function RequireAuth() {
       <Outlet />
     </AppLayout>
   );
+}
+
+function RequireAuthBare() {
+  if (!isAuthenticated()) {
+    return <Navigate to="/login" replace />;
+  }
+  return <Outlet />;
 }
 
 function DashboardRedirect() {
@@ -106,11 +121,6 @@ export const router = createBrowserRouter([
         path: "/my-workorders",
         element: <MyWorkOrdersPage />,
       },
-      // Map
-      {
-        path: "/map",
-        element: <MapPage />,
-      },
       // Road segments
       {
         path: "/roadsegments",
@@ -145,6 +155,48 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+    ],
+  },
+  // Citizen map — full-screen, no dashboard chrome
+  {
+    element: <RequireAuthBare />,
+    children: [
+      {
+        path: "/map",
+        element: <MapPage />,
+      },
+      {
+        path: "/pitch/incidents",
+        element: <IncidentsInboxPage />,
+      },
+      {
+        path: "/pitch/workorders",
+        element: <WorkOrdersBoardPage />,
+      },
+      {
+        path: "/pitch/dashboard",
+        element: <PitchManagerDashboard />,
+      },
+      {
+        path: "/pitch/fleet",
+        element: <FleetMapPage />,
+      },
+      {
+        path: "/pitch/segments",
+        element: <PitchRoadSegmentsPage />,
+      },
+      {
+        path: "/pitch/news",
+        element: <NewsAdminPage />,
+      },
+      {
+        path: "/pitch/resources",
+        element: <ResourcesPage />,
+      },
+      {
+        path: "/pitch/report",
+        element: <MonthlyReportPage />,
       },
     ],
   },

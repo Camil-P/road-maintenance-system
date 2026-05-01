@@ -118,6 +118,62 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes slideLeft {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Fleet vehicle markers */
+.veh-marker {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+.veh-marker:hover { transform: translateY(-1px) scale(1.05); }
+.veh-marker.selected { transform: scale(1.15); }
+.veh-marker .veh-arrow {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform-origin: center 17px;
+  transform: translateX(-50%);
+}
+.veh-marker .veh-dot {
+  position: absolute;
+  inset: 6px;
+  border-radius: 999px;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.veh-marker.pulsing .veh-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.25;
+  animation: citizen-pulse 2s ease-out infinite;
+}
+.veh-marker .veh-label {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #1A1C22;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  letter-spacing: 0.02em;
+}
+
 /* Scrollbar polish */
 .nice-scroll::-webkit-scrollbar { width: 6px; }
 .nice-scroll::-webkit-scrollbar-thumb {
@@ -128,3 +184,35 @@
 /* Safe areas */
 .safe-top { padding-top: max(env(safe-area-inset-top), 0px); }
 .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 0px); }
+
+/* Printable monthly report */
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  html, body { background: white !important; }
+  .report-toolbar, nav, .print\:hidden { display: none !important; }
+  .report-page-bg { background: white !important; padding: 0 !important; }
+  .report-document {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    ring: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+  .report-document section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .report-document .maplibregl-canvas-container,
+  .report-document .maplibregl-control-container {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+.report-clean .report-toolbar { display: none; }
+.report-clean .report-page-bg { padding-top: 28px; }

@@ -1,0 +1,171 @@
+- generic [ref=e1]:
+  - region "Map" [ref=e3]
+  - generic [ref=e4] [cursor=pointer]:
+    - generic [ref=e5]:
+      - generic [ref=e9]: NOVOSTI
+      - generic [ref=e10]: · UŽIVO · GRADSKE SLUŽBE
+      - generic [ref=e11]:
+        - text: 5/8
+        - img [ref=e12]
+    - generic [ref=e278]:
+      - generic [ref=e279]: Sanacija klizišta na obilaznici završena
+      - generic [ref=e280]: Saobraćaj normalan u oba smera od 14:00.
+  - generic [ref=e18]:
+    - button "Moje prijave" [ref=e19]:
+      - img [ref=e20]
+      - generic [ref=e21]: "8"
+    - button "Centriraj na moju lokaciju" [ref=e22]:
+      - img [ref=e23]
+    - button "Slojevi mape" [ref=e25]:
+      - img [ref=e26]
+  - button "Primetili opasnost? Prijavite" [ref=e31]:
+    - img [ref=e33]
+    - generic [ref=e35]:
+      - generic [ref=e36]: Primetili opasnost?
+      - generic [ref=e37]: Prijavite
+  - generic [ref=e283]:
+    - generic [ref=e286]:
+      - img [ref=e288]
+      - generic [ref=e289]:
+        - generic [ref=e290]: MOJE PRIJAVE
+        - generic [ref=e291]: 8 poslato
+        - generic [ref=e292]: Hvala što pomažete da grad ostane u pokretu.
+      - button "Zatvori" [ref=e293]:
+        - img [ref=e294]
+    - list [ref=e298]:
+      - listitem [ref=e299]:
+        - button "Rupa u putu Ekipa na terenu Ulica 13. jula br. 8 \"Velika rupa pored autobuskog stajališta\" pre 2 dana Pogledaj na mapi" [ref=e300]:
+          - generic [ref=e301]:
+            - img [ref=e303]
+            - generic [ref=e308]:
+              - generic [ref=e309]:
+                - generic [ref=e310]: Rupa u putu
+                - generic [ref=e311]: Ekipa na terenu
+              - generic [ref=e313]: Ulica 13. jula br. 8
+              - generic [ref=e314]: "\"Velika rupa pored autobuskog stajališta\""
+              - generic [ref=e317]:
+                - generic [ref=e318]:
+                  - img [ref=e319]
+                  - text: pre 2 dana
+                - generic [ref=e322]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e323]
+      - listitem [ref=e326]:
+        - button "Oštećena signalizacija Rešeno Trg slobode / Ulica 7. jula \"Nedostajao znak prvenstva prolaza\" pre nedelju dana Pogledaj na mapi" [ref=e327]:
+          - generic [ref=e328]:
+            - img [ref=e330]
+            - generic [ref=e332]:
+              - generic [ref=e333]:
+                - generic [ref=e334]: Oštećena signalizacija
+                - generic [ref=e335]: Rešeno
+              - generic [ref=e337]: Trg slobode / Ulica 7. jula
+              - generic [ref=e338]: "\"Nedostajao znak prvenstva prolaza\""
+              - generic [ref=e341]:
+                - generic [ref=e342]:
+                  - img [ref=e343]
+                  - text: pre nedelju dana
+                - generic [ref=e346]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e347]
+      - listitem [ref=e350]:
+        - button "Ne radi rasveta Primljeno Bulevar 12. februar br. 22 \"Ulična lampa treperi celu noć\" pre 3 sata Pogledaj na mapi" [ref=e351]:
+          - generic [ref=e352]:
+            - img [ref=e354]
+            - generic [ref=e358]:
+              - generic [ref=e359]:
+                - generic [ref=e360]: Ne radi rasveta
+                - generic [ref=e361]: Primljeno
+              - generic [ref=e363]: Bulevar 12. februar br. 22
+              - generic [ref=e364]: "\"Ulična lampa treperi celu noć\""
+              - generic [ref=e367]:
+                - generic [ref=e368]:
+                  - img [ref=e369]
+                  - text: pre 3 sata
+                - generic [ref=e372]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e373]
+      - listitem [ref=e376]:
+        - button "Otpad na kolovozu Ekipa na terenu Obilaznica — izlaz ka Tutinu \"Granje na desnoj traci\" juče Pogledaj na mapi" [ref=e377]:
+          - generic [ref=e378]:
+            - img [ref=e380]
+            - generic [ref=e383]:
+              - generic [ref=e384]:
+                - generic [ref=e385]: Otpad na kolovozu
+                - generic [ref=e386]: Ekipa na terenu
+              - generic [ref=e388]: Obilaznica — izlaz ka Tutinu
+              - generic [ref=e389]: "\"Granje na desnoj traci\""
+              - generic [ref=e392]:
+                - generic [ref=e393]:
+                  - img [ref=e394]
+                  - text: juče
+                - generic [ref=e397]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e398]
+      - listitem [ref=e401]:
+        - button "Rupa u putu Rešeno Ulica Stevana Nemanje br. 4 \"Saniran udar pored autobuskog stajališta\" pre 12 dana Pogledaj na mapi" [ref=e402]:
+          - generic [ref=e403]:
+            - img [ref=e405]
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - generic [ref=e412]: Rupa u putu
+                - generic [ref=e413]: Rešeno
+              - generic [ref=e415]: Ulica Stevana Nemanje br. 4
+              - generic [ref=e416]: "\"Saniran udar pored autobuskog stajališta\""
+              - generic [ref=e419]:
+                - generic [ref=e420]:
+                  - img [ref=e421]
+                  - text: pre 12 dana
+                - generic [ref=e424]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e425]
+      - listitem [ref=e428]:
+        - button "Led / sneg Rešeno Most preko Raške \"Ekipa zimske službe je posula put\" prošle nedelje Pogledaj na mapi" [ref=e429]:
+          - generic [ref=e430]:
+            - img [ref=e432]
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - generic [ref=e447]: Led / sneg
+                - generic [ref=e448]: Rešeno
+              - generic [ref=e450]: Most preko Raške
+              - generic [ref=e451]: "\"Ekipa zimske službe je posula put\""
+              - generic [ref=e454]:
+                - generic [ref=e455]:
+                  - img [ref=e456]
+                  - text: prošle nedelje
+                - generic [ref=e459]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e460]
+      - listitem [ref=e463]:
+        - button "Poplava / klizište Ekipa na terenu Ulica Hadžetska br. 17 \"Slivnik začepljen — voda na kolovozu\" pre 5 sati Pogledaj na mapi" [ref=e464]:
+          - generic [ref=e465]:
+            - img [ref=e467]
+            - generic [ref=e470]:
+              - generic [ref=e471]:
+                - generic [ref=e472]: Poplava / klizište
+                - generic [ref=e473]: Ekipa na terenu
+              - generic [ref=e475]: Ulica Hadžetska br. 17
+              - generic [ref=e476]: "\"Slivnik začepljen — voda na kolovozu\""
+              - generic [ref=e479]:
+                - generic [ref=e480]:
+                  - img [ref=e481]
+                  - text: pre 5 sati
+                - generic [ref=e484]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e485]
+      - listitem [ref=e488]:
+        - button "Oštećena signalizacija Primljeno Selakovac — krivina kod škole \"Nedostaje znak za ograničenje brzine 30\" jutros Pogledaj na mapi" [ref=e489]:
+          - generic [ref=e490]:
+            - img [ref=e492]
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e496]: Oštećena signalizacija
+                - generic [ref=e497]: Primljeno
+              - generic [ref=e499]: Selakovac — krivina kod škole
+              - generic [ref=e500]: "\"Nedostaje znak za ograničenje brzine 30\""
+              - generic [ref=e503]:
+                - generic [ref=e504]:
+                  - img [ref=e505]
+                  - text: jutros
+                - generic [ref=e508]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e509]

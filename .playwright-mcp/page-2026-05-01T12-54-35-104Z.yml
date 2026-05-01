@@ -1,0 +1,75 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - region "Map" [ref=e4]
+    - button "Map marker" [ref=e5] [cursor=pointer]:
+      - img [ref=e6]
+    - button "Map marker" [ref=e11] [cursor=pointer]:
+      - img [ref=e12]
+    - button "Map marker" [ref=e17] [cursor=pointer]:
+      - img [ref=e18]
+    - button "Map marker" [ref=e20] [cursor=pointer]:
+      - img [ref=e21]
+    - button "Map marker" [ref=e25] [cursor=pointer]:
+      - img [ref=e26]
+    - button "Map marker" [ref=e29] [cursor=pointer]:
+      - img [ref=e30]
+    - button "Map marker" [ref=e43] [cursor=pointer]:
+      - img [ref=e44]
+    - button "Map marker" [ref=e49] [cursor=pointer]:
+      - img [ref=e50]
+    - button "Map marker" [ref=e53] [cursor=pointer]:
+      - img [ref=e54]
+    - button "Map marker" [ref=e59] [cursor=pointer]:
+      - img [ref=e60]
+    - button "Map marker" [ref=e62] [cursor=pointer]:
+      - img [ref=e63]
+    - button "Map marker" [ref=e68] [cursor=pointer]:
+      - img [ref=e69]
+    - button "Map marker" [ref=e72] [cursor=pointer]:
+      - img [ref=e73]
+    - button "Map marker" [ref=e77] [cursor=pointer]:
+      - img [ref=e78]
+    - button "Map marker" [ref=e83] [cursor=pointer]:
+      - img [ref=e84]
+    - button "Map marker" [ref=e87] [cursor=pointer]:
+      - img [ref=e88]
+    - button "Map marker" [ref=e91] [cursor=pointer]:
+      - img [ref=e92]
+    - button "Map marker" [ref=e97] [cursor=pointer]:
+      - img [ref=e98]
+    - button "Map marker" [ref=e100] [cursor=pointer]:
+      - img [ref=e101]
+    - button "Map marker" [ref=e105] [cursor=pointer]:
+      - img [ref=e106]
+    - button "Map marker" [ref=e115] [cursor=pointer]:
+      - img [ref=e116]
+    - button "Map marker" [ref=e120] [cursor=pointer]:
+      - img [ref=e121]
+    - button "Map marker" [ref=e130] [cursor=pointer]:
+      - img [ref=e131]
+    - button "Map marker" [ref=e135] [cursor=pointer]:
+      - img [ref=e136]
+    - button "Map marker" [ref=e145]
+  - generic [ref=e146] [cursor=pointer]:
+    - generic [ref=e147]:
+      - generic [ref=e151]: ZATVORENO
+      - generic [ref=e152]: · UŽIVO · GRADSKE SLUŽBE
+      - generic [ref=e153]:
+        - text: 1/8
+        - img [ref=e154]
+    - generic [ref=e157]:
+      - generic [ref=e158]: Ulica Stevana Nemanje zatvorena 3—5
+      - generic [ref=e159]: Hitan rad na vodovodu. Otvaranje očekivano u 18:00.
+  - generic [ref=e160]:
+    - button "Moje prijave" [ref=e161]:
+      - img [ref=e162]
+      - generic [ref=e163]: "8"
+    - button "Centriraj na moju lokaciju" [ref=e164]:
+      - img [ref=e165]
+    - button "Slojevi mape" [ref=e167]:
+      - img [ref=e168]
+  - button "Primetili opasnost? Prijavite" [ref=e173]:
+    - img [ref=e175]
+    - generic [ref=e177]:
+      - generic [ref=e178]: Primetili opasnost?
+      - generic [ref=e179]: Prijavite

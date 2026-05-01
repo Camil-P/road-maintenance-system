@@ -1,0 +1,103 @@
+- generic [ref=e23]:
+  - region "Map" [ref=e25]
+  - generic [ref=e26] [cursor=pointer]:
+    - generic [ref=e27]:
+      - generic [ref=e31]: NOVOSTI
+      - generic [ref=e32]: · UŽIVO · GRADSKE SLUŽBE
+      - generic [ref=e33]:
+        - text: 5/5
+        - img [ref=e34]
+    - generic [ref=e66]:
+      - generic [ref=e67]: Sanacija klizišta na obilaznici završena
+      - generic [ref=e68]: Saobraćaj normalan u oba smera od 14:00.
+  - generic [ref=e40]:
+    - button "Moje prijave" [active] [ref=e41]:
+      - img [ref=e42]
+      - generic [ref=e43]: "4"
+    - button "Centriraj na moju lokaciju" [ref=e44]:
+      - img [ref=e45]
+    - button "Slojevi mape" [ref=e47]:
+      - img [ref=e48]
+  - button "Primetili opasnost? Prijavite" [ref=e53]:
+    - img [ref=e55]
+    - generic [ref=e57]:
+      - generic [ref=e58]: Primetili opasnost?
+      - generic [ref=e59]: Prijavite
+  - generic [ref=e71]:
+    - generic [ref=e74]:
+      - img [ref=e76]
+      - generic [ref=e77]:
+        - generic [ref=e78]: MOJE PRIJAVE
+        - generic [ref=e79]: 4 poslato
+        - generic [ref=e80]: Hvala što pomažete da grad ostane u pokretu.
+      - button "Zatvori" [ref=e81]:
+        - img [ref=e82]
+    - list [ref=e86]:
+      - listitem [ref=e87]:
+        - button "Rupa u putu Ekipa na terenu Ulica 13. jula br. 8 \"Velika rupa pored autobuskog stajališta\" pre 2 dana Pogledaj na mapi" [ref=e88]:
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e98]: Rupa u putu
+                - generic [ref=e99]: Ekipa na terenu
+              - generic [ref=e101]: Ulica 13. jula br. 8
+              - generic [ref=e102]: "\"Velika rupa pored autobuskog stajališta\""
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - img [ref=e107]
+                  - text: pre 2 dana
+                - generic [ref=e110]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e111]
+      - listitem [ref=e114]:
+        - button "Oštećena signalizacija Rešeno Trg slobode / Ulica 7. jula \"Nedostajao znak prvenstva prolaza\" pre nedelju dana Pogledaj na mapi" [ref=e115]:
+          - generic [ref=e116]:
+            - img [ref=e118]
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]: Oštećena signalizacija
+                - generic [ref=e123]: Rešeno
+              - generic [ref=e125]: Trg slobode / Ulica 7. jula
+              - generic [ref=e126]: "\"Nedostajao znak prvenstva prolaza\""
+              - generic [ref=e129]:
+                - generic [ref=e130]:
+                  - img [ref=e131]
+                  - text: pre nedelju dana
+                - generic [ref=e134]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e135]
+      - listitem [ref=e138]:
+        - button "Ne radi rasveta Primljeno Bulevar 12. februar \"Ulična lampa treperi celu noć\" pre 3 sata Pogledaj na mapi" [ref=e139]:
+          - generic [ref=e140]:
+            - img [ref=e142]
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: Ne radi rasveta
+                - generic [ref=e149]: Primljeno
+              - generic [ref=e151]: Bulevar 12. februar
+              - generic [ref=e152]: "\"Ulična lampa treperi celu noć\""
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - img [ref=e157]
+                  - text: pre 3 sata
+                - generic [ref=e160]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e161]
+      - listitem [ref=e164]:
+        - button "Otpad na kolovozu Ekipa na terenu Obilaznica, izlaz ka Tutinu \"Granje na desnoj traci\" juče Pogledaj na mapi" [ref=e165]:
+          - generic [ref=e166]:
+            - img [ref=e168]
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: Otpad na kolovozu
+                - generic [ref=e174]: Ekipa na terenu
+              - generic [ref=e176]: Obilaznica, izlaz ka Tutinu
+              - generic [ref=e177]: "\"Granje na desnoj traci\""
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - img [ref=e182]
+                  - text: juče
+                - generic [ref=e185]:
+                  - text: Pogledaj na mapi
+                  - img [ref=e186]

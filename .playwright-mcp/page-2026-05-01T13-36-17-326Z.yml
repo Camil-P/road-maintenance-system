@@ -1,0 +1,378 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e9]:
+          - generic [ref=e10]: Operativa · Radni nalozi
+          - generic [ref=e11]: Tabla naloga · danas
+      - generic [ref=e12]:
+        - img [ref=e13]
+        - textbox "Pretraži po nalogu, naslovu ili adresi…" [ref=e16]
+      - generic [ref=e17]:
+        - button "Filteri" [ref=e18]:
+          - img [ref=e19]
+          - text: Filteri
+        - button "Sortiraj" [ref=e21]:
+          - img [ref=e22]
+          - text: Sortiraj
+        - button "Novi nalog" [ref=e26]:
+          - img [ref=e27]
+          - text: Novi nalog
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - img [ref=e31]
+          - text: U toku sada
+        - generic [ref=e34]: "3"
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - img [ref=e37]
+          - text: Završeno danas
+        - generic [ref=e40]: "2"
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - img [ref=e43]
+          - text: Prosečno trajanje
+        - generic [ref=e46]: 3.4 h
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - img [ref=e49]
+          - text: Trošak ovog ciklusa
+        - generic [ref=e54]: 3.800 €
+  - generic [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e61]: Kreirano
+          - generic [ref=e62]: "2"
+        - button "+ Dodaj" [ref=e63]
+      - generic [ref=e64]:
+        - button "Pre u toku Posle VISOK Zamena znaka Postavljanje znaka „Stop\" Trg slobode 3 Signalizacija Renault Master · 2 članova sutra 08:00 210 € WO-1039 Detalji" [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - img [ref=e69]:
+                  - generic [ref=e78]: STOP
+                - generic [ref=e79]: Pre
+              - generic [ref=e80]:
+                - generic [ref=e82]: u toku
+                - generic [ref=e83]: Posle
+            - generic [ref=e85]:
+              - img [ref=e86]
+              - text: VISOK
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - img [ref=e91]
+              - generic [ref=e93]:
+                - generic [ref=e94]: Zamena znaka
+                - generic [ref=e95]: Postavljanje znaka „Stop"
+                - generic [ref=e96]: Trg slobode 3
+            - generic [ref=e97]:
+              - img [ref=e99]
+              - generic [ref=e104]:
+                - generic [ref=e105]: Signalizacija
+                - generic [ref=e106]: Renault Master · 2 članova
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - img [ref=e109]
+                - text: sutra 08:00
+              - generic [ref=e113]:
+                - img [ref=e114]
+                - text: 210 €
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - img [ref=e121]
+                - text: WO-1039
+              - generic [ref=e124]:
+                - text: Detalji
+                - img [ref=e125]
+        - button "Pre u toku Posle VISOK Krpljenje asfalta Hitno krpljenje — autobuska ruta Postenje — autobuska linija 5 Asfalterska ekipa A Iveco Daily 4x4 · 4 članova sutra 06:30 290 € WO-1038 Detalji" [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e150]: Pre
+              - generic [ref=e151]:
+                - generic [ref=e153]: u toku
+                - generic [ref=e154]: Posle
+            - generic [ref=e156]:
+              - img [ref=e157]
+              - text: VISOK
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - img [ref=e162]
+              - generic [ref=e167]:
+                - generic [ref=e168]: Krpljenje asfalta
+                - generic [ref=e169]: Hitno krpljenje — autobuska ruta
+                - generic [ref=e170]: Postenje — autobuska linija 5
+            - generic [ref=e171]:
+              - img [ref=e173]
+              - generic [ref=e178]:
+                - generic [ref=e179]: Asfalterska ekipa A
+                - generic [ref=e180]: Iveco Daily 4x4 · 4 članova
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - img [ref=e183]
+                - text: sutra 06:30
+              - generic [ref=e187]:
+                - img [ref=e188]
+                - text: 290 €
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - img [ref=e195]
+                - text: WO-1038
+              - generic [ref=e198]:
+                - text: Detalji
+                - img [ref=e199]
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - generic [ref=e205]: U toku
+          - generic [ref=e206]: "3"
+        - button "+ Dodaj" [ref=e207]
+      - generic [ref=e208]:
+        - button "Pre u toku Posle HITNO Čišćenje snega Posipanje soli — pristup mostu Most preko Raške — pristup Zimska služba 1 Mercedes Unimog · 3 članova danas 09:00 320 € WO-1042 Detalji" [ref=e209]:
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - img [ref=e213]
+                - generic [ref=e246]: Pre
+              - generic [ref=e247]:
+                - generic [ref=e249]: u toku
+                - generic [ref=e250]: Posle
+            - generic [ref=e252]:
+              - img [ref=e253]
+              - text: HITNO
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - img [ref=e258]
+              - generic [ref=e271]:
+                - generic [ref=e272]: Čišćenje snega
+                - generic [ref=e273]: Posipanje soli — pristup mostu
+                - generic [ref=e274]: Most preko Raške — pristup
+            - generic [ref=e275]:
+              - img [ref=e277]
+              - generic [ref=e282]:
+                - generic [ref=e283]: Zimska služba 1
+                - generic [ref=e284]: Mercedes Unimog · 3 članova
+            - generic [ref=e285]:
+              - generic [ref=e286]:
+                - img [ref=e287]
+                - text: danas 09:00
+              - generic [ref=e291]:
+                - img [ref=e292]
+                - text: 320 €
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - img [ref=e299]
+                - text: WO-1042
+              - generic [ref=e302]:
+                - text: Detalji
+                - img [ref=e303]
+        - button "Pre u toku Posle VISOK Čišćenje slivnika Sanacija manjeg klizišta Hadžetska 17 Hitna intervencija Land Rover Defender · 3 članova danas 07:30 480 € WO-1041 Detalji" [ref=e305]:
+          - generic [ref=e306]:
+            - generic [ref=e307]:
+              - generic [ref=e308]:
+                - img [ref=e309]
+                - generic [ref=e329]: Pre
+              - generic [ref=e330]:
+                - generic [ref=e332]: u toku
+                - generic [ref=e333]: Posle
+            - generic [ref=e335]:
+              - img [ref=e336]
+              - text: VISOK
+          - generic [ref=e338]:
+            - generic [ref=e339]:
+              - img [ref=e341]
+              - generic [ref=e344]:
+                - generic [ref=e345]: Čišćenje slivnika
+                - generic [ref=e346]: Sanacija manjeg klizišta
+                - generic [ref=e347]: Hadžetska 17
+            - generic [ref=e348]:
+              - img [ref=e350]
+              - generic [ref=e355]:
+                - generic [ref=e356]: Hitna intervencija
+                - generic [ref=e357]: Land Rover Defender · 3 članova
+            - generic [ref=e358]:
+              - generic [ref=e359]:
+                - img [ref=e360]
+                - text: danas 07:30
+              - generic [ref=e364]:
+                - img [ref=e365]
+                - text: 480 €
+            - generic [ref=e370]:
+              - generic [ref=e371]:
+                - img [ref=e372]
+                - text: WO-1041
+              - generic [ref=e375]:
+                - text: Detalji
+                - img [ref=e376]
+        - button "Pre u toku Posle NORMALAN Krpljenje asfalta Krpljenje udarnih rupa — Selakovac Selakovac — krivina kod škole Asfalterska ekipa A Iveco Daily 4x4 · 4 članova danas 09:30 540 € WO-1040 Detalji" [ref=e378]:
+          - generic [ref=e379]:
+            - generic [ref=e380]:
+              - generic [ref=e381]:
+                - img [ref=e382]
+                - generic [ref=e401]: Pre
+              - generic [ref=e402]:
+                - generic [ref=e404]: u toku
+                - generic [ref=e405]: Posle
+            - generic [ref=e407]:
+              - img [ref=e408]
+              - text: NORMALAN
+          - generic [ref=e409]:
+            - generic [ref=e410]:
+              - img [ref=e412]
+              - generic [ref=e417]:
+                - generic [ref=e418]: Krpljenje asfalta
+                - generic [ref=e419]: Krpljenje udarnih rupa — Selakovac
+                - generic [ref=e420]: Selakovac — krivina kod škole
+            - generic [ref=e421]:
+              - img [ref=e423]
+              - generic [ref=e428]:
+                - generic [ref=e429]: Asfalterska ekipa A
+                - generic [ref=e430]: Iveco Daily 4x4 · 4 članova
+            - generic [ref=e431]:
+              - generic [ref=e432]:
+                - img [ref=e433]
+                - text: danas 09:30
+              - generic [ref=e437]:
+                - img [ref=e438]
+                - text: 540 €
+            - generic [ref=e443]:
+              - generic [ref=e444]:
+                - img [ref=e445]
+                - text: WO-1040
+              - generic [ref=e448]:
+                - text: Detalji
+                - img [ref=e449]
+    - generic [ref=e451]:
+      - generic [ref=e452]:
+        - generic [ref=e453]:
+          - generic [ref=e455]: Završeno
+          - generic [ref=e456]: "3"
+        - button "+ Dodaj" [ref=e457]
+      - generic [ref=e458]:
+        - button "Pre Posle NORMALAN Uklanjanje otpada Uklanjanje gume sa kolovoza Obilaznica — izlaz Tutin Ekipa za održavanje VW Crafter · 3 članova juče 15:00 0.6 h 60 € WO-1037 Detalji" [ref=e459]:
+          - generic [ref=e460]:
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - img [ref=e463]
+                - generic [ref=e477]: Pre
+              - generic [ref=e478]:
+                - img [ref=e479]
+                - generic [ref=e487]: Posle
+            - generic [ref=e489]:
+              - img [ref=e490]
+              - text: NORMALAN
+          - generic [ref=e491]:
+            - generic [ref=e492]:
+              - img [ref=e494]
+              - generic [ref=e497]:
+                - generic [ref=e498]: Uklanjanje otpada
+                - generic [ref=e499]: Uklanjanje gume sa kolovoza
+                - generic [ref=e500]: Obilaznica — izlaz Tutin
+            - generic [ref=e501]:
+              - img [ref=e503]
+              - generic [ref=e508]:
+                - generic [ref=e509]: Ekipa za održavanje
+                - generic [ref=e510]: VW Crafter · 3 članova
+            - generic [ref=e511]:
+              - generic [ref=e512]:
+                - img [ref=e513]
+                - text: juče 15:00
+              - generic [ref=e517]:
+                - img [ref=e518]
+                - text: 0.6 h
+              - generic [ref=e521]:
+                - img [ref=e522]
+                - text: 60 €
+            - generic [ref=e527]:
+              - generic [ref=e528]:
+                - img [ref=e529]
+                - text: WO-1037
+              - generic [ref=e532]:
+                - text: Detalji
+                - img [ref=e533]
+        - button "Pre Posle NORMALAN Krpljenje asfalta Krpljenje rupe — 13. jula Ulica 13. jula 8 Asfalterska ekipa B MAN TGM · 5 članova pre 2 dana 09:00 4.4 h 1.180 € WO-1036 Detalji" [ref=e535]:
+          - generic [ref=e536]:
+            - generic [ref=e537]:
+              - generic [ref=e538]:
+                - img [ref=e539]
+                - generic [ref=e558]: Pre
+              - generic [ref=e559]:
+                - img [ref=e560]
+                - generic [ref=e576]: Posle
+            - generic [ref=e578]:
+              - img [ref=e579]
+              - text: NORMALAN
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - img [ref=e583]
+              - generic [ref=e588]:
+                - generic [ref=e589]: Krpljenje asfalta
+                - generic [ref=e590]: Krpljenje rupe — 13. jula
+                - generic [ref=e591]: Ulica 13. jula 8
+            - generic [ref=e592]:
+              - img [ref=e594]
+              - generic [ref=e599]:
+                - generic [ref=e600]: Asfalterska ekipa B
+                - generic [ref=e601]: MAN TGM · 5 članova
+            - generic [ref=e602]:
+              - generic [ref=e603]:
+                - img [ref=e604]
+                - text: pre 2 dana 09:00
+              - generic [ref=e608]:
+                - img [ref=e609]
+                - text: 4.4 h
+              - generic [ref=e612]:
+                - img [ref=e613]
+                - text: 1.180 €
+            - generic [ref=e618]:
+              - generic [ref=e619]:
+                - img [ref=e620]
+                - text: WO-1036
+              - generic [ref=e623]:
+                - text: Detalji
+                - img [ref=e624]
+        - button "Pre Posle NIZAK Servis rasvete Zamena 6 LED reflektora Selakovac — Borisa Kidriča Signalizacija Renault Master · 2 članova pre 3 dana 22:00 5.2 h 720 € WO-1035 Detalji" [ref=e626]:
+          - generic [ref=e627]:
+            - generic [ref=e628]:
+              - generic [ref=e629]:
+                - img [ref=e630]
+                - generic [ref=e642]: Pre
+              - generic [ref=e643]:
+                - img [ref=e644]
+                - generic [ref=e659]: Posle
+            - generic [ref=e661]:
+              - img [ref=e662]
+              - text: NIZAK
+          - generic [ref=e664]:
+            - generic [ref=e665]:
+              - img [ref=e667]
+              - generic [ref=e671]:
+                - generic [ref=e672]: Servis rasvete
+                - generic [ref=e673]: Zamena 6 LED reflektora
+                - generic [ref=e674]: Selakovac — Borisa Kidriča
+            - generic [ref=e675]:
+              - img [ref=e677]
+              - generic [ref=e682]:
+                - generic [ref=e683]: Signalizacija
+                - generic [ref=e684]: Renault Master · 2 članova
+            - generic [ref=e685]:
+              - generic [ref=e686]:
+                - img [ref=e687]
+                - text: pre 3 dana 22:00
+              - generic [ref=e691]:
+                - img [ref=e692]
+                - text: 5.2 h
+              - generic [ref=e695]:
+                - img [ref=e696]
+                - text: 720 €
+            - generic [ref=e701]:
+              - generic [ref=e702]:
+                - img [ref=e703]
+                - text: WO-1035
+              - generic [ref=e706]:
+                - text: Detalji
+                - img [ref=e707]

@@ -1,0 +1,271 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - generic [ref=e11]: Komunikacije · Vesti
+        - generic [ref=e12]: Obaveštenja za građane
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - img [ref=e16]
+          - text: Pregleda
+        - generic [ref=e19]: "22.480"
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - img [ref=e22]
+          - text: Doseg
+        - generic [ref=e27]: "27.712"
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e30]
+          - text: Aktivno
+        - generic [ref=e33]: "4"
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - text: Zakazano
+        - generic [ref=e40]: "1"
+    - button "Nova objava" [ref=e41]:
+      - img [ref=e42]
+      - text: Nova objava
+  - main [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - button "Sve 7" [ref=e46]:
+          - text: Sve
+          - generic [ref=e47]: "7"
+        - button "Zatvoreno 2" [ref=e48]:
+          - text: Zatvoreno
+          - generic [ref=e50]: "2"
+        - button "Upozorenje 2" [ref=e51]:
+          - text: Upozorenje
+          - generic [ref=e53]: "2"
+        - button "Radovi 1" [ref=e54]:
+          - text: Radovi
+          - generic [ref=e56]: "1"
+        - button "Informacija 2" [ref=e57]:
+          - text: Informacija
+          - generic [ref=e59]: "2"
+      - generic [ref=e60]:
+        - button "Zatvoreno Objavljeno Pin · Svi korisnici Ulica Stevana Nemanje zatvorena 15:00 — 18:00 Hitan rad na vodovodnoj instalaciji. Obilaznica preko ulice 13. jula. Pratite preusmeravanja. danas 09:14 · 4.218 · 5.102 AP Aleksandar P." [ref=e61]:
+          - generic [ref=e62]:
+            - img [ref=e64]
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: Zatvoreno
+                - generic [ref=e69]: Objavljeno
+                - generic [ref=e70]:
+                  - img [ref=e71]
+                  - text: Pin
+                - generic [ref=e73]: · Svi korisnici
+              - generic [ref=e74]: Ulica Stevana Nemanje zatvorena 15:00 — 18:00
+              - generic [ref=e75]: Hitan rad na vodovodnoj instalaciji. Obilaznica preko ulice 13. jula. Pratite preusmeravanja.
+              - generic [ref=e76]:
+                - generic [ref=e77]:
+                  - img [ref=e78]
+                  - text: danas 09:14
+                - generic [ref=e81]: ·
+                - generic [ref=e82]:
+                  - img [ref=e83]
+                  - text: "4.218"
+                - generic [ref=e86]: ·
+                - generic [ref=e87]:
+                  - img [ref=e88]
+                  - text: "5.102"
+                - generic [ref=e93]:
+                  - generic [ref=e94]: AP
+                  - text: Aleksandar P.
+        - 'button "Upozorenje Objavljeno · Vozači Upozorenje: poledica na pristupu mostu Ekipa zimske službe trenutno soli kolovoz. Smanjite brzinu i držite odstojanje. danas 07:48 · 2.740 · 3.960 VK Dispečer · Vladan K." [ref=e95]':
+          - generic [ref=e96]:
+            - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e102]: Upozorenje
+                - generic [ref=e103]: Objavljeno
+                - generic [ref=e104]: · Vozači
+              - generic [ref=e105]: "Upozorenje: poledica na pristupu mostu"
+              - generic [ref=e106]: Ekipa zimske službe trenutno soli kolovoz. Smanjite brzinu i držite odstojanje.
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - img [ref=e109]
+                  - text: danas 07:48
+                - generic [ref=e112]: ·
+                - generic [ref=e113]:
+                  - img [ref=e114]
+                  - text: "2.740"
+                - generic [ref=e117]: ·
+                - generic [ref=e118]:
+                  - img [ref=e119]
+                  - text: "3.960"
+                - generic [ref=e124]:
+                  - generic [ref=e125]: VK
+                  - text: Dispečer · Vladan K.
+        - button "Radovi Zakazano · Vozači Asfaltiranje noću — Ulica 13. jula Jedna traka zatvorena 22:00 — 05:00. Lokalni saobraćaj omogućen, koristite Karađorđevu kao obilaznicu. danas 21:30 AP Aleksandar P." [ref=e126]:
+          - generic [ref=e127]:
+            - img [ref=e129]
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - generic [ref=e133]: Radovi
+                - generic [ref=e134]: Zakazano
+                - generic [ref=e135]: · Vozači
+              - generic [ref=e136]: Asfaltiranje noću — Ulica 13. jula
+              - generic [ref=e137]: Jedna traka zatvorena 22:00 — 05:00. Lokalni saobraćaj omogućen, koristite Karađorđevu kao obilaznicu.
+              - generic [ref=e138]:
+                - generic [ref=e139]:
+                  - img [ref=e140]
+                  - text: danas 21:30
+                - generic [ref=e143]:
+                  - generic [ref=e144]: AP
+                  - text: Aleksandar P.
+        - button "Informacija Objavljeno · Svi korisnici Sanacija klizišta na obilaznici završena Saobraćaj normalizovan u oba smera od 14:00. Hvala na strpljenju. juče 14:08 · 6.312 · 7.220 AP Aleksandar P." [ref=e145]:
+          - generic [ref=e146]:
+            - img [ref=e148]
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - generic [ref=e153]: Informacija
+                - generic [ref=e154]: Objavljeno
+                - generic [ref=e155]: · Svi korisnici
+              - generic [ref=e156]: Sanacija klizišta na obilaznici završena
+              - generic [ref=e157]: Saobraćaj normalizovan u oba smera od 14:00. Hvala na strpljenju.
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - img [ref=e160]
+                  - text: juče 14:08
+                - generic [ref=e163]: ·
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - text: "6.312"
+                - generic [ref=e168]: ·
+                - generic [ref=e169]:
+                  - img [ref=e170]
+                  - text: "7.220"
+                - generic [ref=e175]:
+                  - generic [ref=e176]: AP
+                  - text: Aleksandar P.
+        - button "Upozorenje Nacrt · Svi korisnici Najavljeno nevreme — pripremite se Po prognozi, jak vetar i kiša u toku noći. Ekipe spremne za hitne intervencije do jutra. Nacrt MT Marija T. · komunikacije" [ref=e177]:
+          - generic [ref=e178]:
+            - img [ref=e180]
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e184]: Upozorenje
+                - generic [ref=e185]: Nacrt
+                - generic [ref=e186]: · Svi korisnici
+              - generic [ref=e187]: Najavljeno nevreme — pripremite se
+              - generic [ref=e188]: Po prognozi, jak vetar i kiša u toku noći. Ekipe spremne za hitne intervencije do jutra.
+              - generic [ref=e189]:
+                - generic [ref=e190]:
+                  - img [ref=e191]
+                  - text: Nacrt
+                - generic [ref=e194]:
+                  - generic [ref=e195]: MT
+                  - text: Marija T. · komunikacije
+        - 'button "Zatvoreno Objavljeno Pin · Vozači Most preko Raške — zatvoren u smeru ka centru Remont kolovoza. Obilaznica preko Sutjeske ulice. Trajanje: do srede 16:00. pre 2 dana 06:30 · 9.210 · 11.430 AP Aleksandar P." [ref=e196]':
+          - generic [ref=e197]:
+            - img [ref=e199]
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - generic [ref=e203]: Zatvoreno
+                - generic [ref=e204]: Objavljeno
+                - generic [ref=e205]:
+                  - img [ref=e206]
+                  - text: Pin
+                - generic [ref=e208]: · Vozači
+              - generic [ref=e209]: Most preko Raške — zatvoren u smeru ka centru
+              - generic [ref=e210]: "Remont kolovoza. Obilaznica preko Sutjeske ulice. Trajanje: do srede 16:00."
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - text: pre 2 dana 06:30
+                - generic [ref=e216]: ·
+                - generic [ref=e217]:
+                  - img [ref=e218]
+                  - text: "9.210"
+                - generic [ref=e221]: ·
+                - generic [ref=e222]:
+                  - img [ref=e223]
+                  - text: "11.430"
+                - generic [ref=e228]:
+                  - generic [ref=e229]: AP
+                  - text: Aleksandar P.
+        - button "Informacija Arhivirano · Stanovnici Postavljena nova signalizacija — Hadžet Saobraćajni znaci postavljeni na 4 raskrsnice. Vozite oprezno. pre 11 dana MT Marija T. · komunikacije" [ref=e230]:
+          - generic [ref=e231]:
+            - img [ref=e233]
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - generic [ref=e238]: Informacija
+                - generic [ref=e239]: Arhivirano
+                - generic [ref=e240]: · Stanovnici
+              - generic [ref=e241]: Postavljena nova signalizacija — Hadžet
+              - generic [ref=e242]: Saobraćajni znaci postavljeni na 4 raskrsnice. Vozite oprezno.
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - img [ref=e245]
+                  - text: pre 11 dana
+                - generic [ref=e248]:
+                  - generic [ref=e249]: MT
+                  - text: Marija T. · komunikacije
+    - complementary [ref=e250]:
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - generic [ref=e253]: Zatvoreno · Centar
+          - generic [ref=e254]: Ulica Stevana Nemanje zatvorena 15:00 — 18:00
+          - generic [ref=e255]: Hitan rad na vodovodnoj instalaciji. Obilaznica preko ulice 13. jula. Pratite preusmeravanja.
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: Status
+              - generic [ref=e260]: Objavljeno
+            - generic [ref=e261]:
+              - generic [ref=e262]: Publika
+              - text: Svi korisnici
+            - generic [ref=e263]:
+              - generic [ref=e264]: Autor
+              - generic [ref=e265]:
+                - generic [ref=e266]: AP
+                - generic [ref=e267]: Aleksandar P.
+            - generic [ref=e268]:
+              - generic [ref=e269]: Objavljeno
+              - generic [ref=e270]:
+                - img [ref=e271]
+                - text: danas 09:14
+            - generic [ref=e274]:
+              - generic [ref=e275]: Ističe
+              - generic [ref=e276]:
+                - img [ref=e277]
+                - text: danas 18:00
+            - generic [ref=e281]:
+              - generic [ref=e282]: Prikaz
+              - generic [ref=e283]:
+                - img [ref=e284]
+                - text: Zakačeno na vrh
+          - generic [ref=e286]:
+            - generic [ref=e287]: Performanse
+            - generic [ref=e288]:
+              - generic [ref=e289]:
+                - generic [ref=e290]:
+                  - img [ref=e291]
+                  - text: Pregledi
+                - generic [ref=e294]: "4.218"
+              - generic [ref=e295]:
+                - generic [ref=e296]:
+                  - img [ref=e297]
+                  - text: Doseg
+                - generic [ref=e302]: "5.102"
+            - generic [ref=e303]:
+              - text: CTR
+              - generic [ref=e304]: 82.7%
+              - text: · prosečno 176 pregleda na sat
+          - generic [ref=e305]:
+            - button "Izmeni" [ref=e306]:
+              - img [ref=e307]
+              - text: Izmeni
+            - button "Otkači" [ref=e310]:
+              - img [ref=e311]
+              - text: Otkači
+            - button "Otvori javni prikaz" [ref=e313]:
+              - img [ref=e314]
+              - text: Otvori javni prikaz
+            - button "Arhiviraj" [ref=e317]:
+              - img [ref=e318]
+              - text: Arhiviraj

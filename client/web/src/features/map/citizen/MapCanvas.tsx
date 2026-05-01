@@ -1,17 +1,33 @@
 import { useEffect, useRef, useState } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { AlertTriangle } from "lucide-react";
 import maplibregl, { type Map as MLMap, Marker } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Hazard, IncidentTypeId, UserLocation, WorkSegment } from "./types";
-import { CITY_CENTER } from "./data";
+import { CITY_CENTER, INCIDENT_TYPES } from "./data";
+import { Icons } from "./icons";
 import { setFlyTo } from "./mapBridge";
+
+export interface MapVehicleMarker {
+  id: string;
+  lng: number;
+  lat: number;
+  heading: number;
+  color: string;
+  label: string;
+  pulsing?: boolean;
+  selected?: boolean;
+}
 
 interface Props {
   hazards: Hazard[];
   workSegments?: WorkSegment[];
   userLocation: UserLocation | null;
   pendingLocation?: UserLocation | null;
+  vehicles?: MapVehicleMarker[];
   onHazardClick?: (h: Hazard) => void;
   onSegmentClick?: (id: string) => void;
+  onVehicleClick?: (id: string) => void;
 }
 
 const SEV_COLOR: Record<WorkSegment["severity"], string> = {
@@ -25,8 +41,10 @@ export function MapCanvas({
   workSegments = [],
   userLocation,
   pendingLocation,
+  vehicles = [],
   onHazardClick,
   onSegmentClick,
+  onVehicleClick,
 }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MLMap | null>(null);
@@ -34,6 +52,7 @@ export function MapCanvas({
   const segMarkersRef = useRef<Record<string, { start: Marker; end: Marker }>>({});
   const userMarkerRef = useRef<Marker | null>(null);
   const pendingMarkerRef = useRef<Marker | null>(null);
+  const vehicleMarkersRef = useRef<Record<string, Marker>>({});
   const [styleReady, setStyleReady] = useState(false);
 
   // Init map
@@ -68,7 +87,7 @@ export function MapCanvas({
         ],
       },
       center: CITY_CENTER,
-      zoom: 14.2,
+      zoom: 13.4,
       pitch: 0,
       attributionControl: false,
       dragRotate: false,
@@ -90,7 +109,7 @@ export function MapCanvas({
         type: "line",
         source: "work-segments",
         layout: { "line-cap": "round", "line-join": "round" },
-        paint: { "line-color": "#ffffff", "line-width": 10, "line-opacity": 0.6 },
+        paint: { "line-color": "#ffffff", "line-width": 8, "line-opacity": 0.6 },
       });
 
       map.addLayer({
@@ -100,7 +119,7 @@ export function MapCanvas({
         layout: { "line-cap": "round", "line-join": "round" },
         paint: {
           "line-color": ["get", "color"],
-          "line-width": 6,
+          "line-width": 5,
           "line-opacity": 0.95,
         },
       });
@@ -112,7 +131,7 @@ export function MapCanvas({
         layout: { "line-cap": "butt", "line-join": "round" },
         paint: {
           "line-color": "#ffffff",
-          "line-width": 2,
+          "line-width": 1.5,
           "line-dasharray": [1.5, 2],
           "line-opacity": ["case", ["==", ["get", "severity"], "closure"], 0.9, 0.0],
         },
@@ -140,6 +159,12 @@ export function MapCanvas({
       setFlyTo(null);
       map.remove();
       mapRef.current = null;
+      markersRef.current = {};
+      segMarkersRef.current = {};
+      userMarkerRef.current = null;
+      pendingMarkerRef.current = null;
+      vehicleMarkersRef.current = {};
+      setStyleReady(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -300,6 +325,55 @@ export function MapCanvas({
     }
   }, [pendingLocation]);
 
+  // Vehicle markers
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const active = new Set<string>();
+    vehicles.forEach((v) => {
+      active.add(v.id);
+      const existing = vehicleMarkersRef.current[v.id];
+      if (existing) {
+        existing.setLngLat([v.lng, v.lat]);
+        const el = existing.getElement();
+        const arrow = el.querySelector<HTMLElement>(".veh-arrow");
+        if (arrow) arrow.style.transform = `rotate(${v.heading}deg)`;
+        el.classList.toggle("selected", !!v.selected);
+        el.classList.toggle("pulsing", !!v.pulsing);
+        const dot = el.querySelector<HTMLElement>(".veh-dot");
+        if (dot) dot.style.background = v.color;
+        return;
+      }
+
+      const el = document.createElement("div");
+      el.className = `veh-marker ${v.selected ? "selected" : ""} ${v.pulsing ? "pulsing" : ""}`;
+      el.innerHTML = `
+        <div class="veh-arrow" style="transform: rotate(${v.heading}deg)">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L20 22 L12 17 L4 22 Z" fill="${v.color}" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="veh-dot" style="background:${v.color}"></div>
+        <div class="veh-label">${v.label}</div>
+      `;
+      el.addEventListener("click", (e) => {
+        e.stopPropagation();
+        onVehicleClick?.(v.id);
+      });
+
+      const marker = new maplibregl.Marker({ element: el, anchor: "center" })
+        .setLngLat([v.lng, v.lat])
+        .addTo(map);
+      vehicleMarkersRef.current[v.id] = marker;
+    });
+
+    Object.keys(vehicleMarkersRef.current).forEach((id) => {
+      if (!active.has(id)) {
+        vehicleMarkersRef.current[id].remove();
+        delete vehicleMarkersRef.current[id];
+      }
+    });
+  }, [vehicles, onVehicleClick]);
+
   return <div ref={containerRef} className="absolute inset-0 h-full w-full" />;
 }
 
@@ -324,18 +398,8 @@ function endpointSvg(kind: "start" | "end", color: string) {
 }
 
 function iconSvgForType(type: IncidentTypeId) {
-  const stroke = type === "ice" || type === "sign" ? "#0A0B0D" : "white";
-  const paths: Record<IncidentTypeId, string> = {
-    pothole:
-      '<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 12a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="2" fill="none"/>',
-    ice: '<path d="M12 2v20M4 6l16 12M4 18L20 6M2 12h20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>',
-    sign: '<path d="M12 3v4M7 7h10l3 4-3 4H7l-3-4 3-4z M12 11v9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
-    debris:
-      '<path d="M4 8h16l-1 12H5L4 8z M9 4h6v4H9z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
-    flood:
-      '<path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
-    light:
-      '<path d="M9 18h6M10 21h4M8 9a4 4 0 1 1 8 0c0 2-2 3-2 5H10c0-2-2-3-2-5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
-  };
-  return `<svg width="18" height="18" viewBox="0 0 24 24" style="color:${stroke}">${paths[type] || paths.pothole}</svg>`;
+  const meta = INCIDENT_TYPES.find((t) => t.id === type) ?? INCIDENT_TYPES[0];
+  const Icon = Icons[meta.icon] ?? AlertTriangle;
+  const color = type === "ice" || type === "sign" ? "#0A0B0D" : "white";
+  return renderToStaticMarkup(<Icon size={18} color={color} strokeWidth={2.2} />);
 }

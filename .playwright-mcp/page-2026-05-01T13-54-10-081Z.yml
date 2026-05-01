@@ -1,0 +1,303 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e11]:
+        - generic [ref=e12]: Operativa · Resursi
+        - generic [ref=e13]: Vozila, radnici i oprema
+    - generic [ref=e14]:
+      - button "Vozila 10" [ref=e15]:
+        - img [ref=e16]
+        - text: Vozila
+        - generic [ref=e21]: "10"
+      - button "Radnici 15" [ref=e22]:
+        - img [ref=e23]
+        - text: Radnici
+        - generic [ref=e28]: "15"
+      - button "Oprema i materijali 24" [ref=e29]:
+        - img [ref=e30]
+        - text: Oprema i materijali
+        - generic [ref=e33]: "24"
+    - generic [ref=e34]:
+      - img [ref=e35]
+      - textbox "Pretraži po registraciji, pozivnom znaku, vozaču…" [ref=e38]
+    - button "Novo vozilo" [ref=e39]:
+      - img [ref=e40]
+      - text: Novo vozilo
+  - main [ref=e41]:
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - img [ref=e47]
+              - text: Aktivna vozila
+            - generic [ref=e52]: 8/10
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - img [ref=e55]
+              - text: Knjig. vrednost
+            - generic [ref=e60]: 286k €
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - img [ref=e63]
+              - text: Godišnji trošak
+            - generic [ref=e65]: 63.0k €
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - img [ref=e68]
+              - text: Aktivne alarmne stavke
+            - generic [ref=e70]: "3"
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]: Vozilo
+            - generic [ref=e74]: Ekipa / vozač
+            - generic [ref=e75]: Status
+            - generic [ref=e76]: Pređeno
+            - generic [ref=e77]: Reg / TP
+            - generic [ref=e78]: Trošak
+          - generic [ref=e79]:
+            - 'button "AsfaltA-1 · NP 042-AB Iveco Daily 4x4 70C18 · 2021 Asfalterska ekipa A Slobodan M. Na terenu 84.320 km R: 2026-08-14 TP: 2026-08-14 7.2k €" [ref=e80]':
+              - generic [ref=e81]:
+                - img [ref=e83]
+                - generic [ref=e88]:
+                  - generic [ref=e89]: AsfaltA-1 · NP 042-AB
+                  - generic [ref=e90]: Iveco Daily 4x4 70C18 · 2021
+              - generic [ref=e91]:
+                - generic [ref=e92]: Asfalterska ekipa A
+                - generic [ref=e93]: Slobodan M.
+              - generic [ref=e95]: Na terenu
+              - generic [ref=e97]: 84.320 km
+              - generic [ref=e98]:
+                - generic [ref=e99]: "R: 2026-08-14"
+                - generic [ref=e100]: "TP: 2026-08-14"
+              - generic [ref=e101]: 7.2k €
+            - 'button "Zima-1 · NP 308-EF Mercedes-Benz Unimog U400 · 2018 Zimska služba 1 Đorđe S. Na putu 142.500 km R: 2026-11-22 TP: 2026-05-30 12.5k €" [ref=e102]':
+              - generic [ref=e103]:
+                - img [ref=e105]
+                - generic [ref=e110]:
+                  - generic [ref=e111]: Zima-1 · NP 308-EF
+                  - generic [ref=e112]: Mercedes-Benz Unimog U400 · 2018
+              - generic [ref=e113]:
+                - generic [ref=e114]: Zimska služba 1
+                - generic [ref=e115]: Đorđe S.
+              - generic [ref=e117]: Na putu
+              - generic [ref=e119]: 142.500 km
+              - generic [ref=e120]:
+                - generic [ref=e121]: "R: 2026-11-22"
+                - generic [ref=e122]: "TP: 2026-05-30"
+              - generic [ref=e123]: 12.5k €
+            - 'button "Hitna-1 · NP 113-CD Land Rover Defender 130 · 2022 Hitna intervencija Vladan K. Na terenu 38.940 km R: 2027-01-10 TP: 2027-01-10 5.2k €" [ref=e124]':
+              - generic [ref=e125]:
+                - img [ref=e127]
+                - generic [ref=e132]:
+                  - generic [ref=e133]: Hitna-1 · NP 113-CD
+                  - generic [ref=e134]: Land Rover Defender 130 · 2022
+              - generic [ref=e135]:
+                - generic [ref=e136]: Hitna intervencija
+                - generic [ref=e137]: Vladan K.
+              - generic [ref=e139]: Na terenu
+              - generic [ref=e141]: 38.940 km
+              - generic [ref=e142]:
+                - generic [ref=e143]: "R: 2027-01-10"
+                - generic [ref=e144]: "TP: 2027-01-10"
+              - generic [ref=e145]: 5.2k €
+            - 'button "AsfaltB-1 · NP 075-IJ MAN TGM 18.290 · 2017 Asfalterska ekipa B Mirko P. Povratak 218.400 km R: 2026-06-18 TP: 2026-06-18 9.3k €" [ref=e146]':
+              - generic [ref=e147]:
+                - img [ref=e149]
+                - generic [ref=e154]:
+                  - generic [ref=e155]: AsfaltB-1 · NP 075-IJ
+                  - generic [ref=e156]: MAN TGM 18.290 · 2017
+              - generic [ref=e157]:
+                - generic [ref=e158]: Asfalterska ekipa B
+                - generic [ref=e159]: Mirko P.
+              - generic [ref=e161]: Povratak
+              - generic [ref=e163]: 218.400 km
+              - generic [ref=e164]:
+                - generic [ref=e165]: "R: 2026-06-18"
+                - generic [ref=e166]: "TP: 2026-06-18"
+              - generic [ref=e167]: 9.3k €
+            - 'button "Sig-1 · NP 220-GH Renault Master L3H2 · 2020 Signalizacija Jelena R. Slobodno 96.280 km R: 2026-12-04 TP: 2026-12-04 3.1k €" [ref=e168]':
+              - generic [ref=e169]:
+                - img [ref=e171]
+                - generic [ref=e176]:
+                  - generic [ref=e177]: Sig-1 · NP 220-GH
+                  - generic [ref=e178]: Renault Master L3H2 · 2020
+              - generic [ref=e179]:
+                - generic [ref=e180]: Signalizacija
+                - generic [ref=e181]: Jelena R.
+              - generic [ref=e183]: Slobodno
+              - generic [ref=e185]: 96.280 km
+              - generic [ref=e186]:
+                - generic [ref=e187]: "R: 2026-12-04"
+                - generic [ref=e188]: "TP: 2026-12-04"
+              - generic [ref=e189]: 3.1k €
+            - 'button "Servis-2 · NP 154-KL Volkswagen Crafter 35 · 2019 Ekipa za održavanje Dragan T. Slobodno 124.850 km R: 2026-10-11 TP: 2026-10-11 3.8k €" [ref=e190]':
+              - generic [ref=e191]:
+                - img [ref=e193]
+                - generic [ref=e198]:
+                  - generic [ref=e199]: Servis-2 · NP 154-KL
+                  - generic [ref=e200]: Volkswagen Crafter 35 · 2019
+              - generic [ref=e201]:
+                - generic [ref=e202]: Ekipa za održavanje
+                - generic [ref=e203]: Dragan T.
+              - generic [ref=e205]: Slobodno
+              - generic [ref=e207]: 124.850 km
+              - generic [ref=e208]:
+                - generic [ref=e209]: "R: 2026-10-11"
+                - generic [ref=e210]: "TP: 2026-10-11"
+              - generic [ref=e211]: 3.8k €
+            - 'button "Patrola-1 · NP 401-MN Dacia Duster 4x4 · 2023 Putna patrola Marko D. Na putu 24.380 km R: 2027-04-02 TP: 2027-04-02 1.8k €" [ref=e212]':
+              - generic [ref=e213]:
+                - img [ref=e215]
+                - generic [ref=e220]:
+                  - generic [ref=e221]: Patrola-1 · NP 401-MN
+                  - generic [ref=e222]: Dacia Duster 4x4 · 2023
+              - generic [ref=e223]:
+                - generic [ref=e224]: Putna patrola
+                - generic [ref=e225]: Marko D.
+              - generic [ref=e227]: Na putu
+              - generic [ref=e229]: 24.380 km
+              - generic [ref=e230]:
+                - generic [ref=e231]: "R: 2027-04-02"
+                - generic [ref=e232]: "TP: 2027-04-02"
+              - generic [ref=e233]: 1.8k €
+            - 'button "Kiper-1 · NP 268-OP FAP 1418 6x4 · 2015 Transport Stefan B. Van smene 312.600 km R: 2026-09-25 TP: 2026-09-25 8.6k €" [ref=e234]':
+              - generic [ref=e235]:
+                - img [ref=e237]
+                - generic [ref=e242]:
+                  - generic [ref=e243]: Kiper-1 · NP 268-OP
+                  - generic [ref=e244]: FAP 1418 6x4 · 2015
+              - generic [ref=e245]:
+                - generic [ref=e246]: Transport
+                - generic [ref=e247]: Stefan B.
+              - generic [ref=e249]: Van smene
+              - generic [ref=e251]: 312.600 km
+              - generic [ref=e252]:
+                - generic [ref=e253]: "R: 2026-09-25"
+                - generic [ref=e254]: "TP: 2026-09-25"
+              - generic [ref=e255]: 8.6k €
+            - 'button "Kiper-2 · NP 112-QR MAN TGS 33.480 · 2020 Transport — U servisu 168.400 km R: 2026-11-08 TP: 2026-11-08 7.3k €" [ref=e256]':
+              - generic [ref=e257]:
+                - img [ref=e259]
+                - generic [ref=e264]:
+                  - generic [ref=e265]: Kiper-2 · NP 112-QR
+                  - generic [ref=e266]: MAN TGS 33.480 · 2020
+              - generic [ref=e267]:
+                - generic [ref=e268]: Transport
+                - generic [ref=e269]: —
+              - generic [ref=e271]: U servisu
+              - generic [ref=e273]: 168.400 km
+              - generic [ref=e274]:
+                - generic [ref=e275]: "R: 2026-11-08"
+                - generic [ref=e276]: "TP: 2026-11-08"
+              - generic [ref=e277]: 7.3k €
+            - 'button "Pres-1 · NP 089-ST Ford Transit Custom · 2014 — — Otpisano 386.200 km R: — TP: — 4.2k €" [ref=e278]':
+              - generic [ref=e279]:
+                - img [ref=e281]
+                - generic [ref=e286]:
+                  - generic [ref=e287]: Pres-1 · NP 089-ST
+                  - generic [ref=e288]: Ford Transit Custom · 2014
+              - generic [ref=e289]:
+                - generic [ref=e290]: —
+                - generic [ref=e291]: —
+              - generic [ref=e293]: Otpisano
+              - generic [ref=e295]: 386.200 km
+              - generic [ref=e296]:
+                - generic [ref=e297]: "R: —"
+                - generic [ref=e298]: "TP: —"
+              - generic [ref=e299]: 4.2k €
+      - complementary [ref=e300]:
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - generic [ref=e303]:
+              - img [ref=e305]
+              - generic [ref=e310]:
+                - generic [ref=e311]: Pozicije vozila
+                - generic [ref=e312]: 8 u operativi
+            - generic [ref=e313]:
+              - generic [ref=e316]: Slobodno
+              - generic [ref=e319]: Na putu
+              - generic [ref=e322]: Na terenu
+          - generic [ref=e325]:
+            - region "Map" [ref=e326]
+            - button "Map marker" [ref=e327]
+            - button "Map marker" [ref=e328] [cursor=pointer]:
+              - img [ref=e330]
+              - generic: AsfaltA-1
+            - button "Map marker" [ref=e333] [cursor=pointer]:
+              - img [ref=e335]
+              - generic: Zima-1
+            - button "Map marker" [ref=e338] [cursor=pointer]:
+              - img [ref=e340]
+              - generic: Hitna-1
+            - button "Map marker" [ref=e343] [cursor=pointer]:
+              - img [ref=e345]
+              - generic: AsfaltB-1
+            - button "Map marker" [ref=e348] [cursor=pointer]:
+              - img [ref=e350]
+              - generic: Sig-1
+            - button "Map marker" [ref=e353] [cursor=pointer]:
+              - img [ref=e355]
+              - generic: Servis-2
+            - button "Map marker" [ref=e358] [cursor=pointer]:
+              - img [ref=e360]
+              - generic: Patrola-1
+            - button "Map marker" [ref=e363] [cursor=pointer]:
+              - img [ref=e365]
+              - generic: Kiper-1
+        - generic [ref=e368]:
+          - generic [ref=e369]:
+            - img [ref=e371]
+            - generic [ref=e376]:
+              - generic [ref=e377]: Asfaltni kamion
+              - generic [ref=e378]: AsfaltA-1
+              - generic [ref=e379]: Iveco Daily 4x4 70C18 · 2021 (5 g.) · NP 042-AB
+          - generic [ref=e380]:
+            - generic [ref=e381]:
+              - generic [ref=e382]:
+                - img [ref=e383]
+                - text: Pređeno
+              - generic [ref=e386]: 84.320 km
+            - generic [ref=e387]:
+              - generic [ref=e388]:
+                - img [ref=e389]
+                - text: Potrošnja
+              - generic [ref=e392]: 18.4 L/100
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - img [ref=e395]
+                - text: Godišnji trošak
+              - generic [ref=e400]: 7.240 €
+          - generic [ref=e401]:
+            - generic [ref=e402]:
+              - generic [ref=e403]: Registracija
+              - generic [ref=e404]:
+                - img [ref=e405]
+                - text: 2026-08-14
+            - generic [ref=e409]:
+              - generic [ref=e410]: Tehnički pregled
+              - generic [ref=e411]:
+                - img [ref=e412]
+                - text: 2026-08-14
+            - generic [ref=e416]:
+              - generic [ref=e417]: Datum nabavke
+              - generic [ref=e418]: 2021-04-12
+            - generic [ref=e419]:
+              - generic [ref=e420]: Nabavna cena
+              - generic [ref=e421]: 64.500 €
+          - generic [ref=e422]:
+            - generic [ref=e423]:
+              - generic [ref=e424]: Knjigovodstvena vrednost
+              - generic [ref=e425]: 41.200 €
+            - generic [ref=e428]:
+              - text: Amortizovano
+              - generic [ref=e429]: 36%
+              - text: · ostatak vrednosti 64%
+          - generic [ref=e430]:
+            - button "Servisna istorija" [ref=e431]:
+              - img [ref=e432]
+              - text: Servisna istorija
+            - button "Trošak po nalogu" [ref=e434]:
+              - img [ref=e435]
+              - text: Trošak po nalogu

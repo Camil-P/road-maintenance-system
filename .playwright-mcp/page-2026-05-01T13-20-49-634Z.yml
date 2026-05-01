@@ -1,0 +1,262 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e12]:
+        - generic [ref=e13]: Putevi NP · Manager
+        - generic [ref=e14]: Pregled za danas, 1. maj 2026
+    - navigation [ref=e15]:
+      - link "Pregled" [ref=e16] [cursor=pointer]:
+        - /url: /pitch/dashboard
+        - img [ref=e17]
+        - text: Pregled
+      - link "Prijave" [ref=e22] [cursor=pointer]:
+        - /url: /pitch/incidents
+        - img [ref=e23]
+        - text: Prijave
+      - link "Nalozi" [ref=e26] [cursor=pointer]:
+        - /url: /pitch/workorders
+        - img [ref=e27]
+        - text: Nalozi
+      - link "Flota" [ref=e30] [cursor=pointer]:
+        - /url: /pitch/fleet
+        - img [ref=e31]
+        - text: Flota
+      - link "Vesti" [ref=e36] [cursor=pointer]:
+        - /url: /pitch/news
+        - img [ref=e37]
+        - text: Vesti
+    - generic [ref=e40]:
+      - button "4" [ref=e41]:
+        - img [ref=e42]
+        - generic [ref=e45]: "4"
+      - generic [ref=e46]:
+        - generic [ref=e47]: AP
+        - generic [ref=e48]:
+          - generic [ref=e49]: Aleksandar P.
+          - generic [ref=e50]: Dispečer · uprava
+  - main [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img [ref=e56]
+          - generic [ref=e59]:
+            - img [ref=e60]
+            - text: "+3"
+        - generic [ref=e63]: Nove prijave
+        - generic [ref=e64]: "4"
+        - generic [ref=e65]: od jutros
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - img [ref=e69]
+          - generic [ref=e71]:
+            - img [ref=e72]
+            - text: −1 vs juče
+        - generic [ref=e75]: Aktivni radovi
+        - generic [ref=e76]: "3"
+        - generic [ref=e77]: 4/6 ekipa slobodno
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - generic [ref=e84]:
+            - img [ref=e85]
+            - text: −18%
+        - generic [ref=e88]: Prosečno vreme odziva
+        - generic [ref=e89]: 42 min
+        - generic [ref=e90]: poslednjih 7 dana
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - img [ref=e94]
+          - generic [ref=e99]:
+            - img [ref=e100]
+            - text: 65% iskorišćeno
+        - generic [ref=e103]: Trošak ovog meseca
+        - generic [ref=e104]: 14.380 €
+        - generic [ref=e105]: budžet 22.000 €
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - img [ref=e111]
+            - generic [ref=e113]:
+              - generic [ref=e114]: Mapa regiona
+              - generic [ref=e115]: Live prikaz prijava i radova
+          - link "Otvori inbox" [ref=e116] [cursor=pointer]:
+            - /url: /pitch/incidents
+            - text: Otvori inbox
+            - img [ref=e117]
+        - generic [ref=e119]:
+          - generic [ref=e121]:
+            - region "Map" [ref=e122]
+            - button "Map marker" [ref=e123] [cursor=pointer]:
+              - img [ref=e124]
+            - button "Map marker" [ref=e129] [cursor=pointer]:
+              - img [ref=e130]
+            - button "Map marker" [ref=e132] [cursor=pointer]:
+              - img [ref=e133]
+            - button "Map marker" [ref=e146] [cursor=pointer]:
+              - img [ref=e147]
+            - button "Map marker" [ref=e150] [cursor=pointer]:
+              - img [ref=e151]
+            - button "Map marker" [ref=e155] [cursor=pointer]:
+              - img [ref=e156]
+            - button "Map marker" [ref=e159] [cursor=pointer]:
+              - img [ref=e160]
+            - button "Map marker" [ref=e165] [cursor=pointer]:
+              - img [ref=e166]
+            - button "Map marker" [ref=e169] [cursor=pointer]:
+              - img [ref=e170]
+            - button "Map marker" [ref=e175] [cursor=pointer]:
+              - img [ref=e176]
+            - button "Map marker" [ref=e178] [cursor=pointer]:
+              - img [ref=e179]
+            - button "Map marker" [ref=e182] [cursor=pointer]:
+              - img [ref=e183]
+            - button "Map marker" [ref=e188] [cursor=pointer]:
+              - img [ref=e189]
+            - button "Map marker" [ref=e193] [cursor=pointer]:
+              - img [ref=e194]
+            - button "Map marker" [ref=e203] [cursor=pointer]:
+              - img [ref=e204]
+            - button "Map marker" [ref=e208] [cursor=pointer]:
+              - img [ref=e209]
+            - button "Map marker" [ref=e218] [cursor=pointer]:
+              - img [ref=e219]
+            - button "Map marker" [ref=e223] [cursor=pointer]:
+              - img [ref=e224]
+            - button "Map marker" [ref=e233]
+          - generic:
+            - generic [ref=e234]:
+              - generic [ref=e237]: Hitno
+              - generic [ref=e240]: Visok
+              - generic [ref=e243]: Normalan
+            - generic [ref=e244]: Region Novi Pazar
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e248]:
+            - img [ref=e250]
+            - generic [ref=e253]: Trend prijava · 7 dana
+          - img [ref=e254]
+          - generic [ref=e264]:
+            - generic [ref=e265]:
+              - generic [ref=e266]: Pn–Ned
+              - generic [ref=e267]: 187 prijava
+            - generic [ref=e268]:
+              - generic [ref=e269]: Vrh
+              - generic [ref=e270]: 42 čet.
+            - generic [ref=e271]:
+              - generic [ref=e272]: Promena
+              - generic [ref=e273]:
+                - text: +12%
+                - img [ref=e274]
+        - generic [ref=e277]:
+          - generic [ref=e279]:
+            - img [ref=e281]
+            - generic [ref=e286]: Učinak ekipa
+          - generic [ref=e287]:
+            - generic [ref=e289]:
+              - generic [ref=e290]: Asfalterska ekipa A
+              - generic [ref=e291]: 12/14 naloga
+            - generic [ref=e295]:
+              - generic [ref=e296]: Asfalterska ekipa B
+              - generic [ref=e297]: 9/12 naloga
+            - generic [ref=e301]:
+              - generic [ref=e302]: Hitna intervencija
+              - generic [ref=e303]: 8/9 naloga
+            - generic [ref=e307]:
+              - generic [ref=e308]: Signalizacija
+              - generic [ref=e309]: 6/7 naloga
+            - generic [ref=e313]:
+              - generic [ref=e314]: Zimska služba 1
+              - generic [ref=e315]: 4/6 naloga
+    - complementary [ref=e318]:
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - generic [ref=e321]:
+            - img [ref=e323]
+            - generic [ref=e326]: Aktivnost u realnom vremenu
+          - generic [ref=e327]: Live
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - img [ref=e332]
+            - generic [ref=e334]:
+              - generic [ref=e335]: Nova prijava · Stevana Nemanje 12
+              - generic [ref=e336]: Marko Jovanović · pre 12 min
+            - generic [ref=e337]: HITNO
+          - generic [ref=e338]:
+            - img [ref=e340]
+            - generic [ref=e343]:
+              - generic [ref=e344]: Završen WO-1037 · Obilaznica Tutin
+              - generic [ref=e345]: Ekipa za održavanje · pre 38 min
+          - generic [ref=e346]:
+            - img [ref=e348]
+            - generic [ref=e350]:
+              - generic [ref=e351]: Nova prijava · Postenje, autobuska 5
+              - generic [ref=e352]: Marija Todorović · pre 3 min
+            - generic [ref=e353]: VISOK
+          - generic [ref=e354]:
+            - img [ref=e356]
+            - generic [ref=e361]:
+              - generic [ref=e362]: Zimska služba 1 dodeljena WO-1042
+              - generic [ref=e363]: Most preko Raške · pre 28 min
+          - generic [ref=e364]:
+            - img [ref=e366]
+            - generic [ref=e369]:
+              - generic [ref=e370]: Objavljeno upozorenje · poledica
+              - generic [ref=e371]: Aleksandar P. · pre 1 sat
+          - generic [ref=e372]:
+            - img [ref=e374]
+            - generic [ref=e377]:
+              - generic [ref=e378]: Završen WO-1036 · 13. jula
+              - generic [ref=e379]: Asfalterska ekipa B · juče 13:24
+      - generic [ref=e380]:
+        - generic [ref=e382]:
+          - img [ref=e384]
+          - generic [ref=e386]: Prioritetne prijave
+        - generic [ref=e387]:
+          - link "Stevana Nemanje 12 Duboka rupa pored pešačkog prelaza, više vozila je već oštećeno. HITNO" [ref=e388] [cursor=pointer]:
+            - /url: /pitch/incidents
+            - img [ref=e390]
+            - generic [ref=e395]:
+              - generic [ref=e396]: Stevana Nemanje 12
+              - generic [ref=e397]: Duboka rupa pored pešačkog prelaza, više vozila je već oštećeno.
+            - generic [ref=e398]:
+              - img [ref=e399]
+              - text: HITNO
+          - link "Trg slobode 3 Znak „Stop\" oboren u udesu, raskrsnica nije obeležena. VISOK" [ref=e401] [cursor=pointer]:
+            - /url: /pitch/incidents
+            - img [ref=e403]
+            - generic [ref=e405]:
+              - generic [ref=e406]: Trg slobode 3
+              - generic [ref=e407]: Znak „Stop" oboren u udesu, raskrsnica nije obeležena.
+            - generic [ref=e408]:
+              - img [ref=e409]
+              - text: VISOK
+          - link "Most preko Raške — pristup Poledica, vozila proklizavaju. Hitno potrebna so. HITNO" [ref=e411] [cursor=pointer]:
+            - /url: /pitch/incidents
+            - img [ref=e413]
+            - generic [ref=e426]:
+              - generic [ref=e427]: Most preko Raške — pristup
+              - generic [ref=e428]: Poledica, vozila proklizavaju. Hitno potrebna so.
+            - generic [ref=e429]:
+              - img [ref=e430]
+              - text: HITNO
+      - generic [ref=e432]:
+        - generic [ref=e434]:
+          - img [ref=e436]
+          - generic [ref=e440]: Predstojeći radovi
+        - generic [ref=e441]:
+          - link "Postavljanje znaka „Stop\" sutra 08:00 · Signalizacija" [ref=e442] [cursor=pointer]:
+            - /url: /pitch/workorders
+            - img [ref=e444]
+            - generic [ref=e447]:
+              - generic [ref=e448]: Postavljanje znaka „Stop"
+              - generic [ref=e449]: sutra 08:00 · Signalizacija
+            - img [ref=e450]
+          - link "Hitno krpljenje — autobuska ruta sutra 06:30 · Asfalterska ekipa A" [ref=e453] [cursor=pointer]:
+            - /url: /pitch/workorders
+            - img [ref=e455]
+            - generic [ref=e458]:
+              - generic [ref=e459]: Hitno krpljenje — autobuska ruta
+              - generic [ref=e460]: sutra 06:30 · Asfalterska ekipa A
+            - img [ref=e461]

@@ -1,0 +1,281 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e11]:
+        - generic [ref=e12]: Mreža puteva · Katalog deonica
+        - generic [ref=e13]: 5 deonica · region Novi Pazar
+    - generic [ref=e14]:
+      - img [ref=e15]
+      - textbox "Pretraži po nazivu, šifri ili relaciji…" [ref=e18]
+    - button "Izveštaj o stanju mreže" [ref=e19]:
+      - img [ref=e20]
+      - text: Izveštaj o stanju mreže
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - 'button "62 Zadovoljavajuće M-22.4 / km 312+450 Magistralni U radovima Bulevar 12. februar Trg slobode → Postenje · 1.85 km Otvorene 2 12 mes. 27 Trošak 12 mes. 8.420 € Pregled: pre 2 nedelje · Sledeći: za 4 nedelje" [ref=e27]':
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e31]: "62"
+            - generic [ref=e32]: Zadovoljavajuće
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: M-22.4 / km 312+450
+              - generic [ref=e36]: Magistralni
+              - generic [ref=e37]: U radovima
+            - generic [ref=e38]: Bulevar 12. februar
+            - generic [ref=e39]: Trg slobode → Postenje · 1.85 km
+            - generic [ref=e40]:
+              - generic [ref=e41]:
+                - generic [ref=e42]:
+                  - img [ref=e43]
+                  - text: Otvorene
+                - generic [ref=e45]: "2"
+              - generic [ref=e46]:
+                - generic [ref=e47]:
+                  - img [ref=e48]
+                  - text: 12 mes.
+                - generic [ref=e52]: "27"
+              - generic [ref=e53]:
+                - generic [ref=e54]:
+                  - img [ref=e55]
+                  - text: Trošak 12 mes.
+                - generic [ref=e60]: 8.420 €
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - img [ref=e63]
+                - text: "Pregled: pre 2 nedelje"
+              - generic [ref=e67]: ·
+              - generic [ref=e68]:
+                - img [ref=e69]
+                - text: "Sledeći: za 4 nedelje"
+      - 'button "41 Slabo M-22.4 / km 311+200 Magistralni Sa ograničenjima Most preko Raške — pristup Stevana Nemanje → Raška · 0.42 km Otvorene 1 12 mes. 14 Trošak 12 mes. 12.300 € Pregled: pre 1 nedelju · Sledeći: za 3 nedelje" [ref=e71]':
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e75]: "41"
+            - generic [ref=e76]: Slabo
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]: M-22.4 / km 311+200
+              - generic [ref=e80]: Magistralni
+              - generic [ref=e81]: Sa ograničenjima
+            - generic [ref=e82]: Most preko Raške — pristup
+            - generic [ref=e83]: Stevana Nemanje → Raška · 0.42 km
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e86]:
+                  - img [ref=e87]
+                  - text: Otvorene
+                - generic [ref=e89]: "1"
+              - generic [ref=e90]:
+                - generic [ref=e91]:
+                  - img [ref=e92]
+                  - text: 12 mes.
+                - generic [ref=e96]: "14"
+              - generic [ref=e97]:
+                - generic [ref=e98]:
+                  - img [ref=e99]
+                  - text: Trošak 12 mes.
+                - generic [ref=e104]: 12.300 €
+            - generic [ref=e105]:
+              - generic [ref=e106]:
+                - img [ref=e107]
+                - text: "Pregled: pre 1 nedelju"
+              - generic [ref=e111]: ·
+              - generic [ref=e112]:
+                - img [ref=e113]
+                - text: "Sledeći: za 3 nedelje"
+      - 'button "78 Dobro L-014 / 0+800 Lokalni Otvoreno Hadžetska Centar → Hadžet · 1.20 km Otvorene 1 12 mes. 11 Trošak 12 mes. 3.140 € Pregled: pre 3 nedelje · Sledeći: za 9 nedelja" [ref=e115]':
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e119]: "78"
+            - generic [ref=e120]: Dobro
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: L-014 / 0+800
+              - generic [ref=e124]: Lokalni
+              - generic [ref=e125]: Otvoreno
+            - generic [ref=e126]: Hadžetska
+            - generic [ref=e127]: Centar → Hadžet · 1.20 km
+            - generic [ref=e128]:
+              - generic [ref=e129]:
+                - generic [ref=e130]:
+                  - img [ref=e131]
+                  - text: Otvorene
+                - generic [ref=e133]: "1"
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img [ref=e136]
+                  - text: 12 mes.
+                - generic [ref=e140]: "11"
+              - generic [ref=e141]:
+                - generic [ref=e142]:
+                  - img [ref=e143]
+                  - text: Trošak 12 mes.
+                - generic [ref=e148]: 3.140 €
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - img [ref=e151]
+                - text: "Pregled: pre 3 nedelje"
+              - generic [ref=e155]: ·
+              - generic [ref=e156]:
+                - img [ref=e157]
+                - text: "Sledeći: za 9 nedelja"
+      - 'button "38 Slabo L-022 / 0+420 Lokalni U radovima Selakovac — krivina kod škole Selakovac → Mur · 0.65 km Otvorene 2 12 mes. 19 Trošak 12 mes. 5.210 € Pregled: pre 6 dana · Sledeći: za 2 nedelje" [ref=e159]':
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e163]: "38"
+            - generic [ref=e164]: Slabo
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: L-022 / 0+420
+              - generic [ref=e168]: Lokalni
+              - generic [ref=e169]: U radovima
+            - generic [ref=e170]: Selakovac — krivina kod škole
+            - generic [ref=e171]: Selakovac → Mur · 0.65 km
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - img [ref=e175]
+                  - text: Otvorene
+                - generic [ref=e177]: "2"
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - text: 12 mes.
+                - generic [ref=e184]: "19"
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - img [ref=e187]
+                  - text: Trošak 12 mes.
+                - generic [ref=e192]: 5.210 €
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - img [ref=e195]
+                - text: "Pregled: pre 6 dana"
+              - generic [ref=e199]: ·
+              - generic [ref=e200]:
+                - img [ref=e201]
+                - text: "Sledeći: za 2 nedelje"
+      - 'button "81 Dobro OB-1 / 1+200 Obilaznica Otvoreno Obilaznica — izlaz Tutin Petlja Mur → Tutin · 3.80 km Otvorene 0 12 mes. 6 Trošak 12 mes. 980 € Pregled: pre 5 dana · Sledeći: za 11 nedelja" [ref=e203]':
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - generic [ref=e207]: "81"
+            - generic [ref=e208]: Dobro
+          - generic [ref=e209]:
+            - generic [ref=e210]:
+              - generic [ref=e211]: OB-1 / 1+200
+              - generic [ref=e212]: Obilaznica
+              - generic [ref=e213]: Otvoreno
+            - generic [ref=e214]: Obilaznica — izlaz Tutin
+            - generic [ref=e215]: Petlja Mur → Tutin · 3.80 km
+            - generic [ref=e216]:
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - img [ref=e219]
+                  - text: Otvorene
+                - generic [ref=e221]: "0"
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - img [ref=e224]
+                  - text: 12 mes.
+                - generic [ref=e228]: "6"
+              - generic [ref=e229]:
+                - generic [ref=e230]:
+                  - img [ref=e231]
+                  - text: Trošak 12 mes.
+                - generic [ref=e236]: 980 €
+            - generic [ref=e237]:
+              - generic [ref=e238]:
+                - img [ref=e239]
+                - text: "Pregled: pre 5 dana"
+              - generic [ref=e243]: ·
+              - generic [ref=e244]:
+                - img [ref=e245]
+                - text: "Sledeći: za 11 nedelja"
+    - complementary [ref=e247]:
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - img [ref=e251]
+          - generic [ref=e255]:
+            - generic [ref=e256]: Magistralni · M-22.4 / km 312+450
+            - generic [ref=e257]: Bulevar 12. februar
+            - generic [ref=e258]: Trg slobode → Postenje · 1.85 km
+          - button [ref=e259]:
+            - img [ref=e260]
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - generic [ref=e265]: Stanje kolovoza
+            - generic [ref=e266]:
+              - generic [ref=e267]: "62"
+              - generic [ref=e268]: / 100
+            - generic [ref=e271]: Zadovoljavajuće
+          - generic [ref=e272]:
+            - generic [ref=e273]: Status saobraćaja
+            - generic [ref=e274]: U radovima
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - generic [ref=e277]: Otvorene
+                - generic [ref=e278]: "2"
+              - generic [ref=e279]:
+                - generic [ref=e280]: 12 mes.
+                - generic [ref=e281]: "27"
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - img [ref=e285]
+            - generic [ref=e289]: Istorija prijava i radova
+          - generic [ref=e292]:
+            - generic [ref=e293]:
+              - img [ref=e295]
+              - generic [ref=e297]:
+                - generic [ref=e299]: danas 09:18
+                - generic [ref=e300]: Velika rupa — autobuska linija 5
+                - generic [ref=e301]: Marija T. · Postenje
+            - generic [ref=e302]:
+              - img [ref=e304]
+              - generic [ref=e307]:
+                - generic [ref=e308]:
+                  - generic [ref=e309]: pre 3 dana
+                  - generic [ref=e310]:
+                    - img [ref=e311]
+                    - text: "2"
+                - generic [ref=e314]: Krpljenje 3 udarne rupe
+                - generic [ref=e315]:
+                  - generic [ref=e316]:
+                    - img [ref=e317]
+                    - text: Asfalterska ekipa A
+                  - generic [ref=e319]:
+                    - img [ref=e320]
+                    - text: 540 €
+            - generic [ref=e325]:
+              - img [ref=e327]
+              - generic [ref=e331]:
+                - generic [ref=e333]: pre 9 dana
+                - generic [ref=e334]: Tromesečni pregled kolovoza
+                - generic [ref=e335]: "Stanje: zadovoljavajuće (62/100)"
+                - generic [ref=e337]:
+                  - img [ref=e338]
+                  - text: Tehnička služba
+            - generic [ref=e340]:
+              - img [ref=e342]
+              - generic [ref=e344]:
+                - generic [ref=e346]: pre 21 dan
+                - generic [ref=e347]: Manje pukotine — segment kod parka
+            - generic [ref=e348]:
+              - img [ref=e350]
+              - generic [ref=e353]:
+                - generic [ref=e355]: pre 38 dana
+                - generic [ref=e356]: Obeležavanje horizontalne signalizacije
+                - generic [ref=e357]:
+                  - generic [ref=e358]:
+                    - img [ref=e359]
+                    - text: Signalizacija
+                  - generic [ref=e361]:
+                    - img [ref=e362]
+                    - text: 1.280 €
+            - generic [ref=e367]:
+              - img [ref=e369]
+              - generic [ref=e374]:
+                - generic [ref=e376]: pre 2 meseca
+                - generic [ref=e377]: Godišnja revizija stanja
+                - generic [ref=e378]: "Preporuka: re-asfaltiranje za 12-18 meseci"

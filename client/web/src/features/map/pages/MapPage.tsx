@@ -66,7 +66,7 @@ export function MapPage() {
   };
 
   return (
-    <div className="citizen-root relative -m-6 h-[calc(100vh-4rem)] overflow-hidden bg-ink-50">
+    <div className="citizen-root fixed inset-0 h-[100dvh] w-full overflow-hidden bg-ink-50">
       <MapCanvas
         hazards={hazards}
         workSegments={workSegments}

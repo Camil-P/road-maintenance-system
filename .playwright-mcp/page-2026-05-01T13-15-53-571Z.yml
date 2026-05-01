@@ -1,0 +1,378 @@
+- generic [ref=e1]:
+  - complementary [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img [ref=e7]
+          - generic [ref=e10]:
+            - generic [ref=e11]: CENTRALA · UPRAVA
+            - generic [ref=e12]: Prijave građana
+        - button "Obaveštenja" [ref=e13]:
+          - img [ref=e14]
+          - generic [ref=e17]: "4"
+      - generic [ref=e18]:
+        - img [ref=e19]
+        - textbox "Pretraži po adresi ili napomeni…" [ref=e22]
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - button "Sve 12" [ref=e25]:
+          - text: Sve
+          - generic [ref=e26]: "12"
+        - button "Nova 4" [ref=e27]:
+          - text: Nova
+          - generic [ref=e28]: "4"
+        - button "U triaži 3" [ref=e29]:
+          - text: U triaži
+          - generic [ref=e30]: "3"
+        - button "U toku 3" [ref=e31]:
+          - text: U toku
+          - generic [ref=e32]: "3"
+        - button "Rešeno 1" [ref=e33]:
+          - text: Rešeno
+          - generic [ref=e34]: "1"
+      - generic [ref=e35]:
+        - img [ref=e36]
+        - generic [ref=e38]:
+          - button "Svi prioriteti" [ref=e39]
+          - button "Hitno" [ref=e40]
+          - button "Visok" [ref=e41]
+          - button "Normalan" [ref=e42]
+          - button "Nizak" [ref=e43]
+    - generic [ref=e44]:
+      - button "Stevana Nemanje 12 Rupa u putu HITNO Duboka rupa pored pešačkog prelaza, više vozila je već oštećeno. pre 12 min · MJ Marko Jovanović Nova 3 duplikata" [ref=e45]:
+        - generic [ref=e46]:
+          - img [ref=e48]
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: Stevana Nemanje 12
+                - generic [ref=e57]: Rupa u putu
+              - generic [ref=e58]:
+                - img [ref=e59]
+                - text: HITNO
+            - generic [ref=e61]: Duboka rupa pored pešačkog prelaza, više vozila je već oštećeno.
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - img [ref=e64]
+                - text: pre 12 min
+              - generic [ref=e67]: ·
+              - generic [ref=e68]:
+                - generic [ref=e69]: MJ
+                - generic [ref=e70]: Marko Jovanović
+                - img [ref=e71]
+            - generic [ref=e74]:
+              - generic [ref=e75]: Nova
+              - generic [ref=e76]:
+                - img [ref=e77]
+                - text: 3 duplikata
+      - button "Trg slobode 3 Oštećena signalizacija VISOK Znak „Stop\" oboren u udesu, raskrsnica nije obeležena. pre 58 min · AP Ana Petrović U triaži" [ref=e80]:
+        - generic [ref=e81]:
+          - img [ref=e83]
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - generic [ref=e88]: Trg slobode 3
+                - generic [ref=e89]: Oštećena signalizacija
+              - generic [ref=e90]:
+                - img [ref=e91]
+                - text: VISOK
+            - generic [ref=e93]: Znak „Stop" oboren u udesu, raskrsnica nije obeležena.
+            - generic [ref=e94]:
+              - generic [ref=e95]:
+                - img [ref=e96]
+                - text: pre 58 min
+              - generic [ref=e99]: ·
+              - generic [ref=e100]:
+                - generic [ref=e101]: AP
+                - generic [ref=e102]: Ana Petrović
+            - generic [ref=e104]: U triaži
+      - button "Most preko Raške — pristup Led / sneg HITNO Poledica, vozila proklizavaju. Hitno potrebna so. pre 34 min · GS Gradske službe U toku WO-1042" [ref=e105]:
+        - generic [ref=e106]:
+          - img [ref=e108]
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - generic [ref=e124]: Most preko Raške — pristup
+                - generic [ref=e125]: Led / sneg
+              - generic [ref=e126]:
+                - img [ref=e127]
+                - text: HITNO
+            - generic [ref=e129]: Poledica, vozila proklizavaju. Hitno potrebna so.
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - img [ref=e132]
+                - text: pre 34 min
+              - generic [ref=e135]: ·
+              - generic [ref=e136]:
+                - generic [ref=e137]: GS
+                - generic [ref=e138]: Gradske službe
+                - img [ref=e139]
+            - generic [ref=e142]:
+              - generic [ref=e143]: U toku
+              - generic [ref=e144]:
+                - img [ref=e145]
+                - text: WO-1042
+      - button "Stara čaršija 4 Otpad na kolovozu NORMALAN Granje na kolovozu nakon vetra, leva traka neprohodna. pre 18 min · ? Anonimni prijavilac Nova" [ref=e148]:
+        - generic [ref=e149]:
+          - img [ref=e151]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - generic [ref=e156]:
+                - generic [ref=e157]: Stara čaršija 4
+                - generic [ref=e158]: Otpad na kolovozu
+              - generic [ref=e159]:
+                - img [ref=e160]
+                - text: NORMALAN
+            - generic [ref=e161]: Granje na kolovozu nakon vetra, leva traka neprohodna.
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - img [ref=e164]
+                - text: pre 18 min
+              - generic [ref=e167]: ·
+              - generic [ref=e168]:
+                - generic [ref=e169]: "?"
+                - generic [ref=e170]: Anonimni prijavilac
+            - generic [ref=e172]: Nova
+      - button "Bulevar 12. februar 22 Ne radi rasveta NIZAK Ulična rasveta van funkcije već 2 dana. pre 3 sata · IV Ivan Vujović U triaži bez fotografije" [ref=e173]:
+        - generic [ref=e174]:
+          - img [ref=e176]
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic [ref=e183]: Bulevar 12. februar 22
+                - generic [ref=e184]: Ne radi rasveta
+              - generic [ref=e185]:
+                - img [ref=e186]
+                - text: NIZAK
+            - generic [ref=e188]: Ulična rasveta van funkcije već 2 dana.
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - img [ref=e191]
+                - text: pre 3 sata
+              - generic [ref=e194]: ·
+              - generic [ref=e195]:
+                - generic [ref=e196]: IV
+                - generic [ref=e197]: Ivan Vujović
+            - generic [ref=e198]:
+              - generic [ref=e199]: U triaži
+              - generic [ref=e200]:
+                - img [ref=e201]
+                - text: bez fotografije
+      - button "Hadžetska 17 Poplava / klizište VISOK Manje klizište nakon kiše, jedna traka sužena. pre 1 sat · DM Dušan Milić U toku WO-1041" [ref=e208]:
+        - generic [ref=e209]:
+          - img [ref=e211]
+          - generic [ref=e214]:
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: Hadžetska 17
+                - generic [ref=e218]: Poplava / klizište
+              - generic [ref=e219]:
+                - img [ref=e220]
+                - text: VISOK
+            - generic [ref=e222]: Manje klizište nakon kiše, jedna traka sužena.
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - img [ref=e225]
+                - text: pre 1 sat
+              - generic [ref=e228]: ·
+              - generic [ref=e229]:
+                - generic [ref=e230]: DM
+                - generic [ref=e231]: Dušan Milić
+                - img [ref=e232]
+            - generic [ref=e235]:
+              - generic [ref=e236]: U toku
+              - generic [ref=e237]:
+                - img [ref=e238]
+                - text: WO-1041
+      - button "Postenje — autobuska linija 5 Rupa u putu VISOK Velika rupa, direktno na liniji autobusa, neophodno hitno krpljenje. pre 3 min · MT Marija Todorović Nova 2 duplikata" [ref=e241]:
+        - generic [ref=e242]:
+          - img [ref=e244]
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: Postenje — autobuska linija 5
+                - generic [ref=e253]: Rupa u putu
+              - generic [ref=e254]:
+                - img [ref=e255]
+                - text: VISOK
+            - generic [ref=e257]: Velika rupa, direktno na liniji autobusa, neophodno hitno krpljenje.
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - img [ref=e260]
+                - text: pre 3 min
+              - generic [ref=e263]: ·
+              - generic [ref=e264]:
+                - generic [ref=e265]: MT
+                - generic [ref=e266]: Marija Todorović
+                - img [ref=e267]
+            - generic [ref=e270]:
+              - generic [ref=e271]: Nova
+              - generic [ref=e272]:
+                - img [ref=e273]
+                - text: 2 duplikata
+      - button "Obilaznica — izlaz Tutin Otpad na kolovozu NORMALAN Guma u desnoj traci, sklonjena. juče · NV Nemanja Vasić Rešeno WO-1037" [ref=e276]:
+        - generic [ref=e277]:
+          - img [ref=e279]
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - generic [ref=e285]: Obilaznica — izlaz Tutin
+                - generic [ref=e286]: Otpad na kolovozu
+              - generic [ref=e287]:
+                - img [ref=e288]
+                - text: NORMALAN
+            - generic [ref=e289]: Guma u desnoj traci, sklonjena.
+            - generic [ref=e290]:
+              - generic [ref=e291]:
+                - img [ref=e292]
+                - text: juče
+              - generic [ref=e295]: ·
+              - generic [ref=e296]:
+                - generic [ref=e297]: NV
+                - generic [ref=e298]: Nemanja Vasić
+            - generic [ref=e299]:
+              - generic [ref=e300]: Rešeno
+              - generic [ref=e301]:
+                - img [ref=e302]
+                - text: WO-1037
+      - button "Hadžetska bb Rupa u putu NIZAK Manja rupa, već zakrpljena prošle nedelje. pre 2 dana · ? Anonimni prijavilac Odbačeno bez fotografije" [ref=e305]:
+        - generic [ref=e306]:
+          - img [ref=e308]
+          - generic [ref=e313]:
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - generic [ref=e316]: Hadžetska bb
+                - generic [ref=e317]: Rupa u putu
+              - generic [ref=e318]:
+                - img [ref=e319]
+                - text: NIZAK
+            - generic [ref=e321]: Manja rupa, već zakrpljena prošle nedelje.
+            - generic [ref=e322]:
+              - generic [ref=e323]:
+                - img [ref=e324]
+                - text: pre 2 dana
+              - generic [ref=e327]: ·
+              - generic [ref=e328]:
+                - generic [ref=e329]: "?"
+                - generic [ref=e330]: Anonimni prijavilac
+            - generic [ref=e331]:
+              - generic [ref=e332]: Odbačeno
+              - generic [ref=e333]:
+                - img [ref=e334]
+                - text: bez fotografije
+      - button "Selakovac — krivina kod škole Oštećena signalizacija NORMALAN Nedostaje znak za ograničenje brzine 30. pre 95 min · JS Jovana Stanković Nova" [ref=e341]:
+        - generic [ref=e342]:
+          - img [ref=e344]
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - generic [ref=e348]:
+                - generic [ref=e349]: Selakovac — krivina kod škole
+                - generic [ref=e350]: Oštećena signalizacija
+              - generic [ref=e351]:
+                - img [ref=e352]
+                - text: NORMALAN
+            - generic [ref=e353]: Nedostaje znak za ograničenje brzine 30.
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - img [ref=e356]
+                - text: pre 95 min
+              - generic [ref=e359]: ·
+              - generic [ref=e360]:
+                - generic [ref=e361]: JS
+                - generic [ref=e362]: Jovana Stanković
+                - img [ref=e363]
+            - generic [ref=e367]: Nova
+      - button "Postenje — slivnik kod parka Poplava / klizište NORMALAN Nakupljanje vode posle kiše, slivnik začepljen. pre 2 sata · KP Komšije iz parka U triaži" [ref=e368]:
+        - generic [ref=e369]:
+          - img [ref=e371]
+          - generic [ref=e374]:
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - generic [ref=e377]: Postenje — slivnik kod parka
+                - generic [ref=e378]: Poplava / klizište
+              - generic [ref=e379]:
+                - img [ref=e380]
+                - text: NORMALAN
+            - generic [ref=e381]: Nakupljanje vode posle kiše, slivnik začepljen.
+            - generic [ref=e382]:
+              - generic [ref=e383]:
+                - img [ref=e384]
+                - text: pre 2 sata
+              - generic [ref=e387]: ·
+              - generic [ref=e388]:
+                - generic [ref=e389]: KP
+                - generic [ref=e390]: Komšije iz parka
+            - generic [ref=e392]: U triaži
+      - button "Selakovac — krivina Rupa u putu NORMALAN Više udarnih rupa u nizu. jutros · BA Branko Aleksić U toku WO-1040" [ref=e393]:
+        - generic [ref=e394]:
+          - img [ref=e396]
+          - generic [ref=e401]:
+            - generic [ref=e402]:
+              - generic [ref=e403]:
+                - generic [ref=e404]: Selakovac — krivina
+                - generic [ref=e405]: Rupa u putu
+              - generic [ref=e406]:
+                - img [ref=e407]
+                - text: NORMALAN
+            - generic [ref=e408]: Više udarnih rupa u nizu.
+            - generic [ref=e409]:
+              - generic [ref=e410]:
+                - img [ref=e411]
+                - text: jutros
+              - generic [ref=e414]: ·
+              - generic [ref=e415]:
+                - generic [ref=e416]: BA
+                - generic [ref=e417]: Branko Aleksić
+            - generic [ref=e418]:
+              - generic [ref=e419]: U toku
+              - generic [ref=e420]:
+                - img [ref=e421]
+                - text: WO-1040
+  - generic [ref=e424]:
+    - generic [ref=e426]:
+      - region "Map" [ref=e427]
+      - button "Map marker" [ref=e428] [cursor=pointer]:
+        - img [ref=e429]
+      - button "Map marker" [ref=e434] [cursor=pointer]:
+        - img [ref=e435]
+      - button "Map marker" [ref=e437] [cursor=pointer]:
+        - img [ref=e438]
+      - button "Map marker" [ref=e451] [cursor=pointer]:
+        - img [ref=e452]
+      - button "Map marker" [ref=e455] [cursor=pointer]:
+        - img [ref=e456]
+      - button "Map marker" [ref=e460] [cursor=pointer]:
+        - img [ref=e461]
+      - button "Map marker" [ref=e464] [cursor=pointer]:
+        - img [ref=e465]
+      - button "Map marker" [ref=e470] [cursor=pointer]:
+        - img [ref=e471]
+      - button "Map marker" [ref=e474] [cursor=pointer]:
+        - img [ref=e475]
+      - button "Map marker" [ref=e480] [cursor=pointer]:
+        - img [ref=e481]
+      - button "Map marker" [ref=e483] [cursor=pointer]:
+        - img [ref=e484]
+      - button "Map marker" [ref=e487] [cursor=pointer]:
+        - img [ref=e488]
+      - button "Map marker" [ref=e493] [cursor=pointer]:
+        - img [ref=e494]
+      - button "Map marker" [ref=e498] [cursor=pointer]:
+        - img [ref=e499]
+      - button "Map marker" [ref=e508] [cursor=pointer]:
+        - img [ref=e509]
+      - button "Map marker" [ref=e513] [cursor=pointer]:
+        - img [ref=e514]
+      - button "Map marker" [ref=e523] [cursor=pointer]:
+        - img [ref=e524]
+      - button "Map marker" [ref=e528] [cursor=pointer]:
+        - img [ref=e529]
+      - button "Map marker" [ref=e538]
+    - generic:
+      - generic [ref=e539]:
+        - generic [ref=e540]: Region · Novi Pazar
+        - generic [ref=e541]: 12 aktivnih prijava
+      - generic [ref=e542]:
+        - generic [ref=e545]: Hitno
+        - generic [ref=e548]: Visok
+        - generic [ref=e551]: Normalan

@@ -1,0 +1,25 @@
+- generic [ref=e23]:
+  - region "Map" [ref=e25]
+  - generic [ref=e26] [cursor=pointer]:
+    - generic [ref=e27]:
+      - generic [ref=e31]: UPOZORENJE
+      - generic [ref=e32]: · UŽIVO · GRADSKE SLUŽBE
+      - generic [ref=e33]:
+        - text: 2/5
+        - img [ref=e34]
+    - generic [ref=e60]:
+      - generic [ref=e61]: "Upozorenje: poledica na pristupu mostu"
+      - generic [ref=e62]: Ekipa zimske službe trenutno soli kolovoz. Smanjite brzinu.
+  - generic [ref=e40]:
+    - button "Moje prijave" [ref=e41]:
+      - img [ref=e42]
+      - generic [ref=e43]: "4"
+    - button "Centriraj na moju lokaciju" [ref=e44]:
+      - img [ref=e45]
+    - button "Slojevi mape" [ref=e47]:
+      - img [ref=e48]
+  - button "Primetili opasnost? Prijavite" [ref=e53]:
+    - img [ref=e55]
+    - generic [ref=e57]:
+      - generic [ref=e58]: Primetili opasnost?
+      - generic [ref=e59]: Prijavite

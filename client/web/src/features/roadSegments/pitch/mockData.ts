@@ -1,0 +1,157 @@
+import type {
+  RoadSegment,
+  SegmentClass,
+  SegmentCondition,
+  SegmentStatus,
+} from "./types";
+
+export const CLASS_LABEL: Record<SegmentClass, string> = {
+  primary: "Magistralni",
+  secondary: "Regionalni",
+  local: "Lokalni",
+  bypass: "Obilaznica",
+};
+
+export const CONDITION_LABEL: Record<SegmentCondition, string> = {
+  excellent: "Odlično",
+  good: "Dobro",
+  fair: "Zadovoljavajuće",
+  poor: "Slabo",
+  critical: "Kritično",
+};
+
+export const CONDITION_COLOR: Record<SegmentCondition, string> = {
+  excellent: "#2BB673",
+  good: "#7DC768",
+  fair: "#F5A524",
+  poor: "#FF5A1F",
+  critical: "#E5484D",
+};
+
+export const STATUS_LABEL: Record<SegmentStatus, string> = {
+  open: "Otvoreno",
+  under_works: "U radovima",
+  restricted: "Sa ograničenjima",
+  closed: "Zatvoreno",
+};
+
+export const STATUS_TONE: Record<SegmentStatus, string> = {
+  open: "bg-signal-green/15 text-signal-green ring-1 ring-signal-green/30",
+  under_works: "bg-signal-amber/15 text-signal-amber ring-1 ring-signal-amber/30",
+  restricted: "bg-signal-ice/15 text-[#0F7AB3] ring-1 ring-signal-ice/40",
+  closed: "bg-signal-red/15 text-signal-red ring-1 ring-signal-red/30",
+};
+
+export const ROAD_SEGMENTS: RoadSegment[] = [
+  {
+    id: "rs-001",
+    code: "M-22.4 / km 312+450",
+    name: "Bulevar 12. februar",
+    fromTo: "Trg slobode → Postenje",
+    klass: "primary",
+    lengthKm: 1.85,
+    status: "under_works",
+    condition: "fair",
+    conditionScore: 62,
+    lastInspection: "pre 2 nedelje",
+    nextInspection: "za 4 nedelje",
+    totalIncidents12mo: 27,
+    totalCost12mo: 8420,
+    openIncidents: 2,
+    history: [
+      { id: "h1", date: "danas 09:18", kind: "incident", title: "Velika rupa — autobuska linija 5", details: "Marija T. · Postenje" },
+      { id: "h2", date: "pre 3 dana", kind: "work_completed", title: "Krpljenje 3 udarne rupe", crew: "Asfalterska ekipa A", cost: 540, attachments: 2 },
+      { id: "h3", date: "pre 9 dana", kind: "inspection", title: "Tromesečni pregled kolovoza", details: "Stanje: zadovoljavajuće (62/100)", crew: "Tehnička služba" },
+      { id: "h4", date: "pre 21 dan", kind: "incident", title: "Manje pukotine — segment kod parka" },
+      { id: "h5", date: "pre 38 dana", kind: "work_completed", title: "Obeležavanje horizontalne signalizacije", crew: "Signalizacija", cost: 1280 },
+      { id: "h6", date: "pre 2 meseca", kind: "audit", title: "Godišnja revizija stanja", details: "Preporuka: re-asfaltiranje za 12-18 meseci" },
+    ],
+  },
+  {
+    id: "rs-002",
+    code: "M-22.4 / km 311+200",
+    name: "Most preko Raške — pristup",
+    fromTo: "Stevana Nemanje → Raška",
+    klass: "primary",
+    lengthKm: 0.42,
+    status: "restricted",
+    condition: "poor",
+    conditionScore: 41,
+    lastInspection: "pre 1 nedelju",
+    nextInspection: "za 3 nedelje",
+    totalIncidents12mo: 14,
+    totalCost12mo: 12300,
+    openIncidents: 1,
+    history: [
+      { id: "h1", date: "pre 34 min", kind: "incident", title: "Poledica na prilazu mostu", details: "Gradske službe · prijavljeno", crew: "Zimska služba 1" },
+      { id: "h2", date: "pre 4 dana", kind: "work_completed", title: "Sanacija ivičnjaka", crew: "Ekipa za održavanje", cost: 920 },
+      { id: "h3", date: "pre 11 dana", kind: "closure", title: "Privremeno zatvaranje (4h)", details: "Hitna intervencija — odron sa kosine" },
+      { id: "h4", date: "pre 12 dana", kind: "open", title: "Most ponovo otvoren", details: "Saobraćaj normalizovan u oba smera" },
+      { id: "h5", date: "pre 25 dana", kind: "work_completed", title: "Remont kolovoza — 230 m²", crew: "Asfalterska ekipa B", cost: 7800, attachments: 6 },
+    ],
+  },
+  {
+    id: "rs-003",
+    code: "L-014 / 0+800",
+    name: "Hadžetska",
+    fromTo: "Centar → Hadžet",
+    klass: "local",
+    lengthKm: 1.20,
+    status: "open",
+    condition: "good",
+    conditionScore: 78,
+    lastInspection: "pre 3 nedelje",
+    nextInspection: "za 9 nedelja",
+    totalIncidents12mo: 11,
+    totalCost12mo: 3140,
+    openIncidents: 1,
+    history: [
+      { id: "h1", date: "pre 1 sat", kind: "incident", title: "Manje klizište nakon kiše", details: "Dušan M. · prijavljeno" },
+      { id: "h2", date: "pre 8 dana", kind: "inspection", title: "Pregled kolovoza", details: "Stanje: dobro (78/100)" },
+      { id: "h3", date: "pre 41 dan", kind: "work_completed", title: "Čišćenje slivnika i kanala", crew: "Ekipa za održavanje", cost: 460 },
+    ],
+  },
+  {
+    id: "rs-004",
+    code: "L-022 / 0+420",
+    name: "Selakovac — krivina kod škole",
+    fromTo: "Selakovac → Mur",
+    klass: "local",
+    lengthKm: 0.65,
+    status: "under_works",
+    condition: "poor",
+    conditionScore: 38,
+    lastInspection: "pre 6 dana",
+    nextInspection: "za 2 nedelje",
+    totalIncidents12mo: 19,
+    totalCost12mo: 5210,
+    openIncidents: 2,
+    history: [
+      { id: "h1", date: "danas 07:10", kind: "work_completed", title: "Krpljenje 3 udarne rupe", crew: "Asfalterska ekipa A", cost: 540, attachments: 2 },
+      { id: "h2", date: "pre 4 sata", kind: "incident", title: "Više udarnih rupa u nizu", details: "Branko A. · prijavljeno" },
+      { id: "h3", date: "pre 9 dana", kind: "incident", title: "Nedostaje znak za ograničenje brzine 30" },
+      { id: "h4", date: "pre 60 dana", kind: "audit", title: "Saobraćajno-bezbednosna analiza", details: "Krivina označena kao crna tačka — prioritet sanacije" },
+    ],
+  },
+  {
+    id: "rs-005",
+    code: "OB-1 / 1+200",
+    name: "Obilaznica — izlaz Tutin",
+    fromTo: "Petlja Mur → Tutin",
+    klass: "bypass",
+    lengthKm: 3.80,
+    status: "open",
+    condition: "good",
+    conditionScore: 81,
+    lastInspection: "pre 5 dana",
+    nextInspection: "za 11 nedelja",
+    totalIncidents12mo: 6,
+    totalCost12mo: 980,
+    openIncidents: 0,
+    history: [
+      { id: "h1", date: "juče 15:38", kind: "work_completed", title: "Uklanjanje gume sa kolovoza", crew: "Ekipa za održavanje", cost: 60 },
+      { id: "h2", date: "pre 18 dana", kind: "inspection", title: "Pregled kolovoza", details: "Stanje: dobro (81/100)" },
+      { id: "h3", date: "pre 2 meseca", kind: "work_completed", title: "Skidanje natpisa i čišćenje znakova", cost: 420 },
+    ],
+  },
+];
