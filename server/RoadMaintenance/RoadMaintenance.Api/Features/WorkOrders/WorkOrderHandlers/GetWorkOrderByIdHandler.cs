@@ -22,6 +22,8 @@ public class GetWorkOrderByIdHandler : IGetWorkOrderByIdHandler
     {
         var workOrder = await _context.WorkOrders
             .AsNoTracking()
+            .Include(w => w.RoadSegment)
+            .Include(w => w.AssignedMaterials) // Include new materials
             .FirstOrDefaultAsync(w => w.Id == id);
 
         if (workOrder is null)

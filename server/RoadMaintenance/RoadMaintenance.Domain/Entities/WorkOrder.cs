@@ -10,73 +10,29 @@ namespace RoadMaintenance.Domain.Entities;
 public class WorkOrder : IMustHaveTenant
 {
     public Guid Id { get; private set; }
-    
-    /// <summary>
-    /// Type of maintenance work to be performed
-    /// </summary>
     public WorkType WorkType { get; private set; }
-    
-    /// <summary>
-    /// Current status in the work order workflow
-    /// </summary>
     public WorkOrderStatus Status { get; private set; }
-    
-    /// <summary>
-    /// Priority level (1 = highest, higher numbers = lower priority)
-    /// Calculated based on road category and incident type
-    /// </summary>
     public int Priority { get; private set; }
-    
-    /// <summary>
-    /// Detailed description of the work to be performed
-    /// </summary>
     public string Description { get; private set; } = string.Empty;
     
-    /// <summary>
-    /// Reference to the road segment where work will be performed
-    /// </summary>
     public Guid? RoadSegmentId { get; private set; }
     public RoadSegment? RoadSegment { get; private set; }
     
-    /// <summary>
-    /// Reference to the incident report that triggered this work order (if any)
-    /// </summary>
     public Guid? IncidentReportId { get; private set; }
+    public Guid CreatedByUserId { get; private set; }
     
-    /// <summary>
-    /// ID of the user who created the work order
-    /// </summary>
-    public string CreatedByUserId { get; private set; } = string.Empty;
+    public List<Guid> AssignedWorkerIds { get; private set; } = [];
+    public List<Guid> AssignedMachineIds { get; private set; } = [];
     
-    /// <summary>
-    /// ID of the field worker assigned to this work order
-    /// </summary>
-    public string? AssignedToUserId { get; private set; }
+    // New Assigned Materials Collection
+    private readonly List<AssignedMaterial> _assignedMaterials = [];
+    public IReadOnlyCollection<AssignedMaterial> AssignedMaterials => _assignedMaterials.AsReadOnly();
     
-    /// <summary>
-    /// Estimated cost for this work order
-    /// </summary>
     public decimal? EstimatedCost { get; private set; }
-    
-    /// <summary>
-    /// Actual cost after completion
-    /// </summary>
     public decimal? ActualCost { get; private set; }
-    
-    /// <summary>
-    /// Whether this is emergency maintenance (affects budget categorization)
-    /// </summary>
     public bool IsEmergency { get; private set; }
-    
-    /// <summary>
-    /// Notes added by the field worker during or after completion
-    /// </summary>
     public string? CompletionNotes { get; private set; }
     
-    /// <summary>
-    /// ID of the agency responsible for handling this work order. 
-    /// This is determined based on the work order location and agency jurisdiction areas.
-    /// </summary>
     public Guid AgencyId { get; set; }
     public Agency Agency { get; set; } = null!;
 
@@ -85,16 +41,14 @@ public class WorkOrder : IMustHaveTenant
     public DateTime? StartedAt { get; private set; }
     public DateTime? CompletedAt { get; private set; }
     
-    // Navigation property for incident reports linked to this work order
     public ICollection<IncidentReport> IncidentReports { get; private set; } = [];
     
-    // Private constructor for EF Core
     private WorkOrder() { }
     
     public static WorkOrder Create(
         WorkType workType,
         string description,
-        string createdByUserId,
+        Guid createdByUserId,
         int priority,
         Guid? roadSegmentId = null,
         Guid? incidentReportId = null,
@@ -103,10 +57,8 @@ public class WorkOrder : IMustHaveTenant
     {
         if (string.IsNullOrWhiteSpace(description))
             throw new ArgumentException("Work order description is required.", nameof(description));
-        
-        if (string.IsNullOrWhiteSpace(createdByUserId))
+        if (createdByUserId == Guid.Empty)
             throw new ArgumentException("Creator user ID is required.", nameof(createdByUserId));
-        
         if (priority < 1)
             throw new ArgumentException("Priority must be at least 1.", nameof(priority));
         
@@ -126,28 +78,97 @@ public class WorkOrder : IMustHaveTenant
         };
     }
     
-    /// <summary>
-    /// Assigns a field worker and schedules the work order.
-    /// </summary>
-    public void Schedule(string assignedToUserId, DateTime scheduledFor)
+    public void Schedule(List<Guid> assignedWorkerIds, List<Guid>? assignedMachineIds, DateTime scheduledFor)
     {
         if (Status != WorkOrderStatus.Created)
             throw new InvalidOperationException($"Cannot schedule work order in status {Status}. Must be in Created status.");
-        
-        if (string.IsNullOrWhiteSpace(assignedToUserId))
-            throw new ArgumentException("Assigned user ID is required.", nameof(assignedToUserId));
-        
+        if (assignedWorkerIds == null || assignedWorkerIds.Count == 0)
+            throw new ArgumentException("At least one assigned worker ID is required.", nameof(assignedWorkerIds));
         if (scheduledFor < DateTime.UtcNow)
             throw new ArgumentException("Scheduled date must be in the future.", nameof(scheduledFor));
         
-        AssignedToUserId = assignedToUserId;
+        AssignedWorkerIds = assignedWorkerIds;
+        AssignedMachineIds = assignedMachineIds ?? [];
         ScheduledFor = scheduledFor;
         Status = WorkOrderStatus.Scheduled;
     }
-    
+
+    // --- New Worker & Machine Management Methods ---
+
     /// <summary>
-    /// Field worker starts work on the order.
+    /// Replaces the currently assigned workers with a new list.
     /// </summary>
+    public void UpdateWorkers(List<Guid> newWorkerIds)
+    {
+        var distinctWorkerIds = newWorkerIds?.Distinct().ToList() ?? new List<Guid>();
+
+        // Business rule: Active work orders must have at least one worker
+        if (distinctWorkerIds.Count == 0 && Status is WorkOrderStatus.Scheduled or WorkOrderStatus.InProgress)
+        {
+            throw new InvalidOperationException($"Cannot remove all workers while work order is in {Status} status.");
+        }
+
+        AssignedWorkerIds = distinctWorkerIds;
+    }
+
+    public void AssignWorker(Guid workerId)
+    {
+        if (workerId == Guid.Empty) throw new ArgumentException("Worker ID cannot be empty.");
+        if (!AssignedWorkerIds.Contains(workerId)) AssignedWorkerIds.Add(workerId);
+    }
+
+    public void RemoveWorker(Guid workerId)
+    {
+        AssignedWorkerIds.Remove(workerId);
+        if (AssignedWorkerIds.Count == 0 && Status is WorkOrderStatus.Scheduled or WorkOrderStatus.InProgress)
+        {
+            throw new InvalidOperationException("Cannot remove the last worker from an active work order.");
+        }
+    }
+
+    public void AssignMachine(Guid machineId)
+    {
+        if (machineId == Guid.Empty) throw new ArgumentException("Machine ID cannot be empty.");
+        if (!AssignedMachineIds.Contains(machineId)) AssignedMachineIds.Add(machineId);
+    }
+
+    public void RemoveMachine(Guid machineId)
+    {
+        AssignedMachineIds.Remove(machineId);
+    }
+
+    // --- New Material Management Methods ---
+
+    public void AddMaterial(Guid materialStockId, decimal quantity)
+    {
+        if (Status == WorkOrderStatus.Completed || Status == WorkOrderStatus.Cancelled)
+            throw new InvalidOperationException("Cannot add materials to a completed or cancelled work order.");
+
+        var existingMaterial = _assignedMaterials.FirstOrDefault(m => m.MaterialStockId == materialStockId);
+        if (existingMaterial != null)
+        {
+            existingMaterial.UpdateQuantity(existingMaterial.Quantity + quantity);
+        }
+        else
+        {
+            _assignedMaterials.Add(AssignedMaterial.Create(Id, materialStockId, quantity));
+        }
+    }
+
+    public void RemoveMaterial(Guid materialStockId)
+    {
+        if (Status == WorkOrderStatus.Completed || Status == WorkOrderStatus.Cancelled)
+            throw new InvalidOperationException("Cannot modify materials on a completed or cancelled work order.");
+
+        var material = _assignedMaterials.FirstOrDefault(m => m.MaterialStockId == materialStockId);
+        if (material != null)
+        {
+            _assignedMaterials.Remove(material);
+        }
+    }
+
+    // --- Existing Lifecycle Methods ---
+
     public void StartWork()
     {
         if (Status != WorkOrderStatus.Scheduled)
@@ -157,9 +178,6 @@ public class WorkOrder : IMustHaveTenant
         StartedAt = DateTime.UtcNow;
     }
     
-    /// <summary>
-    /// Field worker completes the work order.
-    /// </summary>
     public void Complete(decimal? actualCost = null, string? completionNotes = null)
     {
         if (Status != WorkOrderStatus.InProgress)
@@ -171,9 +189,6 @@ public class WorkOrder : IMustHaveTenant
         CompletedAt = DateTime.UtcNow;
     }
     
-    /// <summary>
-    /// Cancels the work order.
-    /// </summary>
     public void Cancel()
     {
         if (Status == WorkOrderStatus.Completed)
@@ -182,9 +197,6 @@ public class WorkOrder : IMustHaveTenant
         Status = WorkOrderStatus.Cancelled;
     }
     
-    /// <summary>
-    /// Updates the priority of the work order.
-    /// </summary>
     public void UpdatePriority(int newPriority)
     {
         if (newPriority < 1)
@@ -193,9 +205,6 @@ public class WorkOrder : IMustHaveTenant
         Priority = newPriority;
     }
 
-    /// <summary>
-    /// Increments actual cost while work is active or after completion.
-    /// </summary>
     public void AddActualCost(decimal amount)
     {
         if (amount <= 0)
