@@ -283,7 +283,8 @@ public class AuthService : IAuthService
             UserId = user.Id,
             Email = user.Email!,
             FullName = user.FullName,
-            Roles = roles
+            Roles = roles,
+            AgencyId = user.AgencyId.ToString() ?? string.Empty
         };
     }
     
@@ -295,7 +296,8 @@ public class AuthService : IAuthService
             new(ClaimTypes.Email, user.Email!),
             new(ClaimTypes.Name, user.FullName),
             new(JwtRegisteredClaimNames.Sub, user.Id),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new("AgencyId", user.AgencyId.ToString() ?? string.Empty)
         };
         
         // Add role claims

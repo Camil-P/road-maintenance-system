@@ -9,6 +9,7 @@ using RoadMaintenance.Api.Features.Materials;
 using RoadMaintenance.Api.Features.RoadSegments;
 using RoadMaintenance.Api.Features.WorkOrders;
 using RoadMaintenance.Infrastructure;
+using RoadMaintenance.Infrastructure.Interfaces;
 using Scalar.AspNetCore;
 using System.Text;
 
@@ -115,6 +116,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddHttpContextAccessor(); // Neophodno za čitanje HTTP konteksta
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
 var app = builder.Build();
 
 // Seed database (roles, etc.) on startup
@@ -141,8 +145,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://0.0.0.0:{port}");
+if(app.Environment.IsProduction())
+{
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    app.Urls.Add($"http://0.0.0.0:{port}");
+    app.UseHsts();
+}
 
 app.Run();
 

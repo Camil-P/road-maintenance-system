@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RoadMaintenance.Api.Features.Incidents.Contracts; // For PaginatedResponse
+using RoadMaintenance.Api.Features.Incidents.Contracts; 
 using RoadMaintenance.Api.Features.WorkOrders.Contracts;
 using RoadMaintenance.Infrastructure.Persistence;
 
@@ -36,9 +36,10 @@ public class GetWorkOrdersHandler : IGetWorkOrdersHandler
             workOrdersQuery = workOrdersQuery.Where(w => w.RoadSegmentId == query.RoadSegmentId.Value);
         }
 
-        if (!string.IsNullOrEmpty(query.AssignedToUserId))
+        if (query.AssignedWorkerId.HasValue)
         {
-            workOrdersQuery = workOrdersQuery.Where(w => w.AssignedToUserId == query.AssignedToUserId);
+            // Supported natively in EF Core 8+ with primitive collections
+            workOrdersQuery = workOrdersQuery.Where(w => w.AssignedWorkerIds.Contains(query.AssignedWorkerId.Value));
         }
 
         var totalCount = await workOrdersQuery.CountAsync();
@@ -48,6 +49,7 @@ public class GetWorkOrdersHandler : IGetWorkOrdersHandler
             .Skip((query.Page - 1) * query.PageSize)
             .Take(query.PageSize)
             .Include(x => x.RoadSegment)
+            .Include(x => x.AssignedMaterials) // Include materials in list
             .ToListAsync();
 
         var items = workOrders.Select(WorkOrderMapper.MapToResponse);

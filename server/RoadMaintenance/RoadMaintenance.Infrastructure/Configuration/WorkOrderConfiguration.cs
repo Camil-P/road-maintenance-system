@@ -9,47 +9,41 @@ public class WorkOrderConfiguration : IEntityTypeConfiguration<WorkOrder>
     public void Configure(EntityTypeBuilder<WorkOrder> builder)
     {
         builder.HasKey(w => w.Id);
-        
+
         builder.Property(w => w.Description)
             .IsRequired()
             .HasMaxLength(2000);
-        
+
         builder.Property(w => w.CompletionNotes)
             .HasMaxLength(2000);
-        
-        builder.Property(w => w.CreatedByUserId)
-            .IsRequired()
-            .HasMaxLength(450);
-        
-        builder.Property(w => w.AssignedToUserId)
-            .HasMaxLength(450);
-        
-        builder.Property(w => w.WorkType)
-            .IsRequired();
-        
-        builder.Property(w => w.Status)
-            .IsRequired();
-        
-        builder.Property(w => w.Priority)
-            .IsRequired();
-        
+
         builder.Property(w => w.EstimatedCost)
             .HasPrecision(18, 2);
-        
+
         builder.Property(w => w.ActualCost)
             .HasPrecision(18, 2);
-        
-        // Relationship with RoadSegment
+
+        // Map Lists of Guids to primitive collections (Requires EF Core 8+)
+        builder.Property(w => w.AssignedWorkerIds)
+            .HasColumnName("AssignedWorkerIds"); // EF Core 8 natively maps this to JSON or arrays depending on the DB provider
+
+        builder.Property(w => w.AssignedMachineIds)
+            .HasColumnName("AssignedMachineIds");
+
+        // Relationships
+        builder.HasOne(w => w.Agency)
+            .WithMany()
+            .HasForeignKey(w => w.AgencyId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         builder.HasOne(w => w.RoadSegment)
-            .WithMany(r => r.WorkOrders)
+            .WithMany()
             .HasForeignKey(w => w.RoadSegmentId)
             .OnDelete(DeleteBehavior.SetNull);
-        
-        builder.HasIndex(w => w.Status);
-        builder.HasIndex(w => w.Priority);
-        builder.HasIndex(w => w.WorkType);
-        builder.HasIndex(w => w.CreatedAt);
-        builder.HasIndex(w => w.AssignedToUserId);
-        builder.HasIndex(w => w.IsEmergency);
+
+        // The navigation for AssignedMaterials is mapped automatically via the AssignedMaterialConfiguration,
+        // but we need to tell EF Core about the backing field since we used encapsulation.
+        builder.Metadata.FindNavigation(nameof(WorkOrder.AssignedMaterials))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 }

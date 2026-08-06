@@ -72,9 +72,6 @@ secrets.json
 # Ignore environment files
 .env
 
-# Ignore migrations
-Migrations/
-
 # Ignore generated files
 Generated/
 

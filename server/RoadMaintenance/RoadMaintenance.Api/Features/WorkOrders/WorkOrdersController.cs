@@ -14,61 +14,44 @@ public class WorkOrdersController(
     ICreateWorkOrderHandler createHandler,
     IGetWorkOrdersHandler getWorkOrdersHandler,
     IGetWorkOrderByIdHandler getByIdHandler,
-    IUpdateWorkOrderStatusHandler updateStatusHandler) : ControllerBase
+    IUpdateWorkOrderStatusHandler updateStatusHandler,
+    IAssignWorkerHandler assignWorkerHandler,
+    IRemoveWorkerHandler removeWorkerHandler,
+    IAddMaterialHandler addMaterialHandler
+    ) : ControllerBase
 {
     private readonly ICreateWorkOrderHandler _createHandler = createHandler;
     private readonly IGetWorkOrdersHandler _getWorkOrdersHandler = getWorkOrdersHandler;
     private readonly IGetWorkOrderByIdHandler _getByIdHandler = getByIdHandler;
     private readonly IUpdateWorkOrderStatusHandler _updateStatusHandler = updateStatusHandler;
+    private readonly IUpdateWorkOrderWorkersHandler _assignWorkerHandler = assignWorkerHandler;
+    private readonly IRemoveWorkerHandler _removeWorkerHandler = removeWorkerHandler;
+    private readonly IAddMaterialHandler _addMaterialHandler = addMaterialHandler;
 
-    /// <summary>
-    /// Creates a new work order. Accessible by Dispatchers, Maintenance Managers, and Admins.
-    /// </summary>
     [HttpPost]
     [Authorize(Roles = $"{ApplicationRoles.Admin},{ApplicationRoles.Dispatcher},{ApplicationRoles.MaintenanceManager}")]
     [ProducesResponseType(typeof(ApiResponse<WorkOrderResponse>), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> CreateWorkOrder([FromBody] CreateWorkOrderRequest request)
     {
         if (!ModelState.IsValid)
-        {
-            var errors = ModelState.Values
-                .SelectMany(v => v.Errors)
-                .Select(e => e.ErrorMessage);
-            return BadRequest(ApiResponse.Fail("Validation failed.", errors));
-        }
+            return BadRequest(ApiResponse.Fail("Validation failed."));
 
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(userId))
-        {
-            return Unauthorized(ApiResponse.Fail("User not authenticated."));
-        }
-
-        var (success, response, error) = await _createHandler.HandleAsync(request, userId);
+        var (success, response, error) = await _createHandler.HandleAsync(request, userId!);
 
         if (!success)
-        {
             return BadRequest(ApiResponse.Fail(error!));
-        }
 
-        return CreatedAtAction(
-            nameof(GetWorkOrderById),
-            new { id = response!.Id },
+        return CreatedAtAction(nameof(GetWorkOrderById), new { id = response!.Id }, 
             ApiResponse<WorkOrderResponse>.Ok(response, "Work order created successfully."));
     }
 
-    /// <summary>
-    /// Gets a paginated list of work orders with optional filters.
-    /// </summary>
     [HttpGet]
     [Authorize]
     [ProducesResponseType(typeof(ApiResponse<PaginatedResponse<WorkOrderResponse>>), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> GetWorkOrders([FromQuery] GetWorkOrdersQuery query)
     {
-        // If user is a Maintenance Worker, restrict to their assigned work orders only
         var isWorker = User.IsInRole(ApplicationRoles.FieldWorker) &&
                        !User.IsInRole(ApplicationRoles.Dispatcher) &&
                        !User.IsInRole(ApplicationRoles.MaintenanceManager) &&
@@ -77,32 +60,27 @@ public class WorkOrdersController(
         if (isWorker)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            query.AssignedToUserId = userId;
+            if (Guid.TryParse(userId, out var workerGuid))
+            {
+                query.AssignedWorkerId = workerGuid;
+            }
         }
 
         var result = await _getWorkOrdersHandler.HandleAsync(query);
-
         return Ok(ApiResponse<PaginatedResponse<WorkOrderResponse>>.Ok(result));
     }
 
-    /// <summary>
-    /// Gets a specific work order by ID.
-    /// </summary>
     [HttpGet("{id:guid}")]
     [Authorize]
     [ProducesResponseType(typeof(ApiResponse<WorkOrderResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> GetWorkOrderById(Guid id)
     {
         var workOrder = await _getByIdHandler.HandleAsync(id);
 
         if (workOrder is null)
-        {
             return NotFound(ApiResponse.Fail("Work order not found."));
-        }
 
-        // Apply read-access restrictions if necessary (e.g., workers only see their assigned orders)
         var isWorker = User.IsInRole(ApplicationRoles.FieldWorker) &&
                        !User.IsInRole(ApplicationRoles.Dispatcher) &&
                        !User.IsInRole(ApplicationRoles.MaintenanceManager) &&
@@ -111,71 +89,93 @@ public class WorkOrdersController(
         if (isWorker)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (workOrder.AssignedToUserId != userId)
+            if (Guid.TryParse(userId, out var workerGuid) && !workOrder.AssignedWorkerIds.Contains(workerGuid))
             {
-                return NotFound(ApiResponse.Fail("Work order not found."));
+                return NotFound(ApiResponse.Fail("Work order not found or you are not assigned to it."));
             }
         }
 
         return Ok(ApiResponse<WorkOrderResponse>.Ok(workOrder));
     }
 
-    /// <summary>
-    /// Gets work orders assigned to the current user.
-    /// </summary>
     [HttpGet("my")]
     [Authorize]
     [ProducesResponseType(typeof(ApiResponse<PaginatedResponse<WorkOrderResponse>>), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> GetMyWorkOrders([FromQuery] GetWorkOrdersQuery query)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(userId))
+        if (Guid.TryParse(userId, out var workerGuid))
         {
-            return Unauthorized(ApiResponse.Fail("User not authenticated."));
+            query.AssignedWorkerId = workerGuid;
         }
 
-        query.AssignedToUserId = userId;
-
         var result = await _getWorkOrdersHandler.HandleAsync(query);
-
         return Ok(ApiResponse<PaginatedResponse<WorkOrderResponse>>.Ok(result));
     }
 
-    /// <summary>
-    /// Updates the status of an existing work order.
-    /// </summary>
     [HttpPatch("{id:guid}/status")]
     [Authorize]
     [ProducesResponseType(typeof(ApiResponse<WorkOrderResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> UpdateWorkOrderStatus(Guid id, [FromBody] UpdateWorkOrderStatusRequest request)
     {
         if (!ModelState.IsValid)
-        {
-            var errors = ModelState.Values
-                .SelectMany(v => v.Errors)
-                .Select(e => e.ErrorMessage);
-            return BadRequest(ApiResponse.Fail("Validation failed.", errors));
-        }
+            return BadRequest(ApiResponse.Fail("Validation failed."));
 
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        // This handler should ideally check if the user is authorized to update this specific order 
-        // (e.g., they are the assignee or a manager).
         var (success, response, error) = await _updateStatusHandler.HandleAsync(id, request, userId!);
 
         if (!success)
         {
             if (error == "Work order not found.")
-            {
                 return NotFound(ApiResponse.Fail(error));
-            }
             return BadRequest(ApiResponse.Fail(error!));
         }
 
         return Ok(ApiResponse<WorkOrderResponse>.Ok(response!, "Work order status updated successfully."));
+    }
+
+    /// <summary>
+    /// Updates the entire list of assigned workers for a work order.
+    /// </summary>
+    [HttpPut("{id:guid}/workers")]
+    [Authorize(Roles = $"{ApplicationRoles.Admin},{ApplicationRoles.Dispatcher}")]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> UpdateWorkers(
+        Guid id, 
+        [FromBody] AssignWorkersRequest request)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ApiResponse.Fail("Validation failed."));
+
+        var (success, error) = await handler.HandleAsync(id, request.WorkerIds);
+
+        if (!success)
+        {
+            if (error == "Work order not found.")
+                return NotFound(ApiResponse.Fail(error));
+                
+            return BadRequest(ApiResponse.Fail(error!));
+        }
+
+        return Ok(ApiResponse.Ok("Assigned workers updated successfully."));
+    }
+
+    /// <summary>
+    /// Adds material usage to a work order.
+    /// </summary>
+    [HttpPost("{id:guid}/materials")]
+    [Authorize(Roles = $"{ApplicationRoles.Admin},{ApplicationRoles.Dispatcher},{ApplicationRoles.FieldWorker}")]
+    public async Task<IActionResult> AddMaterial(Guid id, [FromBody] AddMaterialRequest request, [FromServices] IAddMaterialHandler handler)
+    {
+        var (success, error) = await handler.HandleAsync(id, request.MaterialStockId, request.Quantity);
+
+        if (!success) return BadRequest(ApiResponse.Fail(error!));
+
+        return Ok(ApiResponse.Ok("Material added successfully."));
     }
 }

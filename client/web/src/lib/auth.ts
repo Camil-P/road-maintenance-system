@@ -1,12 +1,13 @@
 // src/lib/auth.ts
 const TOKEN_KEY = "rms_token";
 
-export type UserRole = "Driver" | "FieldWorker" | "Dispatcher" | "MaintenanceManager" | "Admin";
+export type UserRole = "Driver" | "FieldWorker" | "Dispatcher" | "MaintenanceManager" | "Admin" | "AgencyAdmin";
 
 export interface CurrentUser {
   id: string;
   email: string;
   role: UserRole;
+  agencyId?: string;
 }
 
 export interface AuthPayload {

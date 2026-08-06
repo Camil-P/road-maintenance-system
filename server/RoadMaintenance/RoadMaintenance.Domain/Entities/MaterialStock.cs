@@ -1,9 +1,11 @@
+using RoadMaintenance.Domain.Interfaces;
+
 namespace RoadMaintenance.Domain.Entities;
 
 /// <summary>
 /// Represents the current stock levels of maintenance materials.
 /// </summary>
-public class MaterialStock
+public class MaterialStock : IMustHaveTenant
 {
     public Guid Id { get; private set; }
     
@@ -31,7 +33,13 @@ public class MaterialStock
     /// Cost per unit of material
     /// </summary>
     public decimal UnitCost { get; private set; }
-    
+
+    /// <summary>
+    /// ID of the agency that this material stock belongs to.
+    /// </summary>
+    public Guid AgencyId { get; set; }
+    public Agency Agency { get; set; } = null!;
+
     public DateTime LastUpdated { get; private set; }
     
     // Private constructor for EF Core

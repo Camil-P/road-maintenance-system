@@ -24,7 +24,8 @@ async function loginApi(data: LoginInput): Promise<AuthPayload> {
     user: {
       id: apiData.userId,
       email: apiData.email,
-      role: apiData.roles[0] || "User", // or handle roles as needed
+      role: apiData.roles[0] || "User",
+      agencyId: apiData.agencyId, // <-- Extract agencyId from backend response
     },
   };
 }

@@ -28,6 +28,8 @@ public class UpdateWorkOrderStatusHandler : IUpdateWorkOrderStatusHandler
         string userId)
     {
         var workOrder = await _context.WorkOrders
+            .Include(w => w.RoadSegment)
+            .Include(w => w.AssignedMaterials)
             .FirstOrDefaultAsync(w => w.Id == id);
 
         if (workOrder is null)
@@ -35,12 +37,16 @@ public class UpdateWorkOrderStatusHandler : IUpdateWorkOrderStatusHandler
 
         try
         {
-            // Call the correct domain behavior based on the requested status
             switch (request.Status)
             {
                 case WorkOrderStatus.Scheduled:
-                    // Using userId as a fallback assignee if none was provided yet
-                    workOrder.Schedule(userId, DateTime.UtcNow.AddDays(1));
+                    if (request.AssignedWorkerIds == null || request.AssignedWorkerIds.Count == 0)
+                        return (false, null, "At least one assigned worker is required to schedule a work order.");
+                        
+                    if (!request.ScheduledDate.HasValue)
+                        return (false, null, "A scheduled date is required.");
+                        
+                    workOrder.Schedule(request.AssignedWorkerIds, request.AssignedMachineIds, request.ScheduledDate.Value);
                     break;
 
                 case WorkOrderStatus.InProgress:
@@ -48,6 +54,7 @@ public class UpdateWorkOrderStatusHandler : IUpdateWorkOrderStatusHandler
                     break;
 
                 case WorkOrderStatus.Completed:
+                    // Note: You can extend this endpoint or create a separate one to accept actual cost & notes
                     workOrder.Complete();
 
                     if (workOrder.IncidentReportId.HasValue)
@@ -67,7 +74,6 @@ public class UpdateWorkOrderStatusHandler : IUpdateWorkOrderStatusHandler
                     break;
 
                 case WorkOrderStatus.Created:
-                    // Cannot revert back to created in your domain model
                     return (false, null, "Cannot revert status back to Created.");
             }
 
@@ -76,7 +82,10 @@ public class UpdateWorkOrderStatusHandler : IUpdateWorkOrderStatusHandler
         }
         catch (InvalidOperationException ex)
         {
-            // Catches domain rule violations (e.g. trying to complete an already completed order)
+            return (false, null, ex.Message);
+        }
+        catch (ArgumentException ex)
+        {
             return (false, null, ex.Message);
         }
     }
